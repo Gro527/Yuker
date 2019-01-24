@@ -1,0 +1,75 @@
+/* pages/leader/step-4/step-4.wxss */
+.body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  margin-left:50rpx; 
+  margin-right: 50rpx;
+  margin-bottom: 10rpx;
+  justify-content: space-between;
+
+}
+.location{
+  margin-left:50rpx; 
+  margin-right: 50rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.title{
+  text-align: left;
+  font-size: 35rpx;
+}
+.link{
+  font-size: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+
+}
+.link2{
+  font-size: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 70rpx;
+  margin-top: 30rpx;
+
+}
+.address{
+  padding-left: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.noneaddress{
+  padding-left: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color:#b9b7b7 ;
+}
+.line{
+  margin: 30rpx;
+  height: 2.5rpx;
+  background: #8b8585;
+}
+.image{
+   width: 50rpx;
+   height: 50rpx;
+}
+.ar{
+  width: 60rpx;
+  height: 40rpx;
+  margin-bottom: 25rpx;
+  margin-left:5rpx;
+  margin-right: 5rpx; 
+}
+.textarea{
+  padding-left: 20rpx;
+  margin-top: 10rpx;
+}
+.confirm{
+  width:80%;
+  margin-top: 50rpx;
+}

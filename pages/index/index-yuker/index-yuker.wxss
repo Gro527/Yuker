@@ -1,0 +1,31 @@
+/* pages/index/index-yuker/index-yuker.wxss */
+.myyuker1{
+  margin-Top: 40rpx;
+}
+
+.myyuker2{
+  margin-Top: 40rpx;
+}
+
+.myyuker3{
+ margin-Top: 40rpx;
+ 
+}
+
+
+.myyuker4{
+ margin-Top: 40rpx;
+ 
+}
+.info1{
+  margin-Top: 40rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;
+ 
+}
+.info2{
+ margin-Top: 60rpx;
+ margin-Left:30rpx;
+ margin-Right:30rpx;
+ 
+}

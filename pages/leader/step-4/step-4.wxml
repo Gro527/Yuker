@@ -1,0 +1,49 @@
+<!--pages/leader/step-4/step-4.wxml-->
+<view class="body">
+
+<view class="name">
+<text class='title' >方案名称：</text>
+<text class='textarea'>{{text}}</text>
+
+
+</view>     
+<view class='line'> </view>
+
+
+<view class="name">
+<text class='title' >出行范围： 海淀区</text>
+
+</view>
+<view class='line'></view>
+
+<view class="name">
+<text class='title' >方案环节：\n</text>
+<button class='link' plain='true' size='mini'>{{d1}}</button>
+<image src='/images/arrows.png' class='ar'></image>
+<button class='link' plain='true' size='mini'>{{d2}}</button>
+<image src='/images/arrows.png' class='ar'></image>
+<button class='link' plain='true' size='mini'>{{d3}}</button>
+</view>
+<view class='line'></view>
+
+<view class="name">
+<text class='title' >方案风格:\n</text>
+<button class='link2' plain='true' size='mini'>温馨</button>
+<button class='link2' plain='true' size='mini'>同学</button>
+
+</view>
+<view class='line'></view>
+
+
+<view class="name">
+<text class='title' >备注:</text>
+<textarea class='textarea' placeholder='想对朋友说的话...'></textarea>
+</view>
+<view class='line'></view>
+
+
+ <button open-type='share' bindtap='myplan' type="primary" class='confirm'>分享给我的好友</button>
+
+</view>
+
+

@@ -1,0 +1,148 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70rpx;
+}
+
+.info_up{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:  nowrap;
+  justify-content: space-between;
+
+}
+.personal_info{
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+  align-items: center;
+  margin-right: 60rpx;
+}
+
+.userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin-Top: 10rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa; 
+  margin-Top: 20rpx;
+  margin-left: 10rpx;
+}
+
+.check{
+  margin-Top: 40rpx;
+  margin-Left:60rpx;
+  margin-Right:60rpx;
+}
+.btn-1{
+margin-top: 100rpx;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 120rpx;
+margin-right: 120rpx;
+
+}
+
+.create{
+  width: 100rpx;
+  height:100rpx;
+}
+
+.centor{
+  width: 100rpx;
+  height:100rpx;
+}
+
+.info1{
+  display:flex;
+  flex-direction:  row;
+  justify-content: space-between;
+   margin-Top: 70rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;
+
+}
+
+.info2{
+  display:flex;
+  flex-direction:  row;
+  justify-content: space-between;
+   margin-Top: 50rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;}
+
+  .info3{
+  display:flex;
+  flex-direction:  row;
+  justify-content: space-between;
+   margin-Top: 50rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;}
+
+  .info4{
+  display:flex;
+  flex-direction:  row;
+  justify-content: space-between;
+   margin-Top: 50rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;}
+
+.line1{
+  height: 2.5rpx;
+  background: darkgrey;
+  margin: 20rpx;
+
+}
+
+
+.line2{
+  height: 2rpx;
+  background: darkgrey;
+  margin: 20rpx;
+
+}
+
+
+.line3{
+  height: 3rpx;
+  background: darkgrey;
+  margin: 20rpx;
+
+}
+
+
+
+.line4{
+  height: 3rpx;
+  background: darkgrey;
+  margin: 20rpx;
+
+}
+
+.display1{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.display2{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.display3{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.display4{
+  display: flex;
+  flex-direction: column;
+}

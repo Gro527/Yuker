@@ -1,0 +1,52 @@
+<!--pages/leader/step-2/step-2.wxml-->
+<view class="title">
+<text>方案环节选取：</text>
+<text>*最多可选三项</text></view>
+
+<view class="index-hd">
+<button class="mini-button" bindtap="show1" type="primary"  size="mini" plain="true"> 美食 </button>
+<button class="mini-button" bindtap="show2" type="primary"  size="mini" plain="true"> 娱乐 </button>
+<button class="mini-button" bindtap="show3" type="primary"  size="mini" plain="true"> 运动 </button>
+<button class="mini-button" bindtap="show4" type="primary"  size="mini" plain="true"> 购物 </button>
+<button class="mini-button" bindtap="show5" type="primary"  size="mini" plain="true"> 酒店 </button>
+<button class="mini-button" bindtap="show6" type="primary"  size="mini" plain="true"> 丽人 </button>
+
+</view><view class='line'></view>
+
+<view class="index-dd">
+<text>方案环节</text>
+<text>*选中删除</text>
+</view>
+
+
+<view class="index-td">
+  <view wx:if="{{clicktime>=1}}">
+      <button class="mini-button1"   type="primary" size="mini" plain="true"> {{link1}}</button>
+  </view>
+  <view wx:if="{{clicktime>=2}}">
+      <button class="mini-button1"   type="primary" size="mini" plain="true"> {{link2}}</button>
+  </view>
+ <view wx:if="{{clicktime>=3}}">
+      <button class="mini-button1"    type="primary" size="mini" plain="true"> {{link3}}</button>
+  </view>
+  </view>
+  <view class='line'></view>
+ 
+
+
+
+
+
+<view class="style_choose">方案风格选取：</view>
+<view class="style">
+<button class="mini-button" bindtap="showa"  type="primary" size="mini"   plain="{{type1}}"> 家庭 </button>
+<button class="mini-button" bindtap="showb"  type="primary"   size="mini" plain="{{type2}}"> 同学 </button>
+<button class="mini-button" bindtap="showc"  type="primary"   size="mini" plain="{{type3}}"> 情侣 </button>
+<button class="mini-button" bindtap="showd"  type="primary"  size="mini"  plain="{{type4}}"> 同事 </button>
+<button class="mini-button" bindtap="showe"  type="primary"  size="mini"  plain="{{type5}}"> 商务 </button>
+<button class="mini-button" bindtap="showf"  type="primary"  size="mini"  plain="{{type6}}"> 温馨 </button>
+</view>
+<view class='line'></view>
+ 
+<view class="next-step" >
+<button  bindtap="next" type="primary" > 下一步 </button></view>

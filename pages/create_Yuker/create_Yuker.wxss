@@ -1,0 +1,36 @@
+/* pages/create_Yuker/create_Yuker.wxss */
+.btn-1{
+margin-top: 800rpx;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 120rpx;
+margin-right: 120rpx;
+
+}
+
+.createbutton{
+  margin-top: 20rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size:x-large;
+}
+
+.title{
+  margin-top: 20rpx;
+  margin-Left:30rpx;
+  margin-Right:30rpx;
+}
+
+.create{
+  width: 100rpx;
+  height:100rpx;
+}
+
+.centor{
+  width: 100rpx;
+  height:100rpx;
+}

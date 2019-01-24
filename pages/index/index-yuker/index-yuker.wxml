@@ -1,0 +1,24 @@
+<view class="container">
+<view class="info1">
+   <text class="myyuker">我的Yuker方案:</text>
+   <button class="myyuker1" bindtap='plan1' plain="Boolean">我的Yuker方案一</button>
+   <button class="myyuker2" plain="Boolean">我的Yuker方案二</button>
+</view>
+<view class="info2">
+   <text class="hisyuker">我参与的Yuker方案:</text>  
+   <button class="myyuker3" plain="Boolean">我参与的Yuker方案一</button>
+   <button class="myyuker4" plain="Boolean">我参与的Yuker方案二</button>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

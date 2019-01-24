@@ -1,0 +1,8 @@
+<!--pages/create_Yuker/create_Yuker.wxml-->
+<view class="container">
+<button class="createbutton" bindtap="creator" type="primary" plain="true" > + 创建Yuker方案 </button>
+<view class="btn-1">
+    <image class="create" src="/images/创建.png"> </image>
+    <image class="centor" bindtap="percentor" src="/images/我的.png"></image>
+</view>
+</view>

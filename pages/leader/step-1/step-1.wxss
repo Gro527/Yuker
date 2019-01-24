@@ -1,0 +1,162 @@
+/* pages/leader/step-1/step-1.wxss */
+.title{
+  margin-top:12rpx;}
+
+
+
+.body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.where_go{
+
+
+  margin-bottom: 10rpx;
+  justify-content: space-between;}
+
+  .name1{
+  display: flex;
+  flex-direction: row;
+  margin-left:50rpx; 
+  align-items: center;
+  margin-bottom: 10rpx;
+  
+
+}
+
+
+.location_choose{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+
+}
+
+
+
+.location{
+  margin-left:50rpx; 
+  margin-right: 50rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+
+
+
+.title_where{
+  margin-left:45rpx; 
+}
+.link{
+  font-size: 40rpx;
+  margin: 30rpx;
+}
+.address{
+  padding-left: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.noneaddress{
+  padding-left: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color:#b9b7b7 ;
+}
+.line{
+  margin: 30rpx;
+  height: 2.5rpx;
+  background: #8b8585;
+}
+.image{
+   width: 50rpx;
+   height: 50rpx;
+}
+.ar{
+  width: 60rpx;
+  height: 40rpx;
+  margin-top: 15rpx;
+}
+.textarea{
+  padding-left: 20rpx;
+  margin-top: 10rpx;
+}
+.confirm{
+  width:80%;
+  margin-top: 50rpx;
+}
+
+
+
+
+.index-hd {
+padding: 20rpx;
+text-align: center;
+}
+.mini-button{
+margin-top: 20rpx;
+margin-right:30rpx;
+margin-left: 30rpx;
+margin-bottom: 40rpx;
+}
+
+/* 出行范围 */
+/* pages/leader/step-2/step-2.wxss */
+.food_label_left{
+width: 50%;
+text-align: center;
+background-color:  antiquewhite;
+
+}
+.food_label_right{
+width: 50%;
+text-align: center;
+background-color:  antiquewhite;
+
+}
+.food_title{
+margin-top: 20rpx;
+margin-left:30rpx; 
+margin-right:30rpx;
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:center;
+}
+.food_list_left{
+margin-left:30rpx; 
+height:550rpx;
+width: 60%;
+display:inline-block;
+flex-direction:column;
+background-color: floralwhite;
+}
+.food_list_right{
+height:550rpx;
+width: 60%;
+display:inline-block;
+flex-direction:column;
+background-color: whitesmoke;
+margin-right: 30rpx;
+}
+.food_list{
+display:flex;
+flex-direction:row;
+flex-wrap:nowrap;
+justify-content:center;
+}
+.food_label{
+margin-top: 20rpx;
+}
+
+.next-step{
+
+  padding-left: 30rpx;
+  padding-right:30rpx;
+  padding-bottom: 30rpx;
+
+}

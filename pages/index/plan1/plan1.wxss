@@ -1,0 +1,15 @@
+/* pages/index/plan1/plan1.wxss */
+.person{
+  background: rgb(235, 117, 117);
+  height: 500rpx;
+  display: flex;
+  flex-direction: row;
+
+}
+.little{
+  width: 40%;
+  height: 300rpx;
+  margin-top:100rpx; 
+  margin-left: 30rpx;
+  background: rgb(143, 136, 136)
+}

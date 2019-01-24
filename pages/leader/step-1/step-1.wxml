@@ -1,0 +1,78 @@
+<!--pages/leader/step-1/step-1.wxml-->
+
+<view class="name1">
+<text class='title' >方案名称：</text>
+<input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
+</view>
+<view class='line'></view>
+
+<view class='location'>
+<text class='title_location' >当前定位：</text>
+<image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
+</view>
+<view class='location_choose'>
+ <block wx:if="{{hasLocation === false}}">
+          <text class="noneaddress">未选择位置</text>
+        </block>
+        <block wx:if="{{hasLocation === true}}">
+          <text class="address">{{locationAddress}}</text>
+        </block>
+</view>   
+<view class='line'> </view>
+
+
+
+
+
+<view class="where_go">
+<text class='title_where' >出行范围：</text>
+
+<view class="food_title">
+<view class="food_label_left" bindtap="show_food_list">商圈 ∨</view>
+<view class="food_label_right">{{info_food}}</view>
+</view>
+<view class="food_list">
+<scroll-view scroll-y class="food_list_left" hidden="{{hiddenname}}">
+<view class="food_label" bindtap="get1" style="background-color:{{color1}}">{{label1}}</view>
+<view class="food_label" bindtap="get2">{{label2}}</view>
+<view class="food_label">{{label3}}</view>
+<view class="food_label">{{label4}}</view>
+<view class="food_label">{{label5}}</view>
+<view class="food_label">{{label6}}</view>
+<view class="food_label " >{{label7}}</view>
+<view class="food_label">{{label8}}</view>
+<view class="food_label">{{label9}}</view>
+<view class="food_label">{{label10}}</view>
+<view class="food_label">{{label11}}</view>
+<view class="food_label">{{label12}}</view>
+<view class="food_label">{{label13}}</view>
+<view class="food_label">{{label14}}</view>
+<view class="food_label">{{label15}}</view>
+<view class="food_label">{{label16}}</view>
+<view class="food_label">{{label17}}</view>
+<view class="food_label">{{label18}}</view>
+<view class="food_label">{{label19}}</view>
+<view class="food_label">{{label20}}</view>
+<view class="food_label">{{label21}}</view>
+<view class="food_label">{{label22}}</view>
+<view class="food_label">{{label23}}</view>
+<view class="food_label">{{label24}}</view>
+<view class="food_label">{{label25}}</view>
+
+</scroll-view>
+<scroll-view class="food_list_right" hidden="{{hiddenname}}">
+<view class="food_label" bindtap="geta">{{labela}}</view>
+<view class="food_label" bindtap="getb">{{labelb}}</view>
+<view class="food_label" bindtap="getc">{{labelc}}</view>
+<view class="food_label" bindtap="getd">{{labeld}}</view>
+<view class="food_label" bindtap="gete">{{labele}}</view>
+</scroll-view></view>
+
+
+</view>
+<view class='line'></view>
+
+
+
+<view class="next-step" >
+<button  bindtap="next" type="primary" > 下一步 </button></view>

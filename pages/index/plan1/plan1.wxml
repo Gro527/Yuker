@@ -1,0 +1,16 @@
+<!--pages/index/plan1/plan1.wxml-->
+<view class='body'>
+
+<view class='person' style='flex-direction:row;'>
+<view class='little'>
+<text>address:</text>
+</view>
+<view class='little'>
+<text>step-1饮食:\n</text>
+<text>step-2娱乐:\n</text>
+<text>step-3饮食:</text>
+</view>
+        
+</view>
+
+</view>
