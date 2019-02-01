@@ -25,7 +25,7 @@ Page({
 
   myplan: function () {
     wx.redirectTo({
-      url: '/pages/index/index-yuker/index-yuker?text1=' + this.data.text,
+      url: '/pages/index/index-yuker/index-yuker?text=' + this.data.text,
     })
   },
 
