@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    where_go_array: ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"],
     // 选择位置
     hasLocation: false,
   // 出行范围
@@ -61,7 +62,10 @@ Page({
 //   })
 
 // },
-
+  item_clicked:function()
+  {
+    
+  },
 
   show_food_list: function (e) {
     this.setData({ hiddenname: !this.data.hiddenname })
