@@ -32,11 +32,14 @@
 <view class="food_label_right">{{info_food}}</view>
 </view>
 <view class="food_list">
-<scroll-view scroll-y="true" wx:for="{{where_go_array}}">
-  <view id="{{item}}" bindtap="item_clicked" style="flex-direction:column;">
-  {{item}}
-  </view>
-</scroll-view>
+<picker-view indicator-style="height: 50px;"
+    style="width: 100%; height: 300px;"
+    value="{{value}}"
+    bindchange="bindChange">
+  <picker-view-column>
+    <view wx:for="{{where_go_array}}" style="line-height: 50px">{{item}}</view>
+  </picker-view-column>
+</picker-view> 
 <!-- <scroll-view scroll-y class="food_list_left" hidden="{{hiddenname}}">
 <view class="food_label" bindtap="get1" style="background-color:{{color1}}">{{label1}}</view>
 <view class="food_label" bindtap="get2">{{label2}}</view>
