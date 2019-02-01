@@ -33,7 +33,9 @@
 </view>
 <view class="food_list">
 <scroll-view scroll-y="true" wx:for="{{where_go_array}}">
-<view id="{{item}}" bindtap="item_clicked" style="flex-direction:column;">{{item}}</view>
+  <view id="{{item}}" bindtap="item_clicked" style="flex-direction:column;">
+  {{item}}
+  </view>
 </scroll-view>
 <!-- <scroll-view scroll-y class="food_list_left" hidden="{{hiddenname}}">
 <view class="food_label" bindtap="get1" style="background-color:{{color1}}">{{label1}}</view>
