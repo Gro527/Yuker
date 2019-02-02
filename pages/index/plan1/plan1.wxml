@@ -1,16 +1,49 @@
 <!--pages/index/plan1/plan1.wxml-->
 <view class='body'>
 
-<view class='person' style='flex-direction:row;'>
+<view class='person' style='flex-direction:row;'>   <!--NO.1-->
+<view class='little'>
+<image class='head' src='/images/person_1.png'></image>
+<image class='location_p' src='/images/location.png'></image>
+<text class='location'>BUPT</text>
+</view>
+<view class='little_2'>
+<text>饮食:\n\n</text>
+<text>娱乐:\n\n</text>
+<text>饮食:</text>
+</view>        
+</view>
+
+<view class='line'></view>
+
+<view class='person' style='flex-direction:row;'>  <!--NO.2-->
+<view class='little'>
+<image class='head' src='/images/person_2.png'></image>
+<image class='location_p' src='/images/location.png'></image>
+<text class='location'>beijing</text>
+</view>
+<view class='little_2'>
+<!--text>饮食:\n\n</text>
+<text>娱乐:\n\n</text>
+<text>饮食:</text-->
+<text>\n\n未操作</text>
+</view>    
+</view>
+
+<view class='line'></view>
+
+<view class='person' style='flex-direction:row;'>  <!--NO.3-->
 <view class='little'>
 <text>address:</text>
 </view>
-<view class='little'>
+<view class='little_2'>
 <text>step-1饮食:\n</text>
 <text>step-2娱乐:\n</text>
 <text>step-3饮食:</text>
+</view>    
 </view>
-        
-</view>
+
+<button bindtap='confirm' type="primary" class='final'>生成方案</button>
+
 
 </view>

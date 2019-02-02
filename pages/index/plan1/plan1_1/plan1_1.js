@@ -1,4 +1,4 @@
-// pages/index/plan1/plan1.js
+// pages/index/plan1/plan1_1/plan1_1.js
 Page({
 
   /**
@@ -20,12 +20,6 @@ Page({
    */
   onReady: function () {
 
-  },
-
-  confirm:function(){
-    wx.navigateTo({
-      url: '/pages/index/plan1/plan1_1/plan1_1'
-      })
   },
 
   /**
