@@ -41,12 +41,6 @@
 
 
 
- <view class="btn-1">
-    <image class="create" bindtap="creator" src="/images/创建.png"> </image>
-    <image class="centor" bindtap="percentor" src="/images/我的.png"></image>  
-</view>
-
-
 
 
 
