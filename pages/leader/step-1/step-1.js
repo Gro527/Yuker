@@ -1,6 +1,6 @@
 // pages/leader/step-1/step-1.js
 var tcity = require("../../../utils/citys.js")
-const county = ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"]
+const county = ["附近", "热门商圈"]
 const area = ["500m", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km"]
 
 
@@ -12,34 +12,8 @@ Page({
   data: {
      where_go_array: county,
      where_go_area: area,
-    // 选择位置
+     
     hasLocation: false,
-  // 出行范围
-    label1: "附近",
-    label2: "热门商圈",
-    label3: "海淀区",
-    label4: "朝阳区",
-    label5: "西城区",
-    label6: "东城区",
-    label7: "昌平区",
-    label8: "怀柔区",
-    label9: "丰台区",
-    label10: "石景山区",
-    label11: "通州区",
-    label12: "大兴区",
-    label13: "顺义区",
-    label14: "房山区",
-    label15: "密云区",
-    label16: "延庆区",
-    label17: "门头沟",
-    label18: "平谷区",
-
-    labela: "",
-    labelb: "",
-    labelc: "",
-    labeld: "",
-    labele: "",
-
     info_food: "默认",
     hiddenname: true,
     color1: 'floralwhite',
@@ -48,15 +22,6 @@ Page({
    
   },
   onLoad:function(){
-    var that = this;
-    console.log("in");  
-    tcity.init(that);
-    var citydata = that.data.citydata;
-
-    for (let i = 0; i < cityData[0].sub[0].sub.length; i++) {
-      where_go_array.push(cityData[0].sub[0].sub[i].name);
-    }
-
 
   },
   chooseLocation: function () {
@@ -79,7 +44,18 @@ Page({
   },
 
   show_food_list: function (e) {
-    this.setData({ hiddenname: !this.data.hiddenname })
+    var that = this;
+    
+    tcity.init(that);
+    var cityData = that.data.cityData;
+
+    for (let i = 0; i < cityData[0].sub[0].sub.length; i++) {
+      county.push(cityData[0].sub[0].sub[i].name);
+    }
+    this.setData({ 
+      hiddenname: !this.data.hiddenname ,
+      where_go_array: county
+    })
   },
 
   get1: function (e) {

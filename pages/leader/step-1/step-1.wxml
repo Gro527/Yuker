@@ -32,7 +32,7 @@
     <view class="food_label_left" bindtap="show_food_list">商圈 ∨</view>
     <view class="food_label_right">{{info_food}}</view>
   </view>
-  <view class='choose-area'>
+  <view class='choose-area' hidden='{{hiddenname}}'>
     <view class="pick">
       <scroll-view style="height:200px;width:100%" scroll-y="true">
         <view wx:for="{{where_go_array}}">{{item}}</view>
@@ -44,7 +44,7 @@
       </scroll-view>
     </view>
   </view>
-  
+
 </view>
 <view class='line'></view>
 
