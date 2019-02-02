@@ -32,20 +32,17 @@
     <view class="food_label_left" bindtap="show_food_list">商圈 ∨</view>
     <view class="food_label_right">{{info_food}}</view>
   </view>
-  <view class="food_list">
-    <picker-view
-        indicator-style="height: 30px;"
-        style="width: 100%; height: 250px;"
-        value="{{value}}"
-        bindchange="bindChange">
-      <picker-view-column>
-        <view wx:for="{{where_go_array}}" style="line-height: 30px">{{item}}</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{where_go_area}}" style="line-height: 30px">{{item}}</view>
-      </picker-view-column>
-    </picker-view> 
-
+  <view class='choose-area' hidden='{{hiddenname}}'>
+    <view class="pick">
+      <scroll-view style="height:200px;width:100%" scroll-y="true">
+        <view wx:for="{{where_go_array}}">{{item}}</view>
+      </scroll-view>
+    </view>
+    <view class="pick">
+      <scroll-view style="height:200px;width:100%" scroll-y="true">
+        <view wx:for="{{where_go_area}}">{{item}}</view>
+      </scroll-view>
+    </view>
   </view>
 
 </view>

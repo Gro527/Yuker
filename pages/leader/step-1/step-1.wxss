@@ -13,16 +13,18 @@
 
 
   margin-bottom: 10rpx;
-  justify-content: space-between;}
-
-  .food_list{
+  justify-content: space-between;
+}
+.choose-area{
   display: flex;
+}
+.pick{
+  height: 500rpx;
+  width: 50%;
   flex-direction: row;
   margin-left:50rpx; 
   align-items: center;
   margin-bottom: 10rpx;
-  
-
 }
 
 
