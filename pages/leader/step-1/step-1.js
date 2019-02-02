@@ -1,7 +1,7 @@
 // pages/leader/step-1/step-1.js
 var tcity = require("../../../utils/citys.js")
-const county = ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"]
-const area = ["500m","1km","2km"]
+const county = ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"]
+const area = ["500m", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km"]
 
 
 Page({
@@ -41,7 +41,7 @@ Page({
     labele: "",
 
     info_food: "默认",
-    hiddenname: false,
+    hiddenname: true,
     color1: 'floralwhite',
 
   
