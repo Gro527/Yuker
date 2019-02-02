@@ -14,5 +14,20 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Yuker",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#696969",
+    "list": [{
+        "pagePath": "pages/create_Yuker/create_Yuker",
+        "text": "创建方案",
+        "iconPath": "/images/create-0.png",
+        "selectedIconPath": "/images/create-1.png"
+      },{
+        "pagePath": "pages/index/index",
+        "text": "我的方案",
+        "iconPath": "/images/project-0.png",
+        "selectedIconPath": "/images/project-1.png"
+      }]
   }
 }
