@@ -15,7 +15,7 @@
   margin-bottom: 10rpx;
   justify-content: space-between;}
 
-  .name1{
+  .food_list{
   display: flex;
   flex-direction: row;
   margin-left:50rpx; 

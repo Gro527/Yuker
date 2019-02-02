@@ -1,12 +1,17 @@
 // pages/leader/step-1/step-1.js
-//测试
-Page({
+var tcity = require("../../../utils/citys.js")
+const county = ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"]
+const area = ["500m","1km","2km"]
 
+
+Page({
+  
   /**
    * 页面的初始数据
    */
   data: {
-    where_go_array: ["附近", "热门商圈", "海淀区", "朝阳区", "西城区", "东城区"],
+     where_go_array: county,
+     where_go_area: area,
     // 选择位置
     hasLocation: false,
   // 出行范围
@@ -42,7 +47,18 @@ Page({
   
    
   },
+  onLoad:function(){
+    var that = this;
+    console.log("in");  
+    tcity.init(that);
+    var citydata = that.data.citydata;
 
+    for (let i = 0; i < cityData[0].sub[0].sub.length; i++) {
+      where_go_array.push(cityData[0].sub[0].sub[i].name);
+    }
+
+
+  },
   chooseLocation: function () {
     var that = this
     wx.chooseLocation({
@@ -57,12 +73,6 @@ Page({
     })
   },
 
-// show1:function(){
-//   this.setData({
-//     plain:this.data.plain=false,
-//   })
-
-// },
   item_clicked:function()
   {
     
