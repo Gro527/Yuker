@@ -1,4 +1,4 @@
 <!--pages/create_Yuker/create_Yuker.wxml-->
 <view class="container">
-<button class="createbutton" bindtap="creator" type="primary" plain="true" > + 创建Yuker方案 </button>
+<button class="createbutton" bindtap="creator" type="default" plain="Boolean" > + 创建Yuker方案 </button>
 </view>
