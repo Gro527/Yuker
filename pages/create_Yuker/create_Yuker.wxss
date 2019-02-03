@@ -1,4 +1,31 @@
 /* pages/create_Yuker/create_Yuker.wxss */
+.content{
+  font-family: "Microsoft YaHei";
+}
+
+.bg{
+  width:100%;
+  height: 250rpx;
+  background-color:rgba(255, 255, 240, 0.897);
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.logo{
+  padding-top: 20px;
+  color:#696969;
+}
+
+.first{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.second{
+  margin-top: 20rpx;
+  font-size: 14px;
+}
+
 .btn-1{
 margin-top: 800rpx;
 display: flex;
@@ -10,7 +37,7 @@ margin-right: 120rpx;
 }
 
 .createbutton{
-  margin-top: 300rpx;
+  margin-top: 100rpx;
   margin-Left:30rpx;
   margin-Right:30rpx;
   height: 200rpx;
@@ -33,4 +60,8 @@ margin-right: 120rpx;
 .centor{
   width: 100rpx;
   height:100rpx;
+}
+
+page{
+  background-color: rgba(252, 252, 248, 0.616);
 }

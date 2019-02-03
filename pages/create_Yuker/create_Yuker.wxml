@@ -1,4 +1,13 @@
 <!--pages/create_Yuker/create_Yuker.wxml-->
-<view class="container">
-<button class="createbutton" bindtap="creator" type="default" plain="Boolean" > + 创建Yuker方案 </button>
+<view class="content">
+ <view class="bg">
+  <view class="logo">
+    <view class= "first">Yuker</view>
+    <view class="second">多人行程规划，让出行更简单</view>
+  </view>
+ </view>
 </view>
+
+  <view class="container">
+    <button class="createbutton" bindtap="creator" type="default" plain="Boolean" > + 创建Yuker方案 </button>
+  </view>

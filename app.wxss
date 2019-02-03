@@ -6,5 +6,10 @@
 
 .line{
   height: 2.5rpx;
-  background: #8b8585;
+  background: darkgrey;
+  margin:20rpx;
+}
+
+page{
+  background-color: rgba(252, 252, 248, 0.616);
 }

@@ -12,13 +12,12 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "fafbf9",
     "navigationBarTitleText": "Yuker",
     "navigationBarTextStyle": "black"
-
   },
   "tabBar": {
-    "backgroundColor": "#fff",
+    "backgroundColor":"#fafbf9",
     "selectedColor": "#696969",
     "list": [{
         "pagePath": "pages/create_Yuker/create_Yuker",
