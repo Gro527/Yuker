@@ -9,82 +9,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-    label1: [{
-      n1: "咖啡厅"
-    }, {
-      n2: "烧烤"
-    }, {
-      n3: "面包甜点"
-    }, {
-      n4: "火锅"
-    }, {
-      n5: "小吃快餐"
-    }, {
-      n6: "自助餐"
-    }, {
-      n7: "日本菜"
-    }, {
-      n8: "西餐"
-    }, {
-      n9: "北京菜"
-    }, {
-      n10: "韩国料理"
-    }],
-    label2: [{
-      n11: "茶馆"
-    }, {
-      n12: "酒吧"
-    }, {
-      n13: "融合菜"
-    }, {
-      n14: "山西菜"
-    }, {
-      n15: "江西菜"
-    }, {
-      n16: "东南亚菜"
-    }, {
-      n17: "粤菜"
-    }, {
-      n18: "川菜"
-    }, {
-      n19: "海鲜"
-    }, {
-      n20: "小龙虾"
-    }],
-    label3: [{
-      n21: "湘菜"
-    }, {
-      n22: "下午茶"
-    }, {
-      n23: "素菜"
-    }, {
-      n24: "云南菜"
-    }, {
-      n25: "新疆菜"
-    }, {
-      n26: "江浙菜"
-    }, {
-      n27: "人气餐厅"
-    }, {
-      n28: "东北菜"
-    }, {
-      n29: "俄罗斯菜"
-    }, {
-      n30: "粉面馆"
-    }],
+    label1: [{ name: "咖啡厅", state:false }, { name: "烧烤", state:false }, { name: "面包甜点", state:false }, { name: "火锅", state:false }, { name: "小吃快餐", state:false }, { name: "自助餐", state:false }, { name: "日本菜", state:false }, { name: "西餐", state:false }, { name: "北京菜", state:false }, { name: "韩国料理", state:false }],
 
+ 
+    label2: ["茶馆", "酒吧", "融合菜", "江西菜", "东南亚菜", "粤菜", "川菜", "海鲜", "小龙虾","徐茈球"]
+     ,
+    label3: ["湘菜", "下午茶", "素菜", "云南菜", "新疆菜", "江浙菜", "人气餐厅", "东北菜", "俄罗斯菜","粉面馆"]
+     ,
 
     clicktime: 0,
     title: "默认 ∨",
     dire: "∨",
     hiddenname_food: true,
+  
+    color: 'floralwhite',
+  
+  },
 
-    clickchange1: false,
-    clickchange2: false,
-    clickchange3: false,
-    color1: 'floralwhite',
-    color2: 'floralwhite',
-    color3: 'floralwhite',
+  get: function (e) {
+    var labelId = e.target.id;
+    var clickstate;
+    var label1_up= "label1["+labelId+"].state";
+
+    this.setData({
+      [label1_up]: !this.data.label1[labelId].state,
+     })
+    this.setData({
+      clickstate: this.data.label1[labelId].state
+    })
+    console.log(this.data.clickstate);
+    
+
+    if (this.data.clickstate) {
+      this.setData({
+        //color: this.data.color = 'white',
+        clicktime: this.data.clicktime += 1
+      })
+    }
+    else {
+      this.setData({
+        //color: this.data.color = 'floralwhite',
+        clicktime: this.data.clicktime -= 1
+      })
+    }
+    if (this.data.clicktime == 0) { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
+    if (this.data.clicktime > 0) { this.setData({ title: this.data.title = "已选: " + this.data.clicktime + " 项 " + this.data.dire }) }
 
   },
 
@@ -100,83 +69,9 @@ Page({
     })
   },
 
-  get1: function (e) {
-    this.setData({ clickchange1: !this.data.clickchange1 })
+  
 
-    if (this.data.clickchange1) {
-      this.setData({
-        color1: this.data.color1 = 'white',
-        clicktime: this.data.clicktime += 1
-      })
-    }
-    else {
-      this.setData({
-        color1: this.data.color1 = 'floralwhite',
-        clicktime: this.data.clicktime -= 1
-      })
-    }
-    if (this.data.clicktime == 0)
-    { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
-    if (this.data.clicktime == 1)
-    { this.setData({ title: this.data.title = "咖啡厅 " + this.data.dire }) }
-    if (this.data.clicktime > 1)
-    { this.setData({ title: this.data.title = "已选: " + this.data.clicktime + " 项 " + this.data.dire }) }
-
-  },
-
-  get2: function (e) {
-    this.setData({ clickchange2: !this.data.clickchange2 })
-
-    if (this.data.clickchange2) {
-      this.setData({
-        color2: this.data.color2 = 'white',
-        clicktime: this.data.clicktime += 1
-      })
-    }
-    else {
-      this.setData({
-        color2: this.data.color2 = 'floralwhite',
-        clicktime: this.data.clicktime -= 1
-      })
-    }
-    if (this.data.clicktime == 0)
-    { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
-    if (this.data.clicktime == 1)
-    { this.setData({ title: this.data.title = "烧烤 " + this.data.dire }) }
-    if (this.data.clicktime > 1)
-    { this.setData({ title: this.data.title = "已选: " + this.data.clicktime + " 项 " + this.data.dire }) }
-
-  },
-
-  get3: function (e) {
-    this.setData({ clickchange3: !this.data.clickchange3 })
-
-    if (this.data.clickchange3) {
-      this.setData({
-        color3: this.data.color3 = 'white',
-        clicktime: this.data.clicktime += 1
-      })
-    }
-    else {
-      this.setData({
-        color3: this.data.color3 = 'floralwhite',
-        clicktime: this.data.clicktime -= 1
-      })
-    }
-    if (this.data.clicktime == 0)
-    { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
-    if (this.data.clicktime == 1)
-    { this.setData({ title: this.data.title = "面包甜点 " + this.data.dire }) }
-    if (this.data.clicktime > 1)
-    { this.setData({ title: this.data.title = "已选: " + this.data.clicktime + " 项 " + this.data.dire }) }
-
-  },
-
-
-
-
-
-
+  
   /**
    * 生命周期函数--监听页面加载
    */

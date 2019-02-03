@@ -105,35 +105,6 @@ Page({
   //     url: '/pages//step-2/step-2?d1='+this.data.link1+'&d2='+this.data.link2+'&d3='+this.data.link3+'&click='+this.data.clicktime
   //   })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /**
    * 生命周期函数--监听页面加载
    */

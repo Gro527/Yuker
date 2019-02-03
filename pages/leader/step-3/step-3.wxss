@@ -68,28 +68,6 @@
      justify-content:space-between;
      align-items: baseline;}
 
- .food_label_b{
-     width:620rpx;
-     height:550rpx;
-     display: flex;
-     flex-wrap:wrap;
-     flex-direction:row;
-     justify-content:space-between;
-     align-items: baseline;}
-
-  .food_label_c{
-     width:620rpx;
-     height:550rpx;
-     display: flex;
-     flex-wrap:wrap;
-     flex-direction:row;
-     justify-content:space-between;
-     align-items: baseline;}
-
- 
-
-     
-
  .f_label{
 
 margin-right:70rpx;
