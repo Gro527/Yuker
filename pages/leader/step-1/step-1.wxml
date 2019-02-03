@@ -2,8 +2,13 @@
 
 <view class='line'></view>
 <view class="name1">
+<<<<<<< Updated upstream
 <view class='title' >方案名称:</view>
 <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
+=======
+<text class='title' >方案名称：</text>
+<input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' style='margin-left:10rpx,' maxlength='15'></input>
+>>>>>>> Stashed changes
 </view>
 <view class='line'></view>
 
@@ -21,6 +26,13 @@
 </view>   
 <view class='line'> </view>
 
+<<<<<<< Updated upstream
+=======
+
+
+
+<!-- 选择出行范围 -->
+>>>>>>> Stashed changes
 <view class="where_go">
 
   <text class='title_where' >出行范围：</text>
