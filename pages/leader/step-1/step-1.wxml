@@ -1,7 +1,8 @@
 <!--pages/leader/step-1/step-1.wxml-->
 
+<view class='line'></view>
 <view class="name1">
-<text class='title' >方案名称：</text>
+<view class='title' >方案名称:</view>
 <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
 </view>
 <view class='line'></view>
@@ -19,10 +20,6 @@
         </block>
 </view>   
 <view class='line'> </view>
-
-
-
-
 
 <view class="where_go">
 
@@ -46,9 +43,9 @@
   </view>
 
 </view>
-<view class='line'></view>
+
 
 
 
 <view class="next-step" >
-<button  bindtap="next" type="primary" > 下一步 </button></view>
+<button  bindtap="next" type="default" > 下一步 </button></view>
