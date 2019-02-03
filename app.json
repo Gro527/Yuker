@@ -15,6 +15,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Yuker",
     "navigationBarTextStyle": "black"
+
   },
   "tabBar": {
     "backgroundColor": "#fff",
@@ -30,5 +31,8 @@
         "iconPath": "/images/project-0.png",
         "selectedIconPath": "/images/project-1.png"
       }]
+
+
+
   }
 }

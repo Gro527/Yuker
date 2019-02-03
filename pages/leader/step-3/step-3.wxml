@@ -2,77 +2,37 @@
 <view class="prefer_add">偏好添加</view><view class='line'></view>
 <view class="link1">环节一:</view>
 
-
-
-
-
-
 <view class="title"><image class="delicious" src="/images/美食.png"></image>
 <view class="title_sub" bindtap="tap">{{title}}</view></view>
+
 <swiper class="food_label" indicator-dots="true" duration="1000" hidden="{{hiddenname_food}}">
- 
- 
 
  <swiper-item>
- <view class="food_label_a">
-  <view wx:for="{{label1}}" wx:for-item="name" wx:for-index="id"  >
-    <view class="f_label" bindtap='get1' style="background-color:{{color1}}">{{name.n1}}</view>
-    <view class="f_label" bindtap='get2' style="background-color:{{color2}}">{{name.n2}}</view>
-    <view class="f_label" bindtap='get3' style="background-color:{{color3}}">{{name.n3}}</view>
-    <view class="f_label" bindtap='get4'>{{name.n4}}</view>
-    <view class="f_label" bindtap='get5'>{{name.n5}}</view>
-    <view class="f_label" bindtap='get6'>{{name.n6}}</view>
-    <view class="f_label" bindtap='get7'>{{name.n7}}</view>
-    <view class="f_label" bindtap='get8'>{{name.n8}}</view>
-    <view class="f_label" bindtap='get9'>{{name.n9}}</view>
-    <view class="f_label" bindtap='get10'>{{name.n10}}</view>
- </view>
+<view class="food_label_a">
+<view class="f_label" wx:for="{{label1}}"  id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view>
 </view> </swiper-item>
 
  <swiper-item>
- <view class="food_label_b">
-  <view wx:for="{{label2}}" wx:for-item="name" wx:for-index="id"  >
-    <view class="f_label" bindtap='get11'>{{name.n11}}</view>
-    <view class="f_label" bindtap='get12'>{{name.n12}}</view>
-    <view class="f_label" bindtap='get13'>{{name.n13}}</view>
-    <view class="f_label" bindtap='get14'>{{name.n14}}</view>
-    <view class="f_label" bindtap='get15'>{{name.n15}}</view>
-    <view class="f_label" bindtap='get16'>{{name.n16}}</view>
-    <view class="f_label" bindtap='get17'>{{name.n17}}</view>
-    <view class="f_label" bindtap='get18'>{{name.n18}}</view>
-    <view class="f_label" bindtap='get19'>{{name.n19}}</view>
-    <view class="f_label" bindtap='get20'>{{name.n20}}</view>
- </view>
+<view class="food_label_a">
+<view class="f_label" wx:for="{{label2}}" >{{item}} </view>
 </view> </swiper-item>
 
  <swiper-item>
- <view class="food_label_c">
-  <view wx:for="{{label3}}" wx:for-item="name" wx:for-index="id" >
-    <view class="f_label" bindtap='get21'>{{name.n21}}</view>
-    <view class="f_label" bindtap='get22'>{{name.n22}}</view>
-    <view class="f_label" bindtap='get23'>{{name.n23}}</view>
-    <view class="f_label" bindtap='get24'>{{name.n24}}</view>
-    <view class="f_label" bindtap='get25'>{{name.n25}}</view>
-    <view class="f_label" bindtap='get26'>{{name.n26}}</view>
-    <view class="f_label" bindtap='get27'>{{name.n27}}</view>
-    <view class="f_label" bindtap='get28'>{{name.n28}}</view>
-    <view class="f_label" bindtap='get29'>{{name.n29}}</view>
-    <view class="f_label" bindtap='get30'>{{name.n30}}</view>
- </view>
+<view class="food_label_a">
+<view class="f_label" wx:for="{{label3}}" >{{item}} </view>
 </view> </swiper-item>
 
 </swiper>
-<view class='line'></view>
 
+<view class='line'></view>
 
    <view class="dislike">
       <view >反标签添加：</view>
       <view >厌恶、忌口等></view>
    </view>
 <view class='line'></view>
-
  
-
  <button bindtap="next3" type="primary" class='confirm'>方案创建</button>
 
 
