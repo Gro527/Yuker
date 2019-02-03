@@ -6,7 +6,7 @@ Page({
   data: {
     // motto: 'Hello World',
     userInfo: {},
-
+    hasUserInfo: false,
   },
   //事件处理函数
   clickme: function () {
@@ -39,8 +39,10 @@ Page({
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
-        })
+        });
+        
       }
+      this.sendInfo()
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
@@ -61,6 +63,6 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
 })
 

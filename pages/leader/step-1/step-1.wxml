@@ -1,15 +1,15 @@
 <!--pages/leader/step-1/step-1.wxml-->
 
 <view class='line'></view>
-<view class="name1">
-<view class='title' >方案名称:</view>
-<input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
+<view class="name1" >
+  <view class='title' >方案名称:</view>
+  <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
 </view>
 <view class='line'></view>
 
 <view class='location'>
-<text class='title_location' >当前定位：</text>
-<image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
+  <text class='title_location' >当前定位：</text>
+  <image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
 </view>
 <view class='location_choose'>
  <block wx:if="{{hasLocation === false}}">
@@ -21,6 +21,10 @@
 </view>   
 <view class='line'> </view>
 
+
+
+
+<!-- 选择出行范围 -->
 <view class="where_go">
 
   <text class='title_where' >出行范围：</text>
