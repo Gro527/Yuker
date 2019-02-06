@@ -1,34 +1,45 @@
-/* pages/index/plan1/plan1_1/plan1_1.wxss */
+.person{
+  /*background: rgb(235, 117, 117); /*便于看清布局*/
+  height: 300rpx;
+  display: flex;
+  flex-direction: row;
 
-
-/**index.wxss**/
-
-.swiper-tab{
-	width: 100%;
-	border-bottom: 2rpx solid #777777;
-	text-align: center;
-	line-height: 80rpx;}
-
-.swiper-tab-list{  
-  font-size: 30rpx;
-  display: inline-block;
-	width: 33.33%;
-	color: #777777;
+}
+.little{
+  width: 40%;
+  height: 300rpx;
+  margin-left: 20rpx;
+ /* background: rgb(143, 136, 136)     /*便于看清布局*/
+}
+.little_2{
+  width: 50%;
+  height: 300rpx;
+  margin-left: 20rpx;
+ /* background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 
-.on{ color: #da7c0c;       /*风格颜色改变*/
-	border-bottom: 5rpx solid #da7c0c;}
-
-.swiper-box{ 
- 
-  height: 100%; 
-  width: 100%; 
-  overflow: hidden; }
-
-.swiper-box view{
-	text-align: center;
+.head{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 80rpx 80rpx 10rpx;
+}
+.location_p{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left:50rpx;
+}
+.location{
+  margin-left:15rpx; 
+  
 }
 
+.final{
+  margin-left: 70rpx;
+  margin-right:70rpx;
+  margin-bottom: 30rpx;
+   margin-top: 30rpx;
+
+}
 .plan_item{
   margin: 20rpx;
   padding: 10rpx;

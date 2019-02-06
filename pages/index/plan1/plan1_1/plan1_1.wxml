@@ -1,2 +1,182 @@
-<!--pages/index/plan1/plan1_1/plan1_1.wxml-->
-<text>pages/index/plan1/plan1_1/plan1_1.wxml</text>
+<view class="swiper-tab">
+
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">方案一</view>
+
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">方案二</view>
+
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">方案三</view>
+
+</view>
+<!--此处添加小的组件方便查看方案标签-->
+ 
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+    <!-- 方案一 -->
+
+<swiper-item>
+
+<button bindtap='final' type="primary" plain="true">方案发布</button>
+      <!--step1-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item.png'></image>
+          <view class='info_item'>
+          <text>海底捞火锅\n\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+     <view class='line'></view>
+
+      <!--step2-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item.png'></image>
+          <view class='info_item'>
+          <text>万达影城\n\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+     <view class='line'></view>
+
+      <!--step3-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item.png'></image>
+          <view class='info_item'>
+          <text>木屋烧烤\n\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+       <view class='line'></view>
+       <text>备注：</text> 
+       <view class='line'></view>
+
+    <button type="primary" plain="true">方案发布</button>
+
+</swiper-item>
+
+    <!-- 方案二 -->
+
+<swiper-item>
+
+      <!--step1-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item2.png'></image>
+          <view class='info_item'>
+          <text>万达影城\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+       <view class='line'></view>
+
+      <!--step2-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item2.png'></image>
+          <view class='info_item'>
+          <text>桌游\n\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+      <view class='line'></view>
+
+      <!--step3-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item2.png'></image>
+          <view class='info_item'>
+          <text>木屋烧烤\n\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+       <view class='line'></view>
+       <text>备注：</text> 
+      <view class='line'></view>
+
+      <button type="primary" plain="true">方案发布</button>
+
+
+</swiper-item>
+
+    <!-- 方案三 -->
+
+<swiper-item>
+        <!--step1-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item3.png'></image>
+          <view class='info_item'>
+          <text>比格披萨\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+      <view class='line'></view>
+
+      <!--step2-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item3.png'></image>
+          <view class='info_item'>
+          <text>万达影城\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+      <view class='line'></view>
+
+      <!--step3-->
+      <view class='plan_item'>
+        <view class='plan_API'>
+        <image class='image_item' src='/images/item3.png'></image>
+          <view class='info_item'>
+          <text>木屋烧烤\n</text>
+          <text>地址</text>
+          </view>
+        </view>
+       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+      </view>
+      <button class="mini-btn" type="primary" size="mini">我要更换</button>
+
+      <view class='line'></view>
+      <text>备注：</text> 
+      <view class='line'></view>
+
+      <button type="primary" plain="true">方案发布</button>
+
+
+</swiper-item>
+
+</swiper>

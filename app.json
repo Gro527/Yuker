@@ -8,7 +8,8 @@
     "pages/leader/step-2/step-2",
     "pages/leader/step-3/step-3",
     "pages/leader/step-4/step-4",
-    "pages/index/plan1/plan1_1/plan1_1"
+    "pages/index/plan1/plan1_1/plan1_1",
+    "pages/index/plan1/plan1_final/plan1_final"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,21 +18,21 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor":"#fafbf9",
+    "backgroundColor": "#fafbf9",
     "selectedColor": "#696969",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/create_Yuker/create_Yuker",
         "text": "创建方案",
         "iconPath": "/images/create-0.png",
         "selectedIconPath": "/images/create-1.png"
-      },{
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "我的方案",
         "iconPath": "/images/project-0.png",
         "selectedIconPath": "/images/project-1.png"
-      }]
-
-
-
+      }
+    ]
   }
 }
