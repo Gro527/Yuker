@@ -15,7 +15,7 @@
     <!-- 方案一 -->
 
 <swiper-item>
-
+<scroll-view scroll-y='true'>
 <button bindtap='final' type="primary" plain="true">方案发布</button>
       <!--step1-->
       <view class='plan_item'>
@@ -65,13 +65,13 @@
        <view class='line'></view>
 
     <button type="primary" plain="true">方案发布</button>
-
+</scroll-view>
 </swiper-item>
 
     <!-- 方案二 -->
 
 <swiper-item>
-
+<scroll-view scroll-y='true'>
       <!--step1-->
       <view class='plan_item'>
         <view class='plan_API'>
@@ -121,12 +121,13 @@
 
       <button type="primary" plain="true">方案发布</button>
 
-
+</scroll-view>
 </swiper-item>
 
     <!-- 方案三 -->
 
 <swiper-item>
+<scroll-view scroll-y='true'>
         <!--step1-->
       <view class='plan_item'>
         <view class='plan_API'>
@@ -172,11 +173,11 @@
 
       <view class='line'></view>
       <text>备注：</text> 
-      <view class='line'></view>
+      
 
       <button type="primary" plain="true">方案发布</button>
-
-
+      <view class='line'></view>
+</scroll-view>
 </swiper-item>
 
 </swiper>
