@@ -1,8 +1,17 @@
 <!--pages/index/step-2/step-2.wxml-->
 <view class="prefer_add">偏好添加</view><view class='line'></view>
+
+  <!--环节一-->
+
 <view class="link1">环节一:</view>
 
-<view class="title"><image class="delicious" src="/images/美食.png"></image>
+<view class="title">
+  <view class="Delicious">
+    <image class="delicious" src="/images/chicken.png"></image>
+    <view>美食</view>
+  </view>
+  
+
 <view class="title_sub" bindtap="tap">{{title}}</view></view>
 
 <swiper class="food_label" indicator-dots="true" duration="1000" hidden="{{hiddenname_food}}">
@@ -24,7 +33,6 @@
 </view> </swiper-item>
 
 </swiper>
-
 <view class='line'></view>
 
    <view class="dislike">

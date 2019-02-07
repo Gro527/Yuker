@@ -14,15 +14,26 @@
 
 
 .delicious{
-  width:310rpx;
+  width:75rpx;
   height:75rpx;
   margin-left: 70rpx;
-  border: solid;
-  border-color:  antiquewhite;
+
  
-  
-  
   }
+
+  .Delicious{
+    display: flex;
+     flex-wrap:unwrap;
+     flex-direction:row;
+     justify-content:space-between;
+     width:310rpx;
+    height:75rpx;
+    margin-left: 70rpx;
+    border: solid;
+    border-color:  antiquewhite;
+    
+ }
+  
 
  .title_sub{
    width:310rpx;
