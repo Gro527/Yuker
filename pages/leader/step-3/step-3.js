@@ -17,13 +17,24 @@ Page({
     label3: ["湘菜", "下午茶", "素菜", "云南菜", "新疆菜", "江浙菜", "人气餐厅", "东北菜", "俄罗斯菜","粉面馆"]
      ,
 
-    clicktime: 0,
+    clicktime22: 0,
     title: "默认 ∨",
     dire: "∨",
     hiddenname_food: true,
   
     color: 'floralwhite',
+
+
+    item: [
+      { id: 1, name: 'step-1', addr: '/images/num.png' },
+      { id: 2, name: 'step-2', addr: '/images/line.png' },
+      { id: 3, name: 'step-3', addr: '/images/num.png' },
+      { id: 4, name: 'step-3', addr: '/images/line.png' },
+      { id: 5, name: 'step-3', addr: '/images/num_k.png' },
+    ],
   
+
+
   },
 
   get: function (e) {
@@ -43,23 +54,23 @@ Page({
     if (this.data.clickstate) {
       this.setData({
         //color: this.data.color = 'white',
-        clicktime: this.data.clicktime += 1
+        clicktime22: this.data.clicktime22 += 1
       })
     }
     else {
       this.setData({
         //color: this.data.color = 'floralwhite',
-        clicktime: this.data.clicktime -= 1
+        clicktime22: this.data.clicktime22 -= 1
       })
     }
-    if (this.data.clicktime == 0) { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
-    if (this.data.clicktime > 0) { this.setData({ title: this.data.title = "已选: " + this.data.clicktime + " 项 " + this.data.dire }) }
+    if (this.data.clicktime22 == 0) { this.setData({ title: this.data.title = "默认 " + this.data.dire }) }
+    if (this.data.clicktime22 > 0) { this.setData({ title: this.data.title = "已选: " + this.data.clicktime22 + " 项 " + this.data.dire }) }
 
   },
 
   next3: function (e) {
     wx.navigateTo({
-      url: '/pages/leader/step-4/step-4?text=' + this.data.text + '&addr=' + this.data.address + '&d1=' + this.data.d1 + '&d2=' + this.data.d2 + '&d3=' + this.data.d3
+      url: '/pages/leader/step-4/step-4?text=' + this.data.text + '&addr=' + this.data.address + '&d1=' + this.data.d1 + '&d2=' + this.data.d2 + '&d3=' + this.data.d3+'&ct='+this.data.ct
     })
   },
 
@@ -82,6 +93,7 @@ Page({
       d1: options.d1,
       d2: options.d2,
       d3: options.d3,
+      ct: options.ct
 
     })
 

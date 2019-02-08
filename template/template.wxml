@@ -1,0 +1,25 @@
+<!--template/template.wxml-->
+<template name="create_head">
+  <view class='row' >
+    <view wx:for='{{item}}'>
+      <image bindtap='{{item.id}}' class='ima' src='{{item.addr}}'></image>
+    </view>
+  </view>
+<!--view class='row' >
+  <view class='group' wx:for='{{item}}' >
+      <radio-group bindtap="change">
+         <view class='label'style="flex-direction:column;">
+            <radio id="item.id"  checked="{{item.checked}}"></radio>
+            <!--text>{{item.id}}</text-->
+         <!--/view>
+      </radio-group>
+  </view>
+ </view-->
+</template>
+
+<template name="step1">
+  <view>
+        <image class='ima' src='/images/step.png'></image>
+        <!--text>{{stepitems.text}}</text-->
+  </view>
+</template>

@@ -1,0 +1,23 @@
+/* template/template.wxss */
+.label-1, .label-2{
+  margin: 30rpx 0;
+}
+.label-3-text{
+  color: rgb(3, 3, 3);
+  font-size: 28rpx;
+}
+.checkbox-3{
+  display: block;
+  margin: 30rpx 0;
+}
+.ima{
+height: 80rpx;
+width: 80rpx;
+margin:10rpx; 
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin-left:120rpx; 
+}

@@ -23,9 +23,29 @@ Page({
    type5: true,
    type6: true,
 
-
+    item: [
+      { id: 1, name: 'step-1', addr: '/images/num.png' },
+      { id: 2, name: 'step-2', addr: '/images/line.png' },
+      { id: 3, name: 'step-3', addr: '/images/num_k.png' },
+      { id: 4, name: 'step-3', addr: '/images/line.png' },
+      { id: 5, name: 'step-3', addr: '/images/num_k.png' },
+    ],
 
   },
+/*
+1:function(e){
+  wx.navigateBack({
+    delta:1
+  })
+},
+
+3: function (e) {
+    wx.navigateTo({
+      url: '/pages/leader/step-3/step-3?text=' + this.data.text + '&addr=' + this.data.addr + '&d1=' + this.data.link1 + '&d2=' + this.data.link2 + '&d3=' + this.data.link3
+    })
+  },
+*/
+
   showa:function(e){
    this.setData({type1:!this.data.type1})
   },
@@ -157,7 +177,7 @@ Page({
 
   next: function (e) {
     wx.navigateTo({
-      url: '/pages/leader/step-3/step-3?text=' + this.data.text + '&addr=' + this.data.addr + '&d1=' + this.data.link1 + '&d2=' + this.data.link2 + '&d3=' + this.data.link3
+      url: '/pages/leader/step-3/step-3?text=' + this.data.text + '&addr=' + this.data.addr + '&d1=' + this.data.link1 + '&d2=' + this.data.link2 + '&d3=' + this.data.link3+'&ct='+this.data.clicktime
     })
   },
 

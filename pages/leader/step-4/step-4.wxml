@@ -1,36 +1,59 @@
 <!--pages/leader/step-4/step-4.wxml-->
+<import src="/template/template.wxml"/>
+<template is="create_head" data='{{item}}' />
+
 <view class="body">
 
 <view class="name">
-<text class='title' >方案名称：</text>
-<text class='textarea'>{{text}}</text>
-
-
+  <text class='title' >方案名称：</text>
+  <text class='textarea'>{{text}}</text>
 </view>     
+
 <view class='line'> </view>
 
 
 <view class="name">
-<text class='title' >出行范围： 海淀区</text>
+ <text class='title' >出行范围： 海淀区</text>
+</view>
 
+<view class='line'></view>
+
+<view class="name">
+  <text class='title' >方案环节：{{ct}}\n</text>
+  
+  <view wx:if='{{ct==1}}' class='step'>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d1}}  </text>
+  </view>
+ 
+ <view wx:if='{{ct==2}}' class='step'>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d1}}  </text>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d2}}  </text>
+  </view>
+ 
+  <view wx:if='{{ct==3}}' class='step'>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d1}}  </text>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d2}}  </text>
+    <image class='image' src='/images/step.png'> </image>
+    <text class='link'>{{d3}}</text>
+  </view>
+ 
+  <!--button class='link' plain='true' size='mini'>{{d1}}</button>
+  <image src='/images/arrows.png' class='ar'></image>
+  <button class='link' plain='true' size='mini'>{{d2}}</button>
+  <image src='/images/arrows.png' class='ar'></image>
+  <button class='link' plain='true' size='mini'>{{d3}}</button-->
 </view>
 <view class='line'></view>
 
 <view class="name">
-<text class='title' >方案环节：\n</text>
-<button class='link' plain='true' size='mini'>{{d1}}</button>
-<image src='/images/arrows.png' class='ar'></image>
-<button class='link' plain='true' size='mini'>{{d2}}</button>
-<image src='/images/arrows.png' class='ar'></image>
-<button class='link' plain='true' size='mini'>{{d3}}</button>
-</view>
-<view class='line'></view>
-
-<view class="name">
-<text class='title' >方案风格:\n</text>
-<button class='link2' plain='true' size='mini'>温馨</button>
-<button class='link2' plain='true' size='mini'>同学</button>
-
+  <text class='title' >方案风格:\n</text>
+  <button class='link2' plain='true' size='mini'>温馨</button>
+  <button class='link2' plain='true' size='mini'>同学</button>
 </view>
 <view class='line'></view>
 

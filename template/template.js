@@ -1,47 +1,18 @@
-// pages/leader/step-4/step-4.js
+// template/template.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    item: [
-      { id: 1, name: 'step-1', addr: '/images/num.png' },
-      { id: 2, name: 'step-2', addr: '/images/line.png' },
-      { id: 3, name: 'step-3', addr: '/images/num.png' },
-      { id: 4, name: 'step-3', addr: '/images/line.png' },
-      { id: 5, name: 'step-3', addr: '/images/num.png' },
-    ],
 
-    stepitems:[
-      { id: 1,  addr: '/images/step.png' },
-      { id: 2,  addr: '/images/step.png' },
-      { id: 3,  addr: '/images/step.png' },
-    ]
   },
-
-
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      text: options.text,
-      address: options.addr,
-      d1: options.d1,
-      d2: options.d2,
-      d3: options.d3,
-      ct: options.ct,
-    })
-  },
 
-
-  myplan: function () {
-    wx.redirectTo({
-      url: '/pages/index/index?text=' + this.data.text,
-    })
   },
 
   /**

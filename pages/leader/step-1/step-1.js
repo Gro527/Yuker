@@ -17,10 +17,32 @@ Page({
     info_food: "默认",
     hiddenname: true,
     color1: 'floralwhite',
-
+    
+    item: [
+      { id: 1, name: 'step-1', addr:'/images/num_k.png' },
+      { id: 2, name: 'step-2', addr: '/images/line.png' },
+      { id: 3, name: 'step-3', addr: '/images/num_k.png' },
+      { id: 4, name: 'step-3', addr:'/images/line.png' },
+      { id: 5, name: 'step-3', addr: '/images/num_k.png' },
+    ],
   
-   
   },
+
+
+5:function(e){
+  wx.showToast({
+    icon: 'none',
+    title: '请完成本页填写！'
+  });
+},
+
+3: function (e) {
+    wx.showToast({
+      icon: 'none',
+      title: '请完成本页填写！'
+    });
+},
+
   onLoad:function(){
 
   },
@@ -100,10 +122,6 @@ Page({
 
   },
 
-  // next: function () {
-  //   wx.navigateTo({
-  //     url: '/pages//step-2/step-2?d1='+this.data.link1+'&d2='+this.data.link2+'&d3='+this.data.link3+'&click='+this.data.clicktime
-  //   })
 
   /**
    * 生命周期函数--监听页面加载

@@ -9,7 +9,8 @@
     "pages/leader/step-3/step-3",
     "pages/leader/step-4/step-4",
     "pages/index/plan1/plan1_1/plan1_1",
-    "pages/index/plan1/plan1_final/plan1_final"
+    "pages/index/plan1/plan1_final/plan1_final",
+    "template/template"
   ],
   "window": {
     "backgroundTextStyle": "light",

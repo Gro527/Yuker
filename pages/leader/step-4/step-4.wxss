@@ -1,4 +1,5 @@
 /* pages/leader/step-4/step-4.wxss */
+@import"/template/template.wxss";
 .body{
   width: 100%;
   display: flex;
@@ -27,8 +28,7 @@
 .link{
   font-size: 40rpx;
   margin-left: 20rpx;
-  margin-top: 30rpx;
-
+  
 }
 .link2{
   font-size: 40rpx;
@@ -55,15 +55,9 @@
   background: #8b8585;
 }
 .image{
-   width: 50rpx;
-   height: 50rpx;
-}
-.ar{
-  width: 60rpx;
-  height: 40rpx;
-  margin-bottom: 25rpx;
-  margin-left:5rpx;
-  margin-right: 5rpx; 
+   margin-top: 20rpx;
+   width: 40rpx;
+   height:40rpx;
 }
 .textarea{
   padding-left: 20rpx;
