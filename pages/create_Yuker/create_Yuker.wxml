@@ -1,4 +1,5 @@
 <!--pages/create_Yuker/create_Yuker.wxml-->
+<import src="/template/template.wxml"/>
 <view class="content">
  <view class="bg">
   <view class="logo">
@@ -10,4 +11,5 @@
 
   <view class="container">
     <button class="createbutton" bindtap="creator" type="default" plain="Boolean" > + 创建Yuker方案 </button>
+
   </view>

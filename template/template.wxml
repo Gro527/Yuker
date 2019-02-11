@@ -23,3 +23,33 @@
         <!--text>{{stepitems.text}}</text-->
   </view>
 </template>
+
+<template name="label_choose">
+<view class="title">
+  <view class="title_sub">
+    <image class="picture" src="{{png}}"></image>
+    <view>美食</view>
+  </view>
+  
+<view class="title_right" bindtap="tap">默认 ∨</view></view>
+
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname}}">
+
+ <swiper-item>
+<view class="label_a">
+<view class="label_aa" wx:for="{{label1}}"  id="{{index}}" bindtap='switch' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view>
+</view> </swiper-item>
+
+ <swiper-item>
+<view class="label_a">
+<view class="label_aa" wx:for="{{label2}}" >{{item}} </view>
+</view> </swiper-item>
+
+ <swiper-item>
+<view class="label_a">
+<view class="label_aa" wx:for="{{label3}}" >{{item}} </view>
+</view> </swiper-item>
+</swiper>
+<view class='line'></view>
+</template>
