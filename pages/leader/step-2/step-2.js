@@ -1,9 +1,12 @@
 // pages/leader/step-2/step-2.js
+var clicktime=0;
+var link_choose = new Array();
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
     hiddenName1: true,
     hiddenName2: true,
@@ -11,10 +14,9 @@ Page({
     hiddenName4: true,
     hiddenName5: true,
     hiddenName6: true,
-    clicktime: 0,
-    link1: "",
-    link2: "",
-    link3: "",
+    
+    link:["美食","娱乐","运动","购物","酒店","丽人"],
+   
 
    type1:true,
    type2: true,
@@ -32,147 +34,26 @@ Page({
     ],
 
   },
-/*
-1:function(e){
-  wx.navigateBack({
-    delta:1
+
+show:function(e){
+  var linkid = e.target.id;
+  
+  var link_up = "link_choose[" + clicktime + "]";
+  this.setData({
+    [link_up]: this.data.link[linkid],
   })
+  clicktime++;
+  if (clicktime > 2) { clicktime = 2; }
+  console.log(this.data.link_choose);
 },
 
-3: function (e) {
-    wx.navigateTo({
-      url: '/pages/leader/step-3/step-3?text=' + this.data.text + '&addr=' + this.data.addr + '&d1=' + this.data.link1 + '&d2=' + this.data.link2 + '&d3=' + this.data.link3
-    })
-  },
-*/
+remove:function(e){
+  var removeid = e.target.id;
+  link_choose.splice(0,1);//为啥不能删除
+  console.log(this.data.link_choose);
 
-  showa:function(e){
-   this.setData({type1:!this.data.type1})
-  },
-  showb: function (e) {
-    this.setData({ type2: !this.data.type2 })
-  },
-  showc: function (e) {
-    this.setData({ type3: !this.data.type3 })
-  },
-  showd: function (e) {
-    this.setData({ type4: !this.data.type4 })
-  },
-  showe: function (e) {
-    this.setData({ type5: !this.data.type5 })
-  },
-  showf: function (e) {
-    this.setData({ type6: !this.data.type6 })
-  },
+},
 
-
-
-
-  show1: function (e) {
-    this.setData({ clicktime: this.data.clicktime += 1 })
-
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "美食" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "美食" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "美食" })
-    }
-  },
-
-  show2: function (e) {
-    this.setData({
-
-      clicktime: this.data.clicktime += 1
-    })
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "娱乐" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "娱乐" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "娱乐" })
-    }
-  },
-
-  show3: function (e) {
-    this.setData({
-
-      clicktime: this.data.clicktime += 1
-    })
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "运动" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "运动" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "运动" })
-    }
-  },
-
-  show4: function (e) {
-    this.setData({
-
-      clicktime: this.data.clicktime += 1
-    })
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "购物" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "购物" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "购物" })
-    }
-  },
-
-  show5: function (e) {
-    this.setData({
-
-      clicktime: this.data.clicktime += 1
-    })
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "酒店" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "酒店" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "酒店" })
-    }
-  },
-
-  show6: function (e) {
-    this.setData({
-
-      clicktime: this.data.clicktime += 1
-    })
-    if (this.data.clicktime == 1) {
-      this.setData({ link1: this.data.link1 = "丽人" })
-    }
-
-    if (this.data.clicktime == 2) {
-      this.setData({ link2: this.data.link2 = "丽人" })
-    }
-
-    if (this.data.clicktime == 3) {
-      this.setData({ link3: this.data.link3 = "丽人" })
-    }
-  },
 
 
   next: function (e) {

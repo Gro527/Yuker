@@ -9,38 +9,22 @@
 <text>*最多可选三项</text></view>
 
 <view class="index-hd">
-<button class="mini-button" bindtap="show1" type="primary"  size="mini" plain="true"> 美食 </button>
-<button class="mini-button" bindtap="show2" type="primary"  size="mini" plain="true"> 娱乐 </button>
-<button class="mini-button" bindtap="show3" type="primary"  size="mini" plain="true"> 运动 </button>
-<button class="mini-button" bindtap="show4" type="primary"  size="mini" plain="true"> 购物 </button>
-<button class="mini-button" bindtap="show5" type="primary"  size="mini" plain="true"> 酒店 </button>
-<button class="mini-button" bindtap="show6" type="primary"  size="mini" plain="true"> 丽人 </button>
+  <button class="mini-button" wx:for="{{link}}"  id="{{index}}" bindtap='show' type="primary"  size="mini" plain="true">{{item}}
+  </button>
 
-</view><view class='line'></view>
+</view>
+<view class='line'></view>
 
 <view class="index-dd">
-<text>方案环节</text>
-<text>*选中删除</text>
+  <text>方案环节</text>
+  <text>*选中删除</text>
 </view>
 
-
 <view class="index-td">
-  <view wx:if="{{clicktime>=1}}">
-      <button class="mini-button1"   type="primary" size="mini" plain="true"> {{link1}}</button>
-  </view>
-  <view wx:if="{{clicktime>=2}}">
-      <button class="mini-button1"   type="primary" size="mini" plain="true"> {{link2}}</button>
-  </view>
- <view wx:if="{{clicktime>=3}}">
-      <button class="mini-button1"    type="primary" size="mini" plain="true"> {{link3}}</button>
-  </view>
-  </view>
-  <view class='line'></view>
+  <button class="mini-button1"  wx:for="{{link_choose}}" id="{{index}}" bindtap="remove" type="primary"  size="mini" plain="true"> {{item}}</button>
+ </view>
+<view class='line'></view>
  
-
-
-
-
 
 <view class="style_choose">方案风格选取：</view>
 <view class="style">
