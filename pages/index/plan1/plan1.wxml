@@ -20,7 +20,7 @@
 <view class='little'>
 <image class='head' src='/images/person_2.png'></image>
 <image class='location_p' src='/images/location.png'></image>
-<text class='location'>beijing</text>
+<text class='location'>BeiJing</text>
 </view>
 <view class='little_2'>
 <!--text>饮食:\n\n</text>
@@ -33,17 +33,18 @@
 <view class='line'></view>
 
 <view class='person' style='flex-direction:row;'>  <!--NO.3-->
-<view class='little'>
-<text>address:</text>
+<view class='little_3'>
+<image class='location_p1' src='/images/address.png'></image>
+<text>\nAddress:</text>
 </view>
 <view class='little_2'>
-<text>step-1饮食:\n</text>
-<text>step-2娱乐:\n</text>
-<text>step-3饮食:</text>
+<text>step-1 饮食:\n</text>
+<text>step-2 娱乐:\n</text>
+<text>step-3 饮食:\n</text>
 </view>    
 </view>
 
-<button bindtap='confirm' type="primary" class='final'>生成方案</button>
+<button bindtap='confirm' type="default" class='final'>生成方案</button>
 
 
 </view>

@@ -1,7 +1,7 @@
 /* pages/index/plan1/plan1.wxss */
 .person{
   /*background: rgb(235, 117, 117); /*便于看清布局*/
-  height: 500rpx;
+  height: 400rpx;
   display: flex;
   flex-direction: row;
 
@@ -9,37 +9,54 @@
 .little{
   width: 40%;
   height: 300rpx;
-  margin-top:100rpx; 
+  margin-top:70rpx; 
   margin-left: 20rpx;
  /* background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 .little_2{
   width: 50%;
   height: 300rpx;
-  margin-top:100rpx; 
+  margin-top:70rpx; 
   margin-left: 20rpx;
+  font-weight: bold;
   /*background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 
+.little_3{
+  width:30%;
+  margin-top: 70rpx;
+  margin-left: 50rpx;
+  font-weight: bold;
+}
+
 .head{
-  width: 80rpx;
-  height: 80rpx;
-  margin: 80rpx 80rpx 10rpx;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 40rpx 70rpx 10rpx;
 }
 .location_p{
-  width: 40rpx;
+  width: 50rpx;
   height: 40rpx;
   margin-left:50rpx;
+  margin-top: 20rpx;
+}
+
+.location_p1{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 45rpx;
+  margin-top: 20rpx;
 }
 .location{
   margin-left:15rpx; 
-  
+  margin-top: 20rpx;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .final{
   margin-left: 70rpx;
   margin-right:70rpx;
   margin-bottom: 30rpx;
-   margin-top: 30rpx;
 
 }
