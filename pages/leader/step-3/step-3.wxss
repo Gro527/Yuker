@@ -14,7 +14,7 @@
 
 
 
-.delicious{
+.picture{
   width:75rpx;
   height:75rpx;
   margin-left: 70rpx;
@@ -22,7 +22,7 @@
  
   }
 
-  .Delicious{
+  .title{
     display: flex;
      flex-wrap:unwrap;
      flex-direction:row;
@@ -49,7 +49,7 @@
   align-items: center;
  }
 
- .title{
+ .overall{
     display: flex;
      flex-wrap:unwrap;
      flex-direction:row;
@@ -60,7 +60,7 @@
  }
   
 
-  .food_label{
+  .label{
      background:  floralwhite;
      width:620rpx;
      height:550rpx;
@@ -71,7 +71,7 @@
 
     
 
- .food_label_a{
+ .label_sub{
      width:620rpx;
      height:550rpx;
      display: flex;
@@ -80,7 +80,7 @@
      justify-content:space-between;
      align-items: baseline;}
 
- .f_label{
+ .labelcontent{
 
 margin-right:70rpx;
 margin-left: 70rpx;

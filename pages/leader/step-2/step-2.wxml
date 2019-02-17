@@ -28,14 +28,9 @@
 
 <view class="style_choose">方案风格选取：</view>
 <view class="style">
-<button class="mini-button" bindtap="showa"  type="primary" size="mini"   plain="{{type1}}"> 家庭 </button>
-<button class="mini-button" bindtap="showb"  type="primary"   size="mini" plain="{{type2}}"> 同学 </button>
-<button class="mini-button" bindtap="showc"  type="primary"   size="mini" plain="{{type3}}"> 情侣 </button>
-<button class="mini-button" bindtap="showd"  type="primary"  size="mini"  plain="{{type4}}"> 同事 </button>
-<button class="mini-button" bindtap="showe"  type="primary"  size="mini"  plain="{{type5}}"> 商务 </button>
-<button class="mini-button" bindtap="showf"  type="primary"  size="mini"  plain="{{type6}}"> 温馨 </button>
-</view>
+<button class="mini-button"  wx:for="{{style}}" id="{{index}}" bindtap="display" type="primary"  size="mini" plain="{{item.state?false:true}}"> {{item.name}}</button>
 <view class='line'></view>
- 
+ </view>
+
 <view class="next-step" >
 <button  bindtap="next" type="primary" > 下一步 </button></view>

@@ -7,38 +7,115 @@
 <view class="prefer_add">偏好添加</view><view class='line'></view>
 
   <!--环节一-->
-
+<block wx:if="{{link_number>=1}}">
 <view class="link1">环节一:</view>
 
-<view class="title">
-  <view class="Delicious">
-    <image class="delicious" src="/images/chicken.png"></image>
-    <view>美食</view>
+
+<view class="overall">
+  <view class="title">
+    <image class="picture" src="/images/chicken.png"></image>
+    <view>{{link_choose[0]}}</view>
   </view>
   
 
-<view class="title_sub" bindtap="tap">{{title}}</view></view>
+<view class="title_sub" bindtap="tap1">{{title1}}</view></view>
 
-<swiper class="food_label" indicator-dots="true" duration="1000" hidden="{{hiddenname_food}}">
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname1}}">
 
  <swiper-item>
-<view class="food_label_a">
-<view class="f_label" wx:for="{{label1}}"  id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_1a}}"  id="{{index}}" bindtap='get1' style="background-color:{{item.state?'white':'floralwhite'}}">
 {{item.name}}</view>
 </view> </swiper-item>
 
  <swiper-item>
-<view class="food_label_a">
-<view class="f_label" wx:for="{{label2}}" >{{item}} </view>
-</view> </swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_1b}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view> </view></swiper-item>
 
  <swiper-item>
-<view class="food_label_a">
-<view class="f_label" wx:for="{{label3}}" >{{item}} </view>
-</view> </swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_1c}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view></view></swiper-item>
 
 </swiper>
 <view class='line'></view>
+</block>
+
+
+ <!--环节二-->
+<block wx:if="{{link_number>=2}}">
+<view class="link1">环节二:</view>
+
+
+<view class="overall">
+  <view class="title">
+    <image class="picture" src="/images/chicken.png"></image>
+    <view>{{link_choose[1]}}</view>
+  </view>
+  
+
+<view class="title_sub" bindtap="tap2">{{title2}}</view></view>
+
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname2}}">
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_2a}}"  id="{{index}}" bindtap='get2' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view>
+</view> </swiper-item>
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_2b}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view></view></swiper-item>
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_2c}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view> </view></swiper-item>
+
+</swiper>
+<view class='line'></view>
+</block>
+
+
+ <!--环节三-->
+<block wx:if="{{link_number >= 3}}">
+<view class="link1">环节三:</view>
+
+
+<view class="overall">
+  <view class="title">
+    <image class="picture" src="/images/chicken.png"></image>
+    <view>{{link_choose[2]}}</view>
+  </view>
+  
+
+<view class="title_sub" bindtap="tap3">{{title3}}</view></view>
+
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname3}}">
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_3a}}"  id="{{index}}" bindtap='get3' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view>
+</view> </swiper-item>
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_3b}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view></view> </swiper-item>
+
+ <swiper-item>
+<view class="label_sub">
+<view class="labelcontent" wx:for="{{label_3c}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.name}}</view> </view></swiper-item>
+
+</swiper>
+<view class='line'></view>
+</block>
+
 
    <view class="dislike">
       <view >反标签添加：</view>

@@ -1,29 +1,14 @@
 // pages/leader/step-2/step-2.js
-var clicktime=0;
-var link_choose = new Array();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  
   data: {
-    hiddenName1: true,
-    hiddenName2: true,
-    hiddenName3: true,
-    hiddenName4: true,
-    hiddenName5: true,
-    hiddenName6: true,
-    
+    clicktime :0,
     link:["美食","娱乐","运动","购物","酒店","丽人"],
-   
+    style: [{ name: "家庭", state: false }, { name: "同学", state: false }, { name: "情侣", state: false }, { name: "同事", state: false }, { name: "商务", state: false }, { name: "温馨", state: false }],
 
-   type1:true,
-   type2: true,
-   type3: true,
-   type4: true,
-   type5: true,
-   type6: true,
+    link_choose:[],
+    style_choose:[ ],
+   
 
     item: [
       { id: 1, name: 'step-1', addr: '/images/num.png' },
@@ -38,28 +23,61 @@ Page({
 show:function(e){
   var linkid = e.target.id;
   
-  var link_up = "link_choose[" + clicktime + "]";
+  //var link_up = "link_choose[" + this.data.clicktime + "]";
+  if(this.data.clicktime<3){
+  this.data.link_choose.push(this.data.link[linkid])
+
   this.setData({
-    [link_up]: this.data.link[linkid],
+    link_choose:this.data.link_choose
   })
-  clicktime++;
-  if (clicktime > 2) { clicktime = 2; }
-  console.log(this.data.link_choose);
+  
+  }
+
+  this.data.clicktime++;
+  if (this.data.clicktime > 2) { this.data.clicktime = 3; }
+  console.log(this.data.link_choose+this.data.clicktime);
+
 },
 
 remove:function(e){
   var removeid = e.target.id;
-  link_choose.splice(0,1);//为啥不能删除
+  this.data.link_choose.splice(removeid,1);
+  this.setData({
+    link_choose: this.data.link_choose
+  })
+
+  this.data.clicktime--;
+  if (this.data.clicktime < 0) { this.data.clicktime = 0; }
   console.log(this.data.link_choose);
 
 },
 
+display:function(e){
+  var styleId = e.target.id;
+  var style_up = "style[" + styleId + "].state";
+  
+
+  this.setData({
+    [style_up]: !this.data.style[styleId].state,
+  })
+  this.setData({
+    clickstate: this.data.style[styleId].state,
+    style_choose:[]//清空
+  })
+for(let i=0;i<this.data.style.length;i++){
+  if (this.data.style[i].state){this.data.style_choose.push(this.data.style[i].name)} //每次点击事件重新获取风格标签
+
+}
+
+  console.log(this.data.style_choose);
+
+},
 
 
   next: function (e) {
     wx.navigateTo({
-      url: '/pages/leader/step-3/step-3?text=' + this.data.text + '&addr=' + this.data.addr + '&d1=' + this.data.link1 + '&d2=' + this.data.link2 + '&d3=' + this.data.link3+'&ct='+this.data.clicktime
-    })
+      url: '/pages/leader/step-3/step-3?link_choose='+JSON.stringify(this.data.link_choose),
+      })
   },
 
 
