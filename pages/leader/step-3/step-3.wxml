@@ -123,6 +123,6 @@
    </view>
 <view class='line'></view>
  
- <button bindtap="next3" type="primary" class='confirm'>方案创建</button>
+ <button bindtap="next3" type="default" class='confirm'>方案创建</button>
 
 

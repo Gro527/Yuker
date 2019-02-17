@@ -43,11 +43,11 @@ Page({
     title3: "默认 ∨",
 
     item: [
-      { id: 1, name: 'step-1', addr: '/images/num.png' },
+      { id: 1, name: 'step-1', addr: '/images/c-1.png' },
       { id: 2, name: 'step-2', addr: '/images/line.png' },
-      { id: 3, name: 'step-3', addr: '/images/num.png' },
+      { id: 3, name: 'step-3', addr: '/images/c-1.png' },
       { id: 4, name: 'step-3', addr: '/images/line.png' },
-      { id: 5, name: 'step-3', addr: '/images/num_k.png' },
+      { id: 5, name: 'step-3', addr: '/images/c-0.png' },
     ],
   
 

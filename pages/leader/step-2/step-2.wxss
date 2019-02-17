@@ -48,9 +48,10 @@ justify-content: space-around;
 margin-left:40rpx;
 margin-right: 40rpx;
 margin-top: 40rpx; 
+margin-bottom: 50rpx;
 text-align: center;
 border: solid;
-  border-color: darkseagreen;
+  border-color: rgba(115, 121, 115, 0.726);
 
 }
 
@@ -61,8 +62,9 @@ justify-content: space-around;
 margin-right:40rpx;
 margin-left: 40rpx;
 margin-top: 40rpx;
+margin-bottom: 50rpx;
 border: solid;
-  border-color: darkseagreen;
+  border-color: rgba(115, 121, 115, 0.726);
   height: 130rpx;
 }
 
@@ -74,6 +76,7 @@ justify-content:space-between;
 margin-right:70rpx;
 margin-left: 40rpx;
 margin-top: 50rpx;
+margin-bottom: 50rpx;
    font-size: large;
   font-style:  inherit;
  
@@ -93,11 +96,9 @@ margin-top: 50rpx;
 }
 
 .line{
-  height: 2.5rpx;
   background: darkgrey;
-  margin-top: 50rpx;
-   margin-left: 40rpx;
-  margin-right:40rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }
 
 .style {
@@ -110,13 +111,14 @@ margin-right: 40rpx;
 margin-top: 40rpx; 
 text-align: center;
 border: solid;
-  border-color: darkseagreen;}
+  border-color:  rgba(115, 121, 115, 0.726);}
 
   
 .next-step{
 
-  margin-left: 30rpx;
-  margin-right:30rpx;
-  margin-bottom: 30rpx;
+  margin-left: 70rpx;
+  margin-right:70rpx;
+  margin-bottom: 100rpx;
+  margin-top: 70rpx;
 
 }

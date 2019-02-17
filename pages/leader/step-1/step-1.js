@@ -19,11 +19,11 @@ Page({
     color1: 'floralwhite',
     
     item: [
-      { id: 1, name: 'step-1', addr:'/images/num_k.png' },
+      { id: 1, name: 'step-1', addr:'/images/c-0.png' },
       { id: 2, name: 'step-2', addr: '/images/line.png' },
-      { id: 3, name: 'step-3', addr: '/images/num_k.png' },
+      { id: 3, name: 'step-3', addr: '/images/c-0.png' },
       { id: 4, name: 'step-3', addr:'/images/line.png' },
-      { id: 5, name: 'step-3', addr: '/images/num_k.png' },
+      { id: 5, name: 'step-3', addr: '/images/c-0.png' },
     ],
   
   },

@@ -9,7 +9,7 @@
 <text>*最多可选三项</text></view>
 
 <view class="index-hd">
-  <button class="mini-button" wx:for="{{link}}"  id="{{index}}" bindtap='show' type="primary"  size="mini" plain="true">{{item}}
+  <button class="mini-button" wx:for="{{link}}"  id="{{index}}" bindtap='show' type="default"  size="mini" plain="true">{{item}}
   </button>
 
 </view>
@@ -21,16 +21,16 @@
 </view>
 
 <view class="index-td">
-  <button class="mini-button1"  wx:for="{{link_choose}}" id="{{index}}" bindtap="remove" type="primary"  size="mini" plain="true"> {{item}}</button>
+  <button class="mini-button1"  wx:for="{{link_choose}}" id="{{index}}" bindtap="remove" type="default"  size="mini" plain="true"> {{item}}</button>
  </view>
 <view class='line'></view>
  
 
 <view class="style_choose">方案风格选取：</view>
 <view class="style">
-<button class="mini-button"  wx:for="{{style}}" id="{{index}}" bindtap="display" type="primary"  size="mini" plain="{{item.state?false:true}}"> {{item.name}}</button>
+<button class="mini-button"  wx:for="{{style}}" id="{{index}}" bindtap="display" type="default"  size="mini" plain="{{item.state?false:true}}"> {{item.name}}</button>
 <view class='line'></view>
  </view>
 
 <view class="next-step" >
-<button  bindtap="next" type="primary" > 下一步 </button></view>
+<button  bindtap="next" type="default" > 下一步 </button></view>

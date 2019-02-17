@@ -1,9 +1,11 @@
 /* pages/index/step-2/step-2.wxss */
 @import"/template/template.wxss";
 .prefer_add{
-  margin-left: 70rpx;
+  margin-left: 60rpx;
   font-size: large;
   font-style:  inherit;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
 }
 
 .link1{
@@ -90,16 +92,14 @@ margin-bottom: 30rpx;}
   margin-left: 70rpx;
   margin-right:70rpx;
   margin-bottom: 30rpx;
-   margin-top: 30rpx;
+   margin-top: 100rpx;
 
 }
 
 .line{
-  height: 2.5rpx;
   background: darkgrey;
-  margin: 20rpx;
-   margin-left: 70rpx;
-  margin-right:70rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
 }
 
 .dislike{
@@ -107,8 +107,10 @@ margin-bottom: 30rpx;}
   flex-direction: row;
   flex-wrap: unwrap;
   justify-content: space-between;
-    margin-left: 70rpx;
-  margin-right:70rpx;
+    margin-left: 60rpx;
+  margin-right:60rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
 }
 
 .add_info{
