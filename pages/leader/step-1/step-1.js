@@ -29,6 +29,7 @@ Page({
   },
 
 
+//跳转页面
 5:function(e){
   wx.showToast({
     icon: 'none',
@@ -43,9 +44,6 @@ Page({
     });
 },
 
-  onLoad:function(){
-
-  },
   chooseLocation: function () {
     var that = this
     wx.chooseLocation({
@@ -60,10 +58,6 @@ Page({
     })
   },
 
-  item_clicked:function()
-  {
-    
-  },
 
   show_food_list: function (e) {
     var that = this;
@@ -127,6 +121,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+    wx.request({
+      url: "http://47.94.210.236:5555/dbtest",
+     // url: 'http://47.94.210.236:5555/api/link_type/all',//json数据地址
+    
+      success: function (result) {
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
+         // duration: duration
+        })
+       /* self.setData({
+          loading: false
+        })*/
+        console.log('request success', result)
+      },
+
+      fail: function ({ errMsg }) {
+        console.log('request fail', errMsg)
+        /*self.setData({
+          loading: false
+        })*/
+      }
+    })
   
   },
 

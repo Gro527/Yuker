@@ -96,19 +96,7 @@ for(let i=0;i<this.data.style.length;i++){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  /**
+ /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
@@ -116,6 +104,31 @@ for(let i=0;i<this.data.style.length;i++){
       text: options.text,
       address: options.addr,
           })
+
+    var _this = this
+    wx.request({
+      url: 'http://47.94.210.236:5555/api/link_type/all/index.json',//json数据地址
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
+          // duration: duration
+        })
+        console.log(res.data.imgListData)
+        //console.log(res.data.imgListData[0].tag)
+        //将获取到的json数据，存在名字叫list_data的这个数组中
+        _this.setData({
+          list_data: res.data.imgListData,
+          //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
+        })
+      }
+    })
+
+
 
   },
 
