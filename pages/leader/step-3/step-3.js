@@ -152,7 +152,7 @@ Page({
   },
 
   tap1: function (e) {
-    console.log(this.data.Link)
+    console.log(this.data.link_number)
     this.setData({
       hiddenname1: !this.data.hiddenname1,
     })
@@ -180,18 +180,16 @@ Page({
    */
   onLoad: function (options) {
 
-    var that = this//不要漏了这句，很重要
+    var that = this
     wx.request({
       url: 'http://47.94.210.236:5555/api/link_type/all',
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        //将获取到的json数据，存在名字叫zhihu的这个数组中
+       
         that.setData({
           Link: res.data,
-          //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
-
         })
       }
     })
