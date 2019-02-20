@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    Link: [],//初始定义为空
     link_choose:[],//初始定义为空
     label_1a:[ ],
     label_2a:[ ],
@@ -151,7 +152,7 @@ Page({
   },
 
   tap1: function (e) {
-    console.log(this.data.link_number)
+    console.log(this.data.Link)
     this.setData({
       hiddenname1: !this.data.hiddenname1,
     })
@@ -178,6 +179,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var that = this//不要漏了这句，很重要
+    wx.request({
+      url: 'http://47.94.210.236:5555/api/link_type/all',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        //将获取到的json数据，存在名字叫zhihu的这个数组中
+        that.setData({
+          Link: res.data,
+          //res代表success函数的事件对，data是固定的，stories是是上面json数据中stories
+
+        })
+      }
+    })
+
     
     this.data.link_choose = JSON.parse(options.link_choose);
     this.data.link_number = this.data.link_choose.length;
