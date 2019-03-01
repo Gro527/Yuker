@@ -8,13 +8,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    link_accept :[],
+    link_one : [],
+
+    
+    
+
+
+
+
+
     Link: [],//初始定义为空
     link_choose:[],//初始定义为空
     label_1a:[ ],
     label_2a:[ ],
     label_3a:[ ],
 
-    label_food: [{ name: "咖啡厅", state:false }, { name: "烧烤", state:false }, { name: "面包甜点", state:false }, { name: "火锅", state:false }, { name: "小吃快餐", state:false }, { name: "自助餐", state:false }, { name: "日本菜", state:false }, { name: "西餐", state:false }, { name: "北京菜", state:false }, { name: "韩国料理", state:false }],
+   /* label_food: [{ name: "咖啡厅", state:false }, { name: "烧烤", state:false }, { name: "面包甜点", state:false }, { name: "火锅", state:false }, { name: "小吃快餐", state:false }, { name: "自助餐", state:false }, { name: "日本菜", state:false }, { name: "西餐", state:false }, { name: "北京菜", state:false }, { name: "韩国料理", state:false }],
 
     label_entertainment: [{ name: "电影", state: false }, { name: "狼人杀", state: false }, { name: "三国杀点", state: false }, { name: "打牌", state: false }, { name: "轰趴", state: false }, { name: "麻将", state: false }, { name: "唱歌", state: false }, { name: "私人影院", state: false }, { name: "徐子球", state: false }, { name: "球茈徐", state: false }],
 
@@ -26,9 +37,26 @@ Page({
 
     label_beauty: [{ name: "aa", state: false }, { name: "bb", state: false }, { name: "cc", state: false }, { name: "dd", state: false }, { name: "ee", state: false }, { name: "ff", state: false }, { name: "gg菜", state: false }, { name: "hh", state: false }, { name: "ii", state: false }, { name: "jj", state: false }],
 
- 
-   // label2: ["茶馆", "酒吧", "融合菜", "江西菜", "东南亚菜", "粤菜", "川菜", "海鲜", "小龙虾","徐茈球"] ,
-   // label3: ["湘菜", "下午茶", "素菜", "云南菜", "新疆菜", "江浙菜", "人气餐厅", "东北菜", "俄罗斯菜","粉面馆"],
+
+ /*first:[
+   
+
+   [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }],
+   
+   
+     [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }]
+  
+ ],*/
+
+    foodtest: [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }],
+
+
+  
+   
+
+
+
+
     link_number:0,
     clicktime1: 0,
     clicktime2: 0,
@@ -39,7 +67,7 @@ Page({
     hiddenname3: true,
   
     color: 'floralwhite',
-    title1:"默认 ∨",
+    title1: "默认 ∨",
     title2: "默认 ∨",
     title3: "默认 ∨",
 
@@ -172,43 +200,86 @@ Page({
     })
   },
 
-  
 
-  
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
-    var that = this
+
+
+
+  split_array: function (arr) { //拆分数组
+    var a_len = arr.length;
+    var result = [];
+    for (let i = 0; i < a_len; i += 10) {
+      result.push(arr.slice(i, i + 10));
+    }
+    return result
+  },
+
+  getlabel: function (linkid) {
+    //var link_accept = [];
+    var _this = this;
     wx.request({
-      url: 'http://47.94.210.236:5555/api/link_type/all',
+      url: 'http://47.94.210.236:5555/api/label_type/' + linkid.toString(),//json数据地址
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
-       
-        that.setData({
-          Link: res.data,
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
         })
+       _this.setData({link_accept: res.data,})
+        //console.log(_this.data.link_accept)
       }
+       
     })
-
     
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.getlabel(3);
+    console.log(this.data.link_accept)
+    this.setData({
+      link_one :this.data.link_accept,
+    })
+   console.log(this.data.link_one);
+   
+    var length = this.data.foodtest.length;
+    var num = 10;
+    var first = [];
+    first = this.split_array(this.data.foodtest,num);
+    //console.log(first[0]);
+
+
+
+
+
     this.data.link_choose = JSON.parse(options.link_choose);
     this.data.link_number = this.data.link_choose.length;
     this.setData({
-      link_number:this.data.link_number,
-      link_choose:this.data.link_choose,
+      link_number: this.data.link_number,
+      link_choose: this.data.link_choose,
     })
      //this.data.clicktime = options.clicktime;
 
-    
 
-  
+
+
+
+
+
+
+
+
+
+
+   /* var first,second,third = [];
       if(this.data.link_choose[0]=="美食"){
         this.setData({
-          label_1a:this.data.label_food,
+          first : this.split_array(this.data.foodtest)
+          
         })
       }
       else if (this.data.link_choose[0] == "娱乐") {
@@ -298,7 +369,7 @@ Page({
       this.setData({
         label_3a: this.data.label_beauty,
       })
-    }
+    }*/
 
 
     
