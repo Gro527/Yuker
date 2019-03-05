@@ -32,7 +32,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  /*onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -61,7 +61,32 @@ Page({
         }
       })
     }
-  },
+  },*/
+  onLoad:function(){
+        //登录获取code
+     
+        wx.login({
+          success: function (res) {
+            console.log(res.code)
+            //发送请求
+            wx.request({
+              url: 'http://47.94.210.236:5555/api/login', //接口地址
+              data: 
+              { 'code': res.code },
+              header: {
+                'content-type': 'application/json' //默认值
+              },
+              method:'POST',
+              success: function (res) {
+               console.log(res)
+              },
+              fail:function(res){
+                console.log(res)
+              }
+            })
+         }
+        })
+      },
 
 
   getUserInfo: function (e) {
