@@ -15,11 +15,6 @@ Page({
     })
   },
 
-  me: function () {
-    wx.navigateTo({
-      url: '/pages/index/me/me'
-    })
-  },
 
   creator: function () {
     wx.navigateTo({

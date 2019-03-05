@@ -1,14 +1,20 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="info_up">
-   <view class="userinfo">
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-   </view>
-   <!-- <view class="me">个人中心></view> -->
-   <button class="homepage" bindtap="me" type="default" plain="Boolean">个人中心></button>
+<!-- index.wxml -->
+<view class="content">
+  <view class="bg">
+    <view class="head">
+      <view class="headIcon">
+        <!-- <image src='/images/head.jpg' style='width:99px;'></image> -->
+        <image class='head1' src='/images/head.jpeg' ></image>
+      </view>
+      <view class="login">
+        <view>{{userInfo.nickName}}</view>
+        <view class='account'>账号：757096636_w</view>
+      </view>
+    </view>
   </view>
 
+
+<view class="container">
 
    <button class="check" bindtap="clickme" type="default" plain="Boolean">我的Yuker方案</button>
 
@@ -24,21 +30,21 @@
       <view >我的收藏</view>
       <view >></view>
    </view>
-<view class='line2'></view></view>
+<view class='line1'></view></view>
 
 <view class="display3">
  <view class="info3">
       <view >修改手机</view>
       <view >></view>
    </view>
-<view class='line3'></view></view>
+<view class='line1'></view></view>
 
 <view class="display4">
  <view class="info4">
       <view >反馈及信息</view>
       <view >></view>
    </view>
-<view class='line4'></view></view>
+<view class='line1'></view></view>
 
 
 
@@ -50,5 +56,5 @@
 
 
 </view>
-
+</view>
 

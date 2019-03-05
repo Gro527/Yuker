@@ -1,4 +1,45 @@
 /**index.wxss**/
+.content{
+  height: 600px;
+}
+
+
+.bg{
+  width: 100%;
+  height: 120px;
+  background-color:rgba(255, 255, 240, 0.897);
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+}
+
+.headIcon{
+  margin:10px;
+}
+
+.head1{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx 50rpx 10rpx;
+}
+
+.login{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  left: 120px;
+  margin-top: 30px;
+}
+
+.account{
+  color: #1d1c1c;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -12,15 +53,7 @@
   justify-content: space-between;
 
 }
-.homepage{
-  display: flex;
-  flex-direction: column;
-   justify-content: center;
-  align-items: center;
-  margin-right: 60rpx;
-  background: none;
-  border: none;
-}
+
 
 .userinfo-avatar {
   width: 130rpx;
@@ -36,7 +69,7 @@
 }
 
 .check{
-  margin-Top: 40rpx;
+  margin-Top: 60rpx;
   margin-Left:60rpx;
   margin-Right:60rpx;
 }
@@ -96,31 +129,6 @@ margin-right: 120rpx;
 
 .line1{
   height: 2.5rpx;
-  background: darkgrey;
-  margin: 20rpx;
-
-}
-
-
-.line2{
-  height: 2rpx;
-  background: darkgrey;
-  margin: 20rpx;
-
-}
-
-
-.line3{
-  height: 3rpx;
-  background: darkgrey;
-  margin: 20rpx;
-
-}
-
-
-
-.line4{
-  height: 3rpx;
   background: darkgrey;
   margin: 20rpx;
 
