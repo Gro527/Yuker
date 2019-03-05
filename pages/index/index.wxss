@@ -17,6 +17,8 @@
 
 .headIcon{
   margin:10px;
+  width: 100rpx;
+  height: 100rpx;
 }
 
 .head1{
@@ -26,7 +28,6 @@
 }
 
 .login{
-  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   position: absolute;
