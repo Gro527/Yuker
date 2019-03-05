@@ -15,6 +15,12 @@ Page({
     })
   },
 
+  me: function () {
+    wx.navigateTo({
+      url: '/pages/index/me/me'
+    })
+  },
+
   creator: function () {
     wx.navigateTo({
       url: '/pages/create_Yuker/create_Yuker'
@@ -56,6 +62,8 @@ Page({
       })
     }
   },
+
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -65,4 +73,5 @@ Page({
     })
   },
 })
+
 
