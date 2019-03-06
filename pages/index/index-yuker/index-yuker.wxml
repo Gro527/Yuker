@@ -1,4 +1,4 @@
-<view class="container">
+<!-- <view class="container">
 <view class="info1">
    <text class="myyuker">我的Yuker方案:</text>
    <button class="myyuker1" bindtap='plan1' plain="Boolean">我的Yuker方案一</button>
@@ -8,11 +8,34 @@
    <text class="hisyuker">我参与的Yuker方案:</text>  
    <button class="myyuker3" plain="Boolean">我参与的Yuker方案一</button>
    <button class="myyuker4" plain="Boolean">我参与的Yuker方案二</button>
-</view>
+</view> -->
 
 
-
-
+<view class="content">
+  <view class="menu">
+    <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap='switchNav'>我发起的方案 4</view>
+    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap='switchNav'>我参与的方案 4</view>
+  </view>
+  <view class="hr"></view>
+  <block wx:for="{{coupons}}">
+    <block wx:if="{{currentTab==0}}">
+      <view class="item">
+        <view class="nameInfo">
+          <view class="name">
+            <view class="fname">{{item.name}}</view>
+            <view class="time">{{item.time}}</view>
+            <view class="status">{{item.status}}</view>
+          </view>
+          <button class="count" bindtap='plan1' plain="Boolean">{{item.count}}</button>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="item1">
+        <button class="count" bindtap='plan1' plain="Boolean">{{item.count}}</button>
+      </view>
+    </block>
+  </block>
 
 
 
