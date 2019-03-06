@@ -110,7 +110,15 @@ Page({
     }
     else {
       wx.navigateTo({
-        url: '/pages/leader/step-2/step-2?text='+this.data.text+'&addr='+this.data.locationAddress
+        url: '/pages/leader/step-2/step-2'//?text='+this.data.text+'&addr='+this.data.locationAddress
+      }),
+      wx.setStorage({
+        key: 'text',
+        data: this.data.text,
+      })
+      wx.setStorage({
+        key: 'addr',
+        data: this.data.locationAddress,
       })
     }
 

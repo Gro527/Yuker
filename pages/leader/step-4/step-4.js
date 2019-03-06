@@ -26,15 +26,26 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({
-      text: options.text,
+  onLoad: function () {
+    var that = this
+    wx.getStorage({
+      key: 'text',
+      success: function(res) {
+        console.log(res.data),
+        that.setData({
+          text:res.data
+        })
+      },
+    })
+
+    /*this.setData({
+     // text: options.text,
       address: options.addr,
       d1: options.d1,
       d2: options.d2,
       d3: options.d3,
       ct: options.ct,
-    })
+    })*/
   },
 
 

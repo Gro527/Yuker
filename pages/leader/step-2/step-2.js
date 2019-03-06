@@ -80,26 +80,16 @@ for(let i=0;i<this.data.style.length;i++){
       })
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.getStorage({
+      key: 'text',
+      success: function(res) {},
+    })
+
     this.setData({
       text: options.text,
       address: options.addr,
