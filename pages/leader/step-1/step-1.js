@@ -51,6 +51,8 @@ Page({
         console.log(res)
         that.setData({
           hasLocation: true,
+          addr_longitude_latitude:[res.longitude,res.latitude],
+          //addr_latitude:res.latitude,
           // location: formatLocation(res.longitude, res.latitude),
           locationAddress: res.address
         })
@@ -119,6 +121,10 @@ Page({
       wx.setStorage({
         key: 'addr',
         data: this.data.locationAddress,
+      }),
+      wx.setStorage({
+        key: 'addr_long_lati',
+        data: this.data.addr_longitude_latitude,
       })
     }
 

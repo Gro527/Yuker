@@ -2,6 +2,9 @@
 // var util = require('/utils/util.js')
 // var formatLocation = util.formatLocation
   //  var text= document.getElementById('text').value;
+var text, addr_lo_la, link_choose
+
+//var plan_data=[]
 Page({
 
   /**
@@ -13,8 +16,6 @@ Page({
     link_one : [],
 
     
-    
-
 
 
 
@@ -24,6 +25,8 @@ Page({
     label_1a:[ ],
     label_2a:[ ],
     label_3a:[ ],
+    label: [['咖啡厅', '火锅', '西餐'], ['电影', '狼人杀', '唱歌'], ['篮球', '羽毛球', '网球']],
+  
 
    /* label_food: [{ name: "咖啡厅", state:false }, { name: "烧烤", state:false }, { name: "面包甜点", state:false }, { name: "火锅", state:false }, { name: "小吃快餐", state:false }, { name: "自助餐", state:false }, { name: "日本菜", state:false }, { name: "西餐", state:false }, { name: "北京菜", state:false }, { name: "韩国料理", state:false }],
 
@@ -174,9 +177,62 @@ Page({
 
 
   next3: function (e) {
-    wx.navigateTo({
-      url: '/pages/leader/step-4/step-4?text=' + this.data.text + '&addr=' + this.data.address + '&d1=' + this.data.d1 + '&d2=' + this.data.d2 + '&d3=' + this.data.d3+'&ct='+this.data.ct
-    })
+     /* wx.setStorage({
+        key: 'label1',
+        data: this.data.label1,
+       }),
+      wx.setStorage({
+        key: 'label2',
+        data: this.data.label2,
+       }),
+      wx.setStorage({
+        key: 'label3',
+        data: this.data.label3,
+       }),*/
+      var that=this
+      //let list_arr=["openid","location","links"]
+      var json = {}
+      json.openid=1
+       var addr = {}
+        addr.longitude=that.data.addr_lo_la[0]
+        addr.latitude=that.data.addr_lo_la[1]
+      json.location=addr
+
+        var links=[]
+        for(let i = 0;i<that.data.link_choose.length;i++){
+          var j={}
+          j.name=that.data.link_choose[i]
+           var sub=[]
+           for(let m = 0;m<that.data.label[i].length;m++){
+             var n={}
+             n.label=that.data.label[i][m]
+             sub.push(n)
+           }
+           j.sub=sub
+           links.push(j)
+        }
+        json.links=links
+        console.log(JSON.stringify(json))
+  
+
+      wx.navigateTo({
+      url: '/pages/leader/step-4/step-4'//?text=' + this.data.text + '&addr=' + this.data.address + '&d1=' + this.data.d1 + '&d2=' + this.data.d2 + '&d3=' + this.data.d3+'&ct='+this.data.ct
+    }),
+      wx.request({
+        url: 'http://47.94.210.236:5555/api/login', //接口地址
+        data:
+           { 'data':JSON.stringify(json) },
+         header: {
+           'content-type': 'application/json' //默认值
+         },
+         method: 'POST',
+         success: function (res) {
+           console.log(res)
+         },
+         fail: function (res) {
+           console.log(res)
+         }
+      })
   },
 
   tap1: function (e) {
@@ -239,7 +295,64 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getlabel(3);
+   var that = this
+    wx.getStorage({
+      key: 'text',
+      success: function (res) {
+        that.setData({
+          text: res.data
+        })
+        console.log(that.data.text)
+      }
+    }),
+      wx.getStorage({
+        key: 'addr_long_lati',
+        success: function (res) {
+          that.setData({
+            addr_lo_la: res.data
+          })
+          console.log(that.data.addr_lo_la)
+        }
+      }),
+      wx.getStorage({
+        key: 'link_choose',
+        success: function (res) {
+          that.setData({
+            link_choose: res.data
+          })
+          console.log(that.data.link_choose)
+        },
+      })
+     /* wx.getStorage({
+        key: 'label1',
+        success: function (res) {
+          that.setData({
+            label1: res.data
+          })
+          console.log(that.data.label1)
+        },
+      }),
+      wx.getStorage({
+        key: 'label2',
+        success: function (res) {
+          that.setData({
+            label2: res.data
+          })
+          console.log(that.data.label2)
+        },
+      }),
+      wx.getStorage({
+        key: 'label3',
+        success: function (res) {
+          that.setData({
+            label3: res.data
+          })
+          console.log(that.data.label3)
+        },
+      })*/
+
+
+    /*this.getlabel(3);
     console.log(this.data.link_accept)
     this.setData({
       link_one :this.data.link_accept,
@@ -263,7 +376,7 @@ Page({
       link_choose: this.data.link_choose,
     })
      //this.data.clicktime = options.clicktime;
-
+*/
 
 
 

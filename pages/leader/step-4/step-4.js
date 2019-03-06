@@ -1,4 +1,6 @@
 // pages/leader/step-4/step-4.js
+
+
 Page({
 
   /**
@@ -12,6 +14,7 @@ Page({
       { id: 4, name: 'step-3', addr: '/images/line.png' },
       { id: 5, name: 'step-3', addr: '/images/c-1.png' },
     ],
+    link_choose:[],
 
     stepitems:[
       { id: 1,  addr: '/images/step.png' },
@@ -21,22 +24,29 @@ Page({
   },
 
 
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    var that = this
+    var that=this
     wx.getStorage({
       key: 'text',
       success: function(res) {
-        console.log(res.data),
         that.setData({
-          text:res.data
+          text: res.data
         })
       },
     })
+    wx.getStorage({
+      key: 'link_choose',
+      success: function(res) {
+        that.setData({
+          link_choose:res.data,
+          ct:res.data.length
+        })
+      },
+    })
+    
 
     /*this.setData({
      // text: options.text,

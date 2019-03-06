@@ -23,23 +23,23 @@
   
   <view wx:if='{{ct==1}}' class='step'>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d1}}  </text>
+    <text class='link'>{{link_choose[0]}}  </text>
   </view>
  
  <view wx:if='{{ct==2}}' class='step'>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d1}}  </text>
+    <text class='link'>{{link_choose[0]}}  </text>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d2}}  </text>
+    <text class='link'>{{link_choose[1]}}  </text>
   </view>
  
   <view wx:if='{{ct==3}}' class='step'>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d1}}  </text>
+    <text class='link'>{{link_choose[0]}}  </text>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d2}}  </text>
+    <text class='link'>{{link_choose[1]}}  </text>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{d3}}</text>
+    <text class='link'>{{link_choose[2]}}</text>
   </view>
  
   <!--button class='link' plain='true' size='mini'>{{d1}}</button>

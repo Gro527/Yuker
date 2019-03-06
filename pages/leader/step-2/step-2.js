@@ -6,8 +6,9 @@ Page({
     link:["美食","娱乐","运动","购物","酒店","丽人"],
     style: [{ name: "家庭", state: false }, { name: "同学", state: false }, { name: "情侣", state: false }, { name: "同事", state: false }, { name: "商务", state: false }, { name: "温馨", state: false }],
 
-    link_choose:[],
+    
     style_choose:[ ],
+    link_choose:[],
    
 
     item: [
@@ -75,6 +76,10 @@ for(let i=0;i<this.data.style.length;i++){
 
 
   next: function (e) {
+    wx.setStorage({
+      key: 'link_choose',
+      data:this.data.link_choose,
+    })
     wx.navigateTo({
       url: '/pages/leader/step-3/step-3?link_choose='+JSON.stringify(this.data.link_choose),
       })
@@ -84,11 +89,6 @@ for(let i=0;i<this.data.style.length;i++){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    wx.getStorage({
-      key: 'text',
-      success: function(res) {},
-    })
 
     this.setData({
       text: options.text,
