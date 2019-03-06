@@ -8,9 +8,7 @@
         <!--image class='head1' src='/images/head.jpeg' ></image-->
       </view>
       <view class="login">
-        <!--view>{{userInfo.nickName}}</view-->
         <open-data class='account' type="userNickName" ></open-data>
-        <!--view class='account'>账号：757096636_w</view-->
       </view>
     </view>
   </view>
