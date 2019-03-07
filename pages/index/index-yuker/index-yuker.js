@@ -32,7 +32,7 @@ Page({
     var coupons = new Array();
     var coupon = new Object();
     coupon.id = "1";
-    coupon.count = "一";
+
     coupon.name = "同学聚会";
     coupon.time = "2019.01.01";
     coupon.status = "已完成";
@@ -41,7 +41,7 @@ Page({
 
     var coupon2 = new Object();
     coupon2.id = "2";
-    coupon2.count = "二";
+
     coupon2.name = "朋友聚会";
     coupon2.time = "2019.01.01";
     coupon2.status = "已完成";
@@ -68,25 +68,37 @@ Page({
 
     var coupon5 = new Object();
     coupon5.id = "5";
-    coupon5.count = "我参与的Yuker方案一";
+    coupon5.count = "一";
+    coupon5.name = "基友聚会";
+    coupon5.time = "2019.01.01";
+    coupon5.status = "已完成";
     coupon5.type = "1";
     coupons.push(coupon5);
 
     var coupon6 = new Object();
     coupon6.id = "6";
-    coupon6.count = "我参与的Yuker方案二";
+    coupon6.count = "二";
+    coupon6.name = "基友聚会";
+    coupon6.time = "2019.01.01";
+    coupon6.status = "已完成";
     coupon6.type = "1";
     coupons.push(coupon6);
 
     var coupon7 = new Object();
     coupon7.id = "7";
-    coupon7.count = "我参与的Yuker方案三";
+    coupon7.count = "三";
+    coupon7.name = "基友聚会";
+    coupon7.time = "2019.02.01";
+    coupon7.status = "已完成";
     coupon7.type = "1";
     coupons.push(coupon7);
 
     var coupon8 = new Object();
     coupon8.id = "8";
-    coupon8.count = "我参与的Yuker方案四";
+    coupon8.count = "四";
+    coupon8.name = "这个方案名字有、长";
+    coupon8.time = "2019.03.11";
+    coupon8.status = "未完成";
     coupon8.type = "1";
     coupons.push(coupon8);
 

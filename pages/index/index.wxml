@@ -3,9 +3,7 @@
   <view class="bg">
     <view class="head">
       <view class="headIcon">
-        <!-- <image src='/images/head.jpg' style='width:99px;'></image> -->
         <open-data class='head1' type="userAvatarUrl" ></open-data>
-        <!--image class='head1' src='/images/head.jpeg' ></image-->
       </view>
       <view class="login">
         <open-data class='account' type="userNickName" ></open-data>
