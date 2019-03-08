@@ -73,7 +73,8 @@
       </view>
  
        <view class='line'></view> 
-       <text>备注：</text>  
+         <view class="bz">备注：</view>
+         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
        <view class='line'></view> 
 
      <button class='final' type="default" plain="true">方案发布</button> 
@@ -140,7 +141,8 @@
       </view>
  
        <view class='line'></view> 
-       <text>备注：</text>  
+         <view class="bz">备注：</view>
+         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
       <view class='line'></view> 
  
        <button class='final' type="default" plain="true">方案发布</button> 
@@ -208,7 +210,8 @@
       </view>
  
       <view class='line'></view> 
-      <text>备注：</text>  
+         <view class="bz">备注：</view>
+         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
          <view class='line'></view> 
       <button class='final' type="default" plain="true">方案发布</button> 
     

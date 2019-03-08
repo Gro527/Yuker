@@ -33,7 +33,7 @@ Page({
     var coupon = new Object();
     coupon.id = "1";
 
-    coupon.name = "同学聚会";
+    coupon.name = "同学liuneng聚会";
     coupon.time = "2019.01.01";
     coupon.status = "已完成";
     coupon.type = "0";

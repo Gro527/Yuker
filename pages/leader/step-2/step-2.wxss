@@ -28,14 +28,21 @@ font-style:  inherit;
 margin-top: 30rpx;
 margin-right:20rpx;
 margin-left: 20rpx;
-margin-bottom: 20rpx;
+margin-bottom: 30rpx;
 }
 
 .mini-button1{
 margin-top: 30rpx;
 margin-right:30rpx;
 margin-left: 30rpx;
-margin-bottom: 20rpx;
+margin-bottom: 30rpx;
+}
+
+.mini-button2{
+margin-top: 30rpx;
+margin-right:34rpx;
+margin-left: 34rpx;
+margin-bottom: 30rpx;
 }
 
 
@@ -51,7 +58,7 @@ margin-top: 40rpx;
 margin-bottom: 50rpx;
 text-align: center;
 border: solid;
-  border-color: rgba(115, 121, 115, 0.726);
+border-color: rgba(115, 121, 115, 0.726);
 
 }
 
@@ -105,13 +112,14 @@ margin-bottom: 50rpx;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-around;
-margin-left:40rpx;
-margin-right: 40rpx;
+align-items: center;
+margin-left:45rpx;
+margin-right: 45rpx;
 margin-top: 40rpx; 
 text-align: center;
 border: solid;
-  border-color:  rgba(115, 121, 115, 0.726);}
+border-color:  rgba(115, 121, 115, 0.726);
+}
 
   
 .next-step{

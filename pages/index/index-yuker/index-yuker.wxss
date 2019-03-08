@@ -85,8 +85,8 @@
 }
 
 .next{
-  width: 100rpx;
-  height: 80rpx;
+  width: 80rpx;
+  height: 65rpx;
   /* display: flex;
   overflow:hidden; */
   margin-right: 200rpx;
