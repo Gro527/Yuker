@@ -1,4 +1,4 @@
-<!--pages/leader/step-2/step-2.wxml-->
+ <!--pages/leader/step-2/step-2.wxml-->
 <import src="/template/template.wxml"/>
 
  <template is="create_head" data='{{item}}' />

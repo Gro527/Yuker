@@ -21,15 +21,15 @@
 
 <view class="title_sub" bindtap="tap1">{{title1}}</view></view>
 
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname1}}">
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname1}}" bindchange='get_view_first'>
 
-<view wx:for="{{first}}">
-<swiper-item>
+<block wx:for="{{first}}" >
+<swiper-item  item-id="{{index}}" >
 <view class="label_sub">
-<view class="labelcontent" wx:for="{{item}}" wx:for-item="item"   >
-{{item.name}}</view>
+<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_first' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.label}}</view>
 </view> </swiper-item>
-</view>
+</block>
 </swiper>
 <view class='line'></view>
 </block>
@@ -49,32 +49,21 @@
 
 <view class="title_sub" bindtap="tap2">{{title2}}</view></view>
 
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname2}}">
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname2}}" bindchange='get_view_second'>
 
- <swiper-item>
+<block wx:for="{{second}}" >
+<swiper-item  item-id="{{index}}" >
 <view class="label_sub">
-<view class="labelcontent" wx:for="{{label_2a}}"  id="{{index}}" bindtap='get2' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view>
+<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_second' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.label}}</view>
 </view> </swiper-item>
-
-
- <swiper-item>
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{label_2b}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view></view></swiper-item>
-
- <swiper-item>
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{label_2c}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view> </view></swiper-item>
-
+</block>
 </swiper>
 <view class='line'></view>
 </block>
 
-
  <!--环节三-->
-<block wx:if="{{link_number >= 3}}">
+<block wx:if="{{link_number>=3}}">
 <view class="link1">环节三:</view>
 
 
@@ -87,24 +76,15 @@
 
 <view class="title_sub" bindtap="tap3">{{title3}}</view></view>
 
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname3}}">
+<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname3}}" bindchange='get_view_third'>
 
- <swiper-item>
+<block wx:for="{{third}}" >
+<swiper-item  item-id="{{index}}" >
 <view class="label_sub">
-<view class="labelcontent" wx:for="{{label_3a}}"  id="{{index}}" bindtap='get3' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view>
+<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_third' style="background-color:{{item.state?'white':'floralwhite'}}">
+{{item.label}}</view>
 </view> </swiper-item>
-
- <swiper-item>
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{label_3b}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view></view> </swiper-item>
-
- <swiper-item>
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{label_3c}}" id="{{index}}" bindtap='get' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.name}}</view> </view></swiper-item>
-
+</block>
 </swiper>
 <view class='line'></view>
 </block>
@@ -112,7 +92,7 @@
 
    <view class="dislike">
       <view >反标签添加：</view>
-      <view >厌恶、忌口等></view>
+      <view bindtap="test">厌恶、忌口等></view>
    </view>
 <view class='line'></view>
  

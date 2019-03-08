@@ -5,8 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    
+
+   /* test: [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }],*/
+
+  
+
+   
+
+
+
+  },
+  /**
+  * 生命周期函数--监听页面加载
+  */
+  onLoad: function (options) {
   
   },
+
 
   percentor: function () {
     wx.navigateTo({
@@ -20,12 +36,7 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+ 
 
   /**
    * 生命周期函数--监听页面初次渲染完成

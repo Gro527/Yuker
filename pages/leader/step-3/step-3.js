@@ -12,55 +12,21 @@ Page({
    */
   data: {
 
-    link_accept :[],
-    link_one : [],
+    linkType_label1: [], linkType_label2: [], linkType_label3: [], linkType_label4: [], linkType_label5: [], linkType_label6: [],           linkType_label7: [], //接收api所有标签 标签按环节分类
 
-    
+    middle1: [], middle2: [], middle3: [], middle4: [], middle5: [], middle6: [], middle7: [],//中间量 添加false状态
+   
+    first:[],second:[],third:[],//页面中三个环节所呈现标签
+    label_choose_first: [], label_choose_second: [], label_choose_third: [],//每个环节所选择标签
+    label_choose_all:[],
 
-
-
+    viewid_first:0 , viewid_second:0, viewid_third:0,
+    link_number: 0,//上页面所选环节数
 
     Link: [],//初始定义为空
-    link_choose:[],//初始定义为空
-    label_1a:[ ],
-    label_2a:[ ],
-    label_3a:[ ],
-    label: [['咖啡厅', '火锅', '西餐'], ['电影', '狼人杀', '唱歌'], ['篮球', '羽毛球', '网球']],
-  
-
-   /* label_food: [{ name: "咖啡厅", state:false }, { name: "烧烤", state:false }, { name: "面包甜点", state:false }, { name: "火锅", state:false }, { name: "小吃快餐", state:false }, { name: "自助餐", state:false }, { name: "日本菜", state:false }, { name: "西餐", state:false }, { name: "北京菜", state:false }, { name: "韩国料理", state:false }],
-
-    label_entertainment: [{ name: "电影", state: false }, { name: "狼人杀", state: false }, { name: "三国杀点", state: false }, { name: "打牌", state: false }, { name: "轰趴", state: false }, { name: "麻将", state: false }, { name: "唱歌", state: false }, { name: "私人影院", state: false }, { name: "徐子球", state: false }, { name: "球茈徐", state: false }],
-
-    label_sport: [{ name: "篮球", state: false }, { name: "羽毛球", state: false }, { name: "兵乓球", state: false }, { name: "羽毛球", state: false }, { name: "网球", state: false }, { name: "橄榄球", state: false }, { name: "跆拳道", state: false }, { name: "健身房", state: false }, { name: "跑步", state: false }, { name: "滑雪", state: false }],
-
-    label_shopping: [{ name: "电子", state: false }, { name: "美妆", state: false }, { name: "国朝", state: false }, { name: "日潮", state: false }, { name: "港潮", state: false }, { name: "美潮", state: false }, { name: "母婴", state: false }, { name: "零食", state: false }, { name: "综合", state: false }, { name: "水果", state: false }],
-
-    label_hotel: [{ name: "如家1", state: false }, { name: "如家2", state: false }, { name: "如家3", state: false }, { name: "如家4", state: false }, { name: "如家5", state: false }, { name: "如家6", state: false }, { name: "如家7", state: false }, { name: "如家8", state: false }, { name: "如家9", state: false }, { name: "如家10", state: false }],
-
-    label_beauty: [{ name: "aa", state: false }, { name: "bb", state: false }, { name: "cc", state: false }, { name: "dd", state: false }, { name: "ee", state: false }, { name: "ff", state: false }, { name: "gg菜", state: false }, { name: "hh", state: false }, { name: "ii", state: false }, { name: "jj", state: false }],
-
-
- /*first:[
-   
-
-   [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }],
-   
-   
-     [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }]
-  
- ],*/
-
-    foodtest: [{ name: "咖啡厅", state: false }, { name: "烧烤", state: false }, { name: "面包甜点", state: false }, { name: "火锅", state: false }, { name: "小吃快餐", state: false }, { name: "自助餐", state: false }, { name: "日本菜", state: false }, { name: "西餐", state: false }, { name: "北京菜", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }, { name: "韩国料理", state: false }],
-
+    link_choose:[],//接收上个页面所选择环节
 
   
-   
-
-
-
-
-    link_number:0,
     clicktime1: 0,
     clicktime2: 0,
     clicktime3: 0,
@@ -69,7 +35,7 @@ Page({
     hiddenname2: true,
     hiddenname3: true,
   
-    color: 'floralwhite',
+    
     title1: "默认 ∨",
     title2: "默认 ∨",
     title3: "默认 ∨",
@@ -86,97 +52,159 @@ Page({
 
   },
 
-  get1: function (e) {
-    var labelId = e.target.id;
+  get_label_first: function (e) {
+    var labelid = e.target.id;
     var clickstate;
-    var label1_up= "label_1a["+labelId+"].state";
-
+    var label1_up = "first["+this.data.viewid_first+"]["+labelid+"].state"
     this.setData({
-      [label1_up]: !this.data.label_1a[labelId].state,
-     })
+      [label1_up]: !this.data.first[this.data.viewid_first][labelid].state,
+    })
     this.setData({
-      clickstate: this.data.label_1a[labelId].state
+      clickstate: this.data.first[this.data.viewid_first][labelid].state
     })
     console.log(this.data.clickstate);
-
+    
     if (this.data.clickstate) {
       this.setData({
-        //color: this.data.color = 'white',
-        clicktime1: this.data.clicktime1 += 1
+       clicktime1: this.data.clicktime1 += 1
       })
+      this.data.label_choose_first.push(this.data.first[this.data.viewid_first][labelid])//添加元素
     }
     else {
       this.setData({
-        //color: this.data.color = 'floralwhite',
         clicktime1: this.data.clicktime1 -= 1
       })
+      for(var index in this.data.label_choose_first){
+        if (this.data.first[this.data.viewid_first][labelid].id == this.data.label_choose_first[index].id  ){
+          this.data.label_choose_first.splice(index,1)
+
+        }
+      }
+
     }
     if (this.data.clicktime1 == 0) { this.setData({ title1: this.data.title1 = "默认 ∨ " }) }
-    if (this.data.clicktime1 > 0) { this.setData({ title1: this.data.title1 = "已选:  " + this.data.clicktime1 + " 项 ∨ "  }) }
+    if (this.data.clicktime1 > 0) { this.setData({ title1: this.data.title1 = "已选:  " + this.data.clicktime1 + " 项 ∨ " }) }
+  
+    
+    console.log(this.data.label_choose_first)
+  
   },
-
-  get2: function (e) {
-    var labelId = e.target.id;
+   
+  get_label_second: function (e) {
+    var labelid = e.target.id;
     var clickstate;
-    var label2_up = "label_2a[" + labelId + "].state";
-
+    var label2_up = "second[" + this.data.viewid_second + "][" + labelid + "].state"
     this.setData({
-      [label2_up]: !this.data.label_2a[labelId].state,
+      [label2_up]: !this.data.second[this.data.viewid_second][labelid].state,
     })
     this.setData({
-      clickstate: this.data.label_2a[labelId].state
+      clickstate: this.data.second[this.data.viewid_second][labelid].state
     })
     console.log(this.data.clickstate);
 
     if (this.data.clickstate) {
       this.setData({
-        //color: this.data.color = 'white',
-        clicktime1: this.data.clicktime2 += 1
+        clicktime2: this.data.clicktime2 += 1
       })
+      this.data.label_choose_second.push(this.data.second[this.data.viewid_second][labelid])//添加元素
     }
     else {
       this.setData({
-        //color: this.data.color = 'floralwhite',
         clicktime2: this.data.clicktime2 -= 1
       })
+      for (var index in this.data.label_choose_second) {
+        if (this.data.second[this.data.viewid_second][labelid].id == this.data.label_choose_second[index].id) {
+          this.data.label_choose_second.splice(index, 1)
+
+        }
+      }
+
     }
     if (this.data.clicktime2 == 0) { this.setData({ title2: this.data.title2 = "默认 ∨ " }) }
     if (this.data.clicktime2 > 0) { this.setData({ title2: this.data.title2 = "已选:  " + this.data.clicktime2 + " 项 ∨ " }) }
+
+
+    console.log(this.data.label_choose_second)
+
   },
 
-  get3: function (e) {
-    var labelId = e.target.id;
+  get_label_third: function (e) {
+    var labelid = e.target.id;
     var clickstate;
-    var label3_up = "label_3a[" + labelId + "].state";
-
+    var label3_up = "third[" + this.data.viewid_third + "][" + labelid + "].state"
     this.setData({
-      [label3_up]: !this.data.label_3a[labelId].state,
+      [label3_up]: !this.data.third[this.data.viewid_third][labelid].state,
     })
     this.setData({
-      clickstate: this.data.label_3a[labelId].state
+      clickstate: this.data.third[this.data.viewid_third][labelid].state
     })
     console.log(this.data.clickstate);
 
     if (this.data.clickstate) {
       this.setData({
-        //color: this.data.color = 'white',
         clicktime3: this.data.clicktime3 += 1
       })
+      this.data.label_choose_third.push(this.data.third[this.data.viewid_third][labelid])//添加元素
     }
     else {
       this.setData({
-        //color: this.data.color = 'floralwhite',
         clicktime3: this.data.clicktime3 -= 1
       })
+      for (var index in this.data.label_choose_third) {
+        if (this.data.third[this.data.viewid_third][labelid].id == this.data.label_choose_third[index].id) {
+          this.data.label_choose_third.splice(index, 1)
+
+        }
+      }
+
     }
     if (this.data.clicktime3 == 0) { this.setData({ title3: this.data.title3 = "默认 ∨ " }) }
     if (this.data.clicktime3 > 0) { this.setData({ title3: this.data.title3 = "已选:  " + this.data.clicktime3 + " 项 ∨ " }) }
+
+
+    console.log(this.data.label_choose_third)
+
   },
+
+  
+
+
+  get_view_first: function(e){
+    this.setData({
+      viewid_first : e.detail.currentItemId})
+    console.log(this.data.viewid_first)
+
+  },
+
+  get_view_second: function (e) {
+    this.setData({
+      viewid_second: e.detail.currentItemId
+    })
+    console.log(this.data.viewid_second)
+
+  },
+
+  get_view_third: function (e) {
+    this.setData({
+      viewid_third: e.detail.currentItemId
+    })
+    console.log(this.data.viewid_third)
+
+  },
+
+ 
+
+
 
 
 
 
   next3: function (e) {
+    //将所选所有标签放进label_choose_all
+    that.data.label_choose_all.push(that.data.label_choose_first);
+    that.data.label_choose_all.push(that.data.label_choose_second);
+    that.data.label_choose_all.push(that.data.label_choose_third);
+    console.log(that.data.label_choose_all)
      /* wx.setStorage({
         key: 'label1',
         data: this.data.label1,
@@ -189,7 +217,8 @@ Page({
         key: 'label3',
         data: this.data.label3,
        }),*/
-      var that=this
+    var that=this
+    
       //let list_arr=["openid","location","links"]
       var json = {}
       json.openid=1
@@ -236,30 +265,25 @@ Page({
   },
 
   tap1: function (e) {
-    console.log(this.data.link_number)
+    //console.log(this.data.link_number)
     this.setData({
       hiddenname1: !this.data.hiddenname1,
     })
   },
 
   tap2: function (e) {
-    console.log(this.data.link_number)
+    //console.log(this.data.link_number)
     this.setData({
       hiddenname2: !this.data.hiddenname2,
     })
   },
 
   tap3: function (e) {
-    console.log(this.data.link_number)
+    //console.log(this.data.link_number)
     this.setData({
       hiddenname3: !this.data.hiddenname3,
     })
   },
-
-
-
-
-
 
   split_array: function (arr) { //拆分数组
     var a_len = arr.length;
@@ -270,11 +294,14 @@ Page({
     return result
   },
 
-  getlabel: function (linkid) {
-    //var link_accept = [];
-    var _this = this;
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+   var that = this
+   //获取偏好标签
     wx.request({
-      url: 'http://47.94.210.236:5555/api/label_type/' + linkid.toString(),//json数据地址
+      url: 'http://47.94.210.236:5555/api/label_type/all',//json数据地址
       headers: {
         'Content-Type': 'application/json'
       },
@@ -284,18 +311,103 @@ Page({
           icon: 'success',
           mask: true,
         })
-       _this.setData({link_accept: res.data,})
-        //console.log(_this.data.link_accept)
-      }
+
+
+
+
+        that.setData({
+
+        middle1: res.data[0].sub,
+        middle2: res.data[1].sub,
+        middle3: res.data[2].sub,
+        middle4: res.data[3].sub,
+        middle5: res.data[4].sub,
+        middle6: res.data[5].sub,
+        middle7: res.data[6].sub,
+
+        })
+
+        for(var index in that.data.middle1){
+          var stateParam = "middle1["+ index +"].state"
+          that.setData({[stateParam]:false})
+        }
+        for (var index in that.data.middle2) {
+          var stateParam = "middle2[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        for (var index in that.data.middle3) {
+          var stateParam = "middle3[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        for (var index in that.data.middle4) {
+          var stateParam = "middle4[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        for (var index in that.data.middle5) {
+          var stateParam = "middle5[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        for (var index in that.data.middle6) {
+          var stateParam = "middle6[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        for (var index in that.data.middle7) {
+          var stateParam = "middle7[" + index + "].state"
+          that.setData({ [stateParam]: false })
+        }
+        
+
+
+
+        that.setData({ 
+          
+          linkType_label1: that.split_array(that.data.middle1), 
+          linkType_label2: that.split_array(that.data.middle2),
+          linkType_label3: that.split_array(that.data.middle3),
+          linkType_label4: that.split_array(that.data.middle4),
+          linkType_label5: that.split_array(that.data.middle5),
+          linkType_label6: that.split_array(that.data.middle6),
+          linkType_label7: that.split_array(that.data.middle7),
+         
+          })
+
+         
        
+          
+            
+        if (that.data.link_choose[0] == res.data[0].link) {that.setData({first: that.data.linkType_label1})}
+        else if (that.data.link_choose[0] == res.data[1].link) { that.setData({ first: that.data.linkType_label2 }) }
+        else if (that.data.link_choose[0] == res.data[2].link) { that.setData({ first: that.data.linkType_label3 }) }
+        else if (that.data.link_choose[0] == res.data[3].link) { that.setData({ first: that.data.linkType_label4 }) }
+        else if (that.data.link_choose[0] == res.data[4].link) { that.setData({ first: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[0] == res.data[5].link) { that.setData({ first: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[0] == res.data[6].link) { that.setData({ first: that.data.linkType_label7 }) }
+
+        if (that.data.link_choose[1] == res.data[0].link) { that.setData({ second: that.data.linkType_label1 }) }
+        else if (that.data.link_choose[1] == res.data[1].link) { that.setData({ second: that.data.linkType_label2 }) }
+        else if (that.data.link_choose[1] == res.data[2].link) { that.setData({ second: that.data.linkType_label3 }) }
+        else if (that.data.link_choose[1] == res.data[3].link) { that.setData({ second: that.data.linkType_label4 }) }
+        else if (that.data.link_choose[1] == res.data[4].link) { that.setData({ second: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[1] == res.data[5].link) { that.setData({ second: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[1] == res.data[6].link) { that.setData({ second: that.data.linkType_label7 }) }
+
+        if (that.data.link_choose[2] == res.data[0].link) { that.setData({ third: that.data.linkType_label1 }) }
+        else if (that.data.link_choose[2] == res.data[1].link) { that.setData({ third: that.data.linkType_label2 }) }
+        else if (that.data.link_choose[2] == res.data[2].link) { that.setData({ third: that.data.linkType_label3 }) }
+        else if (that.data.link_choose[2] == res.data[3].link) { that.setData({ third: that.data.linkType_label4 }) }
+        else if (that.data.link_choose[2] == res.data[4].link) { that.setData({ third: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[2] == res.data[5].link) { that.setData({ third: that.data.linkType_label6 }) }
+        else if (that.data.link_choose[2] == res.data[6].link) { that.setData({ third: that.data.linkType_label7 }) }
+
+
+        
+        
+        
+      }
+
     })
-    
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-   var that = this
+   
+    //接收上个页面传值
     wx.getStorage({
       key: 'text',
       success: function (res) {
@@ -318,11 +430,15 @@ Page({
         key: 'link_choose',
         success: function (res) {
           that.setData({
-            link_choose: res.data
+            link_choose: res.data,
+            link_number: res.data.length,
           })
           console.log(that.data.link_choose)
         },
       })
+
+    
+
      /* wx.getStorage({
         key: 'label1',
         success: function (res) {
@@ -352,138 +468,8 @@ Page({
       })*/
 
 
-    /*this.getlabel(3);
-    console.log(this.data.link_accept)
-    this.setData({
-      link_one :this.data.link_accept,
-    })
-   console.log(this.data.link_one);
-   
-    var length = this.data.foodtest.length;
-    var num = 10;
-    var first = [];
-    first = this.split_array(this.data.foodtest,num);
-    //console.log(first[0]);
-
-
-
-
-
-    this.data.link_choose = JSON.parse(options.link_choose);
-    this.data.link_number = this.data.link_choose.length;
-    this.setData({
-      link_number: this.data.link_number,
-      link_choose: this.data.link_choose,
-    })
-     //this.data.clicktime = options.clicktime;
-*/
-
-
-
-
-
-
-
-
-
-
-
-   /* var first,second,third = [];
-      if(this.data.link_choose[0]=="美食"){
-        this.setData({
-          first : this.split_array(this.data.foodtest)
-          
-        })
-      }
-      else if (this.data.link_choose[0] == "娱乐") {
-        this.setData({
-          label_1a: this.data.label_entertainment,
-        })
-      }
-      else if (this.data.link_choose[0] == "运动") {
-        this.setData({
-          label_1a: this.data.label_sport,
-        })
-      }
-      else if (this.data.link_choose[0] == "购物") {
-        this.setData({
-          label_1a: this.data.label_shopping,
-        })
-      }
-      else if (this.data.link_choose[0] == "酒店") {
-        this.setData({
-          label_1a: this.data.label_hotel,
-        })
-      }
-      else  {
-        this.setData({
-          label_1a: this.data.label_beauty,
-        })
-      }
-
-    if (this.data.link_choose[1] == "美食") {
-      this.setData({
-        label_2a: this.data.label_food,
-      })
-    }
-    else if (this.data.link_choose[1] == "娱乐") {
-      this.setData({
-        label_2a: this.data.label_entertainment,
-      })
-    }
-    else if (this.data.link_choose[1] == "运动") {
-      this.setData({
-        label_2a: this.data.label_sport,
-      })
-    }
-    else if (this.data.link_choose[1] == "购物") {
-      this.setData({
-        label_2a: this.data.label_shopping,
-      })
-    }
-    else if (this.data.link_choose[1] == "酒店") {
-      this.setData({
-        label_2a: this.data.label_hotel,
-      })
-    }
-    else  {
-      this.setData({
-        label_2a: this.data.label_beauty,
-      })
-    }
-
-
-   if (this.data.link_choose[2] == "美食") {
-      this.setData({
-        label_3a: this.data.label_food,
-      })
-    }
-    else if (this.data.link_choose[2] == "娱乐") {
-      this.setData({
-        label_3a: this.data.label_entertainment,
-      })
-    }
-    else if (this.data.link_choose[2] == "运动") {
-      this.setData({
-        label_3a: this.data.label_sport,
-      })
-    }
-    else if (this.data.link_choose[2] == "购物") {
-      this.setData({
-        label_3a: this.data.label_shopping,
-      })
-    }
-    else if (this.data.link_choose[2] == "酒店") {
-      this.setData({
-        label_3a: this.data.label_hotel,
-      })
-    }
-    else {
-      this.setData({
-        label_3a: this.data.label_beauty,
-      })
-    }*/
-
+     // var first,second,third = [];
+      
 
     
    
