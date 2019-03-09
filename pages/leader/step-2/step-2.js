@@ -103,13 +103,6 @@ for(let i=0;i<this.data.style.length;i++){
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        wx.showToast({
-          title: '请求成功',
-          icon: 'success',
-          mask: true,
-        
-        })
-        //console.log(res.data)
        
         _this.setData({
           link: res.data,

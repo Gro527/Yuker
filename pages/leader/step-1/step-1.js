@@ -141,15 +141,6 @@ Page({
       url: 'http://47.94.210.236:5555/api/link_type/all',//json数据地址
     
       success: function (result) {
-        wx.showToast({
-          title: '请求成功',
-          icon: 'success',
-          mask: true,
-         // duration: duration
-        })
-       /* self.setData({
-          loading: false
-        })*/
         console.log('request success', result)
       },
 

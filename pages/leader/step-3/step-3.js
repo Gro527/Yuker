@@ -306,11 +306,6 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        wx.showToast({
-          title: '请求成功',
-          icon: 'success',
-          mask: true,
-        })
 
 
 
