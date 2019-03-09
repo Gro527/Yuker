@@ -15,7 +15,7 @@
 <view class="overall">
   <view class="title">
     <image class="picture" src="/images/chicken.png"></image>
-    <view>{{link_choose[0]}}</view>
+    <view class= "choose">{{link_choose[0]}}</view>
   </view>
   
 

@@ -19,7 +19,8 @@
 .picture{
   width:75rpx;
   height:75rpx;
-  margin-left: 70rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
 
  
   }
@@ -28,13 +29,22 @@
     display: flex;
      flex-wrap:unwrap;
      flex-direction:row;
-     justify-content:space-between;
+     /* justify-content:space-between; */
+     align-items: center;
      width:310rpx;
     height:75rpx;
     margin-left: 70rpx;
     border: solid;
-    border-color:  antiquewhite;
+    border-color:  rgba(115, 121, 115, 0.726);
     
+ }
+
+ .choose{
+   margin-right: 20rpx;
+   /* margin-left: 50rpx; */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
  }
   
 
@@ -43,7 +53,7 @@
   height:75rpx;
   margin-right: 70rpx;
   border: solid;
-  border-color:  antiquewhite;
+  border-color:rgba(115, 121, 115, 0.726);
  
    display: flex;
   flex-direction: column;
@@ -63,7 +73,7 @@
   
 
   .label{
-     background:  floralwhite;
+     background:  rgba(255, 255, 240, 0.877);
      width:620rpx;
      height:550rpx;
      margin-left: 70rpx;
