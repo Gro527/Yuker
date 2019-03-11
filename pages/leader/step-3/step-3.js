@@ -2,6 +2,16 @@ const host = require('../../../host')
 Page({
 
   Data:{
+    
+    links_chosen:[],
+    labels_all:[],
+    labels_toChoose:[],
+    hidden_swiper:[true,],
+    numLabel_chosen:[0,],
+    labels_chosen:[]
+  },
+
+  data:{
     item: [
       { id: 1, name: 'step-1', addr: '/images/c-1.png' },
       { id: 2, name: 'step-2', addr: '/images/line.png' },
@@ -9,12 +19,6 @@ Page({
       { id: 4, name: 'step-3', addr: '/images/line.png' },
       { id: 5, name: 'step-3', addr: '/images/c-0.png' },
     ],
-    links_chosen:[],
-    labels_all:[],
-    labels_toChoose:[],
-    hidden_swiper:[true,],
-    numLabel_chosen:[0,],
-    labels_chosen:[]
   },
 
   onLoad: function(options){

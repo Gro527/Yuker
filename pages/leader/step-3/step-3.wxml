@@ -21,12 +21,12 @@
 
   <swiper class="label" indicator-dots="true" duration="1000" hidden="{{hidden_swiper[i]}}" bindchange='get_view_first'>
     <block wx:for="{{labels_toChoose}}" >
-    <swiper-item  item-id="{{index}}" >
-      <view class="label_sub">
-        <view class="labelcontent" data-link="{{i}}" wx:for="{{labels_toChoose[i]}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'white':'floralwhite'}}">
-        {{item.label}}</view>
-      </view> 
-    </swiper-item>
+      <swiper-item  item-id="{{index}}" >
+        <view class="label_sub">
+          <view class="labelcontent" data-link="{{i}}" wx:for="{{labels_toChoose[i]}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'white':'floralwhite'}}">
+          {{item.label}}</view>
+        </view> 
+      </swiper-item>
     </block>
   </swiper>
   <view class='line'></view>

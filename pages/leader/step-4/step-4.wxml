@@ -20,11 +20,16 @@
 
 <view class="name">
   <text class='title' >方案环节：{{ct}}\n</text>
-  
+
+<view class="box0">
   <view wx:for='{{link_choose}}' wx:for-item="link" class='step'>
+   <view class="box1"> 
     <image class='image' src='/images/step.png'> </image>
     <text class='link'>{{link}}  </text>
+   </view>
   </view>
+</view>
+
  
 </view>
 <view class='line'></view>
