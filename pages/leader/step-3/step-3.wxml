@@ -23,8 +23,7 @@
     <block wx:for="{{labels_toChoose_split[i]}}" wx:for-item="split_array" wx:for-index="split_array_index">
       <swiper-item  item-id="{{index}}" >
         <view class="label_sub">
-          <view class="labelcontent" data-link="{{i}}" data-index="{{split_array_index}}" wx:for="{{split_array}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'white':'floralwhite'}}">
-          {{item.label}}</view>
+          <view class="labelcontent" data-link="{{i}}" data-index="{{split_array_index}}" wx:for="{{split_array}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'PapayaWhip':'#FFFFFF0'}}">{{item.label}}</view>
         </view> 
       </swiper-item>
     </block>

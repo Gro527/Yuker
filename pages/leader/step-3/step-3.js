@@ -126,11 +126,13 @@ Page({
       }
       chosenNum--
     }
-    var index_labels_toChoose = "labels_toChoose["+link+"]["+id+"].chosen"
+    var index_labels_toChoose = "labels_toChoose["+link+"]["+label.id+"].chosen"
+    var index_labels_toChoose_split = "labels_toChoose_split["+link+"]["+index+"]["+id+"].chosen"
     var index_numLabel_chosen = "numLabel_chosen["+link+"]"
     this.setData({
       [index_labels_toChoose]:label.chosen,
-      [index_numLabel_chosen]:chosenNum
+      [index_numLabel_chosen]:chosenNum,
+      [index_labels_toChoose_split]:label.chosen
     })
   },
 
@@ -173,7 +175,6 @@ Page({
       data:{json},
       method:'POST',
       success: function(res){
-        console.log(res)
         wx.setStorage({
           key: 'program_id',
           data: res.data.program_id,
