@@ -1,4 +1,18 @@
 <!--pages/index/plan1/plan1.wxml-->
+<!-- <view class="content"> -->
+  <view class="bg">
+    
+      <view class="head_name">
+        <text>方案名称</text>
+      </view>
+      <view class="head_time">
+        <text>time</text>
+      </view>
+    
+  </view>
+<!-- </view> -->
+
+
 <view class='body'>
 
 <view class='person' style='flex-direction:row;'>   <!--NO.1-->

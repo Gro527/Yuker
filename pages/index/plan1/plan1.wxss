@@ -1,4 +1,38 @@
 /* pages/index/plan1/plan1.wxss */
+
+/* .content{
+  height: 60px;
+} */
+
+
+.bg{
+  width: 100%;
+  height: 70px;
+  background-color:rgba(255, 255, 240, 0.897);
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.head_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Microsoft YaHei";
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.head_time{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bold;
+}
+
 .person{
   /*background: rgb(235, 117, 117); /*便于看清布局*/
   height: 400rpx;
