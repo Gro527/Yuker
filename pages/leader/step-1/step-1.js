@@ -1,7 +1,7 @@
 // pages/leader/step-1/step-1.js
 var tcity = require("../../../utils/citys.js")
 const county = ["附近", "热门商圈"]
-const area = ["500m", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km", "1km", "2km"]
+const area = ["500m", "1km", "2km", "3km", "4km", "5km", "6km", "7km", "8km", "10km", "15km", "20km", "20km以上"]
 
 
 Page({

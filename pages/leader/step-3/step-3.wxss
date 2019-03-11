@@ -73,7 +73,7 @@
   
 
   .label{
-     background:  rgba(255, 255, 240, 0.877);
+     background: #FFFFF0;
      width:620rpx;
      height:550rpx;
      margin-left: 70rpx;
@@ -96,7 +96,12 @@
 
 margin-right:70rpx;
 margin-left: 70rpx;
-margin-bottom: 30rpx;}
+margin-bottom: 30rpx;
+border-radius: 20rpx;
+/* border-width: 200rpx;
+border-left-width: 50rpx; */
+padding: 15rpx;
+}
 
 .confirm{
   margin-left: 70rpx;
