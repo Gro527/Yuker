@@ -1,4 +1,5 @@
 // pages/leader/step-2/step-2.js
+const host = require('../../../host')
 Page({
 
   data: {
@@ -98,7 +99,7 @@ for(let i=0;i<this.data.style.length;i++){
 
     var _this = this
     wx.request({
-      url: 'http://47.94.210.236:5555/api/link_type/all',//json数据地址
+      url: host.link_url,//json数据地址
       headers: {
         'Content-Type': 'application/json'
       },
