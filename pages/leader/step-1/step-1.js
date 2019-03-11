@@ -1,4 +1,5 @@
 // pages/leader/step-1/step-1.js
+const host = require('../../../host')
 var tcity = require("../../../utils/citys.js")
 const county = ["附近", "热门商圈"]
 const area = ["500m", "1km", "2km", "3km", "4km", "5km", "6km", "7km", "8km", "10km", "15km", "20km", "20km以上"]
@@ -136,21 +137,21 @@ Page({
    */
   onLoad: function (options) {
     
-    wx.request({
-     // url: "http://47.94.210.236:5555/dbtest",
-      url: 'http://47.94.210.236:5555/api/link_type/all',//json数据地址
+    // wx.request({
+    //  // url: "http://47.94.210.236:5555/dbtest",
+    //   url: host.link_url,//json数据地址
     
-      success: function (result) {
-        console.log('request success', result)
-      },
+    //   success: function (result) {
+    //     console.log('request success', result)
+    //   },
 
-      fail: function ({ errMsg }) {
-        console.log('request fail', errMsg)
-        /*self.setData({
-          loading: false
-        })*/
-      }
-    })
+    //   fail: function ({ errMsg }) {
+    //     console.log('request fail', errMsg)
+    //     /*self.setData({
+    //       loading: false
+    //     })*/
+    //   }
+    // })
   
   },
 

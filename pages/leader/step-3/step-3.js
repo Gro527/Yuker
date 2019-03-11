@@ -6,12 +6,14 @@ Page({
     links_chosen:[],
     labels_all:[],
     labels_toChoose:[],
+    labels_toChoose_split:[],
     hidden_swiper:[true,],
     numLabel_chosen:[0,],
     labels_chosen:[]
   },
 
   data:{
+    viewid:0,
     item: [
       { id: 1, name: 'step-1', addr: '/images/c-1.png' },
       { id: 2, name: 'step-2', addr: '/images/line.png' },
@@ -19,6 +21,15 @@ Page({
       { id: 4, name: 'step-3', addr: '/images/line.png' },
       { id: 5, name: 'step-3', addr: '/images/c-0.png' },
     ],
+  },
+  
+  split_array: function (arr) { //拆分数组
+    var a_len = arr.length;
+    var result = [];
+    for (let i = 0; i < a_len; i += 10) {
+      result.push(arr.slice(i, i + 10));
+    }
+    return result
   },
 
   onLoad: function(options){
@@ -50,6 +61,8 @@ Page({
         var _labels_toChoose = []
         for (var link in that.data.links_chosen) {
           _labels_toChoose[link] = _labels_all.get(that.data.links_chosen[link])
+          var _labels_toChoose_split = []
+          _labels_toChoose_split = that.split_array(_labels_toChoose[link])
           for(var label in _labels_toChoose[link]){
             _labels_toChoose[link][label].chosen = false
           }
@@ -59,10 +72,12 @@ Page({
           var index_swiper =  "hidden_swiper["+link+"]"
           var index_numlabel = "numLabel_chosen["+link+"]"
           var index_labels_chosen = "labels_chosen["+link+"]"
+          var index_labels_toChoose_split = "labels_toChoose_split["+link+"]"
           that.setData({
             [index_swiper]:true,
             [index_numlabel]:0,
-            [index_labels_chosen]:_labels_chosen
+            [index_labels_chosen]:_labels_chosen,
+            [index_labels_toChoose_split]:_labels_toChoose_split
           })
         }
         that.setData({labels_toChoose:_labels_toChoose})
@@ -70,6 +85,14 @@ Page({
       }
     })
 
+
+  },
+
+  get_view: function (e) {
+    this.setData({
+      viewid: e.detail.currentItemId
+    })
+    console.log(this.data.viewid)
 
   },
 
@@ -83,9 +106,11 @@ Page({
   },
 
   label_choose: function(data){
+    console.log(data)
     var link = data.currentTarget.dataset.link
+    var index = data.currentTarget.dataset.index
     var id = data.currentTarget.id
-    var label = this.data.labels_toChoose[link][id]
+    var label = this.data.labels_toChoose_split[link][index][id]
     label.chosen = !label.chosen
     // var link_chosenlist = this.data.labels_chosen[link]
     var chosenNum = this.data.numLabel_chosen[link]
@@ -94,7 +119,6 @@ Page({
       chosenNum++
     }
     else {
-
       for(var i in this.data.labels_chosen[link]){
         if(this.data.labels_chosen[link][i].id == label.id){
           this.data.labels_chosen[link].splice(i,1)
