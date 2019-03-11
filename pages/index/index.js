@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+const host = require('../../host')
 const app = getApp()
 
 Page({
@@ -65,7 +66,7 @@ Page({
             console.log(res.code)
             //发送请求
             wx.request({
-              url: 'http://47.94.210.236:5555/api/login', //接口地址
+              url: host.login_url, //接口地址
               data: 
               { 'code': res.code },
               header: {
