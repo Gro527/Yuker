@@ -152,6 +152,7 @@ Page({
     json.openid = openid
     var long_lati = wx.getStorageSync('addr_long_lati')
     json.location = {}
+    json.location.name = wx.getStorageSync('addr')
     json.location.longitude = long_lati[0]
     json.location.latitude = long_lati[1]
     var links = []

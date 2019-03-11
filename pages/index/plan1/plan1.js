@@ -1,20 +1,29 @@
 // pages/index/plan1/plan1.js
+const host = require('../../../host')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    member_type:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(options.proid)
       this.setData({
-        proid:options.proid
+        proid:options.proid,
+        //设置成员类型：0未参与者，1为发起人，2为参与者
+        member_type:options.type
+      })
+      wx.request({
+        url: host.program_info_url+this.data.proid,
+        success: function(res){
+          console.log(res.data)
+          //待补全
+        }
       })
       
   },
