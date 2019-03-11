@@ -2,6 +2,13 @@ const host = require('../../../host')
 Page({
 
   Data:{
+    item: [
+      { id: 1, name: 'step-1', addr: '/images/c-1.png' },
+      { id: 2, name: 'step-2', addr: '/images/line.png' },
+      { id: 3, name: 'step-3', addr: '/images/c-1.png' },
+      { id: 4, name: 'step-3', addr: '/images/line.png' },
+      { id: 5, name: 'step-3', addr: '/images/c-0.png' },
+    ],
     links_chosen:[],
     labels_all:[],
     labels_toChoose:[],
@@ -104,6 +111,12 @@ Page({
     wx.navigateTo({
       url: '/pages/leader/step-4/step-4'
     })
+    //将label发送至storage
+    wx.setStorage({
+      key: 'labels_chosen',
+      data: that.data.labels_chosen,
+    })
+    //打包json数据并发送至后台
     var json = {}
     var openid = wx.getStorageSync("openid")
     json.openid = openid
@@ -111,7 +124,6 @@ Page({
     json.location = {}
     json.location.longitude = long_lati[0]
     json.location.latitude = long_lati[1]
-
     var links = []
     for (var i in that.data.links_chosen) {
       console.log(i)

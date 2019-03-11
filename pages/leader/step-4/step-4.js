@@ -111,6 +111,8 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    wx.redirectTo({
+      url: '/pages/index/index?text=' + this.data.text,
+    })
   }
 })

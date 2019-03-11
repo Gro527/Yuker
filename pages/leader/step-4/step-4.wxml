@@ -21,41 +21,20 @@
 <view class="name">
   <text class='title' >方案环节：{{ct}}\n</text>
   
-  <view wx:if='{{ct==1}}' class='step'>
+  <view wx:for='{{link_choose}}' wx:for-item="link" class='step'>
     <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[0]}}  </text>
+    <text class='link'>{{link}}  </text>
   </view>
  
- <view wx:if='{{ct==2}}' class='step'>
-    <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[0]}}  </text>
-    <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[1]}}  </text>
-  </view>
- 
-  <view wx:if='{{ct==3}}' class='step'>
-    <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[0]}}  </text>
-    <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[1]}}  </text>
-    <image class='image' src='/images/step.png'> </image>
-    <text class='link'>{{link_choose[2]}}</text>
-  </view>
- 
-  <!--button class='link' plain='true' size='mini'>{{d1}}</button>
-  <image src='/images/arrows.png' class='ar'></image>
-  <button class='link' plain='true' size='mini'>{{d2}}</button>
-  <image src='/images/arrows.png' class='ar'></image>
-  <button class='link' plain='true' size='mini'>{{d3}}</button-->
 </view>
 <view class='line'></view>
 
-<view class="name">
+<!-- <view class="name">
   <text class='title' >方案风格:\n</text>
   <button class='link2' plain='true' size='mini'>温馨</button>
   <button class='link2' plain='true' size='mini'>同学</button>
 </view>
-<view class='line'></view>
+<view class='line'></view> -->
 
 
 <view class="name">
