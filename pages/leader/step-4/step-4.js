@@ -42,20 +42,11 @@ Page({
       success: function(res) {
         that.setData({
           link_choose:res.data,
-          ct:res.data.length
         })
       },
     })
     
 
-    /*this.setData({
-     // text: options.text,
-      address: options.addr,
-      d1: options.d1,
-      d2: options.d2,
-      d3: options.d3,
-      ct: options.ct,
-    })*/
   },
 
 
@@ -110,9 +101,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    wx.redirectTo({
-      url: '/pages/index/index?text=' + this.data.text,
-    })
+  onShareAppMessage: function (object) {
+    if(object.from === 'button') {
+      var proid = wx.getStorageSync('program_id')
+      return {
+        title: '约客',
+        path: '/pages/plan1?proid='+proid,
+      }
+    }
   }
 })

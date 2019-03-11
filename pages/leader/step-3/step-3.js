@@ -146,6 +146,10 @@ Page({
       method:'POST',
       success: function(res){
         console.log(res)
+        wx.setStorage({
+          key: 'program_id',
+          data: res.data.program_id,
+        })
       }
     })
   }

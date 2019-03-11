@@ -115,7 +115,7 @@ Page({
 
   plan1:function(){
     wx.navigateTo({
-      url: '/pages/index/plan1/plan1',
+      url: '/pages/index/plan1/plan1?proid=18',
     })
   },
 
