@@ -1,7 +1,6 @@
 // pages/index/plan1/plan1.js
 const host = require('../../../host')
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -18,11 +17,21 @@ Page({
         //设置成员类型：0未参与者，1为发起人，2为参与者
         member_type:options.type
       })
+      var that = this
       wx.request({
-        url: host.program_info_url+this.data.proid,
+        url: host.program_info_url,
+        data:{'program_id': this.data.proid},
+        method:'POST',
+        header:{
+          'content-type': 'application/json'
+        },
         success: function(res){
-          console.log(res.data)
-          //待补全
+          console.log(res.data.members)
+          that.setData({
+            time:res.data.time,
+            members: res.data.members,
+          })
+          
         }
       })
       
