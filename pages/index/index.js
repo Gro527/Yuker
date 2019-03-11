@@ -74,6 +74,10 @@ Page({
               method:'POST',
               success: function (res) {
                console.log(res)
+               wx.setStorage({
+                 key: 'openid',
+                 data: res.data,
+               })
               },
               fail:function(res){
                 console.log(res)

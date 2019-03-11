@@ -50,7 +50,7 @@ remove:function(e){
 
   this.data.clicktime--;
   if (this.data.clicktime < 0) { this.data.clicktime = 0; }
-  console.log(this.data.link_choose);
+  // console.log(this.data.link_choose);
 
 },
 
@@ -108,7 +108,7 @@ for(let i=0;i<this.data.style.length;i++){
           link: res.data,
          
         })
-        console.log(_this.data.link)
+        // console.log(_this.data.link)
       }
     })
 

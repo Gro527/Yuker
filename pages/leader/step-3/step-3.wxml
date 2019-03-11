@@ -8,87 +8,29 @@
 
 
   <!--环节一-->
-<block wx:if="{{link_number>=1}}">
-<view class="link1">环节一:</view>
-
-
-<view class="overall">
-  <view class="title">
-    <image class="picture" src="/images/chicken.png"></image>
-    <view class= "choose">{{link_choose[0]}}</view>
+<block wx:for="{{links_chosen}}" wx:for-item="linkname" wx:for-index="i">
+  <view class="link1">环节{{i+1}}:</view>
+  <view class="overall">
+    <view class="title">
+      <image class="picture" src="/images/chicken.png"></image>
+      <view class= "choose">{{linkname}}</view>
+    </view>
+    <view id="{{i}}" hidden="{{!hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">请选择 ∨</view>
+    <view id="{{i}}" hidden="{{hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">已选 {{numLabel_chosen[i]}} 项:</view>
   </view>
-  
 
-<view class="title_sub" bindtap="tap1">{{title1}}</view></view>
-
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname1}}" bindchange='get_view_first'>
-
-<block wx:for="{{first}}" >
-<swiper-item  item-id="{{index}}" >
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_first' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.label}}</view>
-</view> </swiper-item>
+  <swiper class="label" indicator-dots="true" duration="1000" hidden="{{hidden_swiper[i]}}" bindchange='get_view_first'>
+    <block wx:for="{{labels_toChoose}}" >
+    <swiper-item  item-id="{{index}}" >
+      <view class="label_sub">
+        <view class="labelcontent" data-link="{{i}}" wx:for="{{labels_toChoose[i]}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'white':'floralwhite'}}">
+        {{item.label}}</view>
+      </view> 
+    </swiper-item>
+    </block>
+  </swiper>
+  <view class='line'></view>
 </block>
-</swiper>
-<view class='line'></view>
-</block>
-
-
- <!--环节二-->
-<block wx:if="{{link_number>=2}}">
-<view class="link1">环节二:</view>
-
-
-<view class="overall">
-  <view class="title">
-    <image class="picture" src="/images/chicken.png"></image>
-    <view>{{link_choose[1]}}</view>
-  </view>
-  
-
-<view class="title_sub" bindtap="tap2">{{title2}}</view></view>
-
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname2}}" bindchange='get_view_second'>
-
-<block wx:for="{{second}}" >
-<swiper-item  item-id="{{index}}" >
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_second' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.label}}</view>
-</view> </swiper-item>
-</block>
-</swiper>
-<view class='line'></view>
-</block>
-
- <!--环节三-->
-<block wx:if="{{link_number>=3}}">
-<view class="link1">环节三:</view>
-
-
-<view class="overall">
-  <view class="title">
-    <image class="picture" src="/images/chicken.png"></image>
-    <view>{{link_choose[2]}}</view>
-  </view>
-  
-
-<view class="title_sub" bindtap="tap3">{{title3}}</view></view>
-
-<swiper class="label" indicator-dots="true" duration="1000" hidden="{{hiddenname3}}" bindchange='get_view_third'>
-
-<block wx:for="{{third}}" >
-<swiper-item  item-id="{{index}}" >
-<view class="label_sub">
-<view class="labelcontent" wx:for="{{item}}" wx:for-item="item" id="{{index}}" bindtap='get_label_third' style="background-color:{{item.state?'white':'floralwhite'}}">
-{{item.label}}</view>
-</view> </swiper-item>
-</block>
-</swiper>
-<view class='line'></view>
-</block>
-
 
    <view class="dislike">
       <view >反标签添加：</view>
