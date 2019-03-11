@@ -68,3 +68,10 @@
   margin-top: 50rpx;
   margin-bottom: 70rpx;
 }
+
+
+.box0{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
