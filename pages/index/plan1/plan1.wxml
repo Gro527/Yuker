@@ -6,59 +6,31 @@
         <text>方案名称</text>
       </view>
       <view class="head_time">
-        <text>time</text>
+        <text>{{time}}</text>
       </view>
     
   </view>
 <!-- </view> -->
 
+<block wx:for="{{members}}"  wx:for-item="user"  wx:for-index="i">
+  <view class="person" style='flex-direction:row;'>
+    <view class='little'>
+      <image class='head' src='/images/person_1.png'></image>
+    </view>
+    <view class='little_2'>
+      <text wx:for="{{user.sub}}" wx:for-item="link">
+      {{link.link}} : {{link.sub}}
+      </text>
+    </view>
+  </view>
+  <view class='loc'>
+      <image class='location_p' src='/images/location.png'></image>
+      <text class='location'>{{location}}</text>
+  </view>
+  <view class='line'></view>
+</block>
 
-<view class='body'>
-
-<view class='person' style='flex-direction:row;'>   <!--NO.1-->
-<view class='little'>
-<image class='head' src='/images/person_1.png'></image>
-<image class='location_p' src='/images/location.png'></image>
-<text class='location'>BUPT</text>
-</view>
-<view class='little_2'>
-<text>饮食:\n\n</text>
-<text>娱乐:\n\n</text>
-<text>饮食:</text>
-</view>        
-</view>
-
-<view class='line'></view>
-
-<view class='person' style='flex-direction:row;'>  <!--NO.2-->
-<view class='little'>
-<image class='head' src='/images/person_2.png'></image>
-<image class='location_p' src='/images/location.png'></image>
-<text class='location'>BeiJing</text>
-</view>
-<view class='little_2'>
-<!--text>饮食:\n\n</text>
-<text>娱乐:\n\n</text>
-<text>饮食:</text-->
-<text>\n\n未操作</text>
-</view>    
-</view>
-
-<view class='line'></view>
-
-<view class='person' style='flex-direction:row;'>  <!--NO.3-->
-<view class='little_3'>
-<image class='location_p1' src='/images/address.png'></image>
-<text>\nAddress:</text>
-</view>
-<view class='little_2'>
-<text>step-1 饮食:\n</text>
-<text>step-2 娱乐:\n</text>
-<text>step-3 饮食:\n</text>
-</view>    
-</view>
 
 <button bindtap='confirm' type="default" class='final'>生成方案</button>
 
 
-</view>
