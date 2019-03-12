@@ -31,13 +31,13 @@
 </block>
 
 <block wx:if="{{member_type==0}}">
- <button bindtap='join' type="default" class='final'>生成方案</button>
+ <button bindtap='comfirm' type="default" class='final'>生成方案</button>
 </block>
 <block wx:elif="{{member_type==1}}">
- <button bindtap='confirm' type="default" class='final'>修改方案</button>
+ <button bindtap='join' type="default" class='final'>修改方案</button>
 </block>
 <block wx:elif="{{member_type==2}}">
- <button bindtap='confirm' type="default" class='final'>加入方案</button>
+ <button bindtap='join' type="default" class='final'>加入方案</button>
 </block>
 
 

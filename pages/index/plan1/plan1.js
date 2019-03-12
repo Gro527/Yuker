@@ -17,7 +17,7 @@ Page({
     
       this.setData({
         proid:options.proid,
-        //设置成员类型：0未参与者，1为发起人，2为参与者
+        //设置成员类型：0为发起者，1为参与人，2为路人
         // member_type:options.type
       })
     
@@ -67,7 +67,7 @@ Page({
      })
 
 
-    //判断当前用户类型所属（0未发起者，1为参与人，2为路人）
+    //判断当前用户类型所属（0为发起者，1为参与人，2为路人）
     if (that.data.userid_current = that.data.userid[0]){
       that.setData({
         member_type:0
@@ -119,6 +119,14 @@ Page({
       url: '/pages/index/plan1/plan1_1/plan1_1'
       })
   },
+
+  join: function () {
+    wx.navigateTo({
+      url: '/pages/leader/step-3/step-3'
+    })
+  },
+
+  
 
   /**
    * 生命周期函数--监听页面显示
