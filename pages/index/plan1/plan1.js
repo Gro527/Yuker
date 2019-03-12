@@ -56,55 +56,45 @@ Page({
       })
     
     var that = this
-
-     wx.getStorage({
-      key: 'userid',
-      success: function (res) {
-        that.setData({
-          userid_current: res.data
-        })
+    wx.request({
+      url: host.program_info_url,
+      data:{'program_id': this.data.proid},
+      method:'POST',
+      header:{
+        'content-type': 'application/json'
       },
-     })
+      success: function(res){
+        console.log(res.data)
+        
+        that.setData({
+          time : res.data.time,
+          members : res.data.members,
+          userid_current : wx.getStorageSync('userid')
+        })
 
 
-    //判断当前用户类型所属（0为发起者，1为参与人，2为路人）
-    if (that.data.userid_current = that.data.userid[0]){
-      that.setData({
-        member_type:0
-      })
-    }
-    else if(that.data.userid_current in that.data.userid){
-      that.setData({
-        member_type: 1
-      })
-    }
-    else {
-      that.setData({
-        member_type: 2
-      })
-    }
-
-
-      wx.request({
-        url: host.program_info_url,
-        data:{'program_id': this.data.proid},
-        method:'POST',
-        header:{
-          'content-type': 'application/json'
-        },
-        success: function(res){
-          console.log(res.data)
-          that.setData({
-            time:res.data.time,
-            members: res.data.members,
-            userid: res.data.members[0].userid,
-            location: res.data.members[0].location.location,
-          })
-          
-          
+        var _member_type = 2
+        //判断当前用户类型所属（0为发起者，1为参与人，2为路人）
+        if (that.data.userid_current == that.data.members[0].userid) {
+          _member_type = 0
         }
-      })
+        else {
+          for (var i in that.data.members) {
+            if (that.data.members[i] == that.data.userid_current) {
+              _member_type = 1
+            }
+          }
+        }
+        that.setData({
+          member_type: _member_type
+        })
+
+      }
+    })
       
+
+
+
   },
 
   /**

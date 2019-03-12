@@ -25,7 +25,7 @@
   </view>
   <view class='loc'>
       <image class='location_p' src='/images/location.png'></image>
-      <text class='location'>{{location}}</text>
+      <text class='location'>{{user.location.location}}</text>
   </view>
   <view class='line'></view>
 </block>
