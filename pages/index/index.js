@@ -63,7 +63,6 @@ Page({
      
         wx.login({
           success: function (res) {
-            console.log(res.code)
             //发送请求
             wx.request({
               url: host.login_url, //接口地址
@@ -77,7 +76,15 @@ Page({
                console.log(res)
                wx.setStorage({
                  key: 'openid',
-                 data: res.data,
+                 data: res.data.openid,
+               })
+               wx.setStorage({
+                 key: 'userid',
+                 data: res.data.id,
+               })
+               wx.setStorage({
+                 key: 'session_key',
+                 data: res.data.session_key,
                })
               },
               fail:function(res){
