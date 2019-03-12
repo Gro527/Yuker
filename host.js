@@ -25,10 +25,13 @@ var host = {
   leader_submit_url:`${base}/submit`,
 
   //查询方案信息
-  //需提交方案id
   program_info_url:`${base}/program_info`,
 
-  
+  //查询当前用户发起的方案
+  leader_history_url:`${base}/leader_history`,
+
+  //查询当前用户参与的方案
+  member_history_url:`${base}/member_history`,
 }
 
 module.exports = host

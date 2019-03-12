@@ -1,12 +1,12 @@
 
 <view class="content">
   <view class="menu">
-    <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap='switchNav'>我发起的方案 4</view>
-    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap='switchNav'>我参与的方案 4</view>
+    <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap='switchNav'>我发起的方案</view>
+    <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap='switchNav'>我参与的方案</view>
   </view>
+
   <view class="hr"></view>
-  <block wx:for="{{coupons}}">
-    <block wx:if="{{currentTab==0}}">
+<block wx:for="{{show}}">
       <view class="item">
         <view class="nameInfo">
           <view class="name">
@@ -14,24 +14,10 @@
             <view class="time">{{item.time}}</view>
             <view class="status">{{item.status}}</view>
           </view>
-          <button class="count" bindtap='plan1' ><image class="next" src="/images/next.png"></image></button>
+          <button class="count" data-program_id='{{item.id}}' bindtap='plan1' ><image class="next" src="/images/next.png"></image></button>
         </view>
       </view>
       <view class="line"></view>
-    </block>
-    <block wx:else>
-      <view class="item1">
-        <view class="nameInfo">
-          <view class="name">
-            <view class="fname">{{item.name}}</view>
-            <view class="time">{{item.time}}</view>
-            <view class="status">{{item.status}}</view>
-          </view>
-          <button class="count" bindtap='plan1'><image class="next" src="/images/next.png"></image></button>
-        </view>
-      </view>
-      <view class="line"></view>
-    </block>
   </block>
   <view class="bt"></view>
 

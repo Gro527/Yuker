@@ -53,7 +53,7 @@ Page({
   myplan: function () {
     var proid = wx.getStorageSync('program_id')
     wx.redirectTo({
-      url: '/pages/plan1?proid='+proid,
+      url: '/pages/index/plan1/plan1?proid='+proid,
     })
   },
 
