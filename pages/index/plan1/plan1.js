@@ -5,19 +5,86 @@ Page({
    * 页面的初始数据
    */
   data: {
-    member_type:0
+    member_type:0,
+    userid:[],
+    userid_current:3
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
       this.setData({
         proid:options.proid,
         //设置成员类型：0未参与者，1为发起人，2为参与者
         // member_type:options.type
       })
-      var that = this
+    
+      //当前用户id刷新storage
+      wx.login({
+        success: function (res) {
+          //发送请求
+          wx.request({
+            url: host.login_url, //接口地址
+            data:
+              { 'code': res.code },
+            header: {
+              'content-type': 'application/json' //默认值
+            },
+            method: 'POST',
+            success: function (res) {
+              console.log(res)
+              wx.setStorage({
+                key: 'openid',
+                data: res.data.openid,
+              })
+              wx.setStorage({
+                key: 'userid',
+                data: res.data.id,
+              })
+              wx.setStorage({
+                key: 'session_key',
+                data: res.data.session_key,
+              })
+            },
+            fail: function (res) {
+              console.log(res)
+            }
+          })
+        }
+      })
+    
+    var that = this
+
+     wx.getStorage({
+      key: 'userid',
+      success: function (res) {
+        that.setData({
+          userid_current: res.data
+        })
+      },
+     })
+
+
+    //判断当前用户类型所属（0未发起者，1为参与人，2为路人）
+    if (that.data.userid_current = that.data.userid[0]){
+      that.setData({
+        member_type:0
+      })
+    }
+    else if(that.data.userid_current in that.data.userid){
+      that.setData({
+        member_type: 1
+      })
+    }
+    else {
+      that.setData({
+        member_type: 2
+      })
+    }
+
+
       wx.request({
         url: host.program_info_url,
         data:{'program_id': this.data.proid},
@@ -30,8 +97,10 @@ Page({
           that.setData({
             time:res.data.time,
             members: res.data.members,
+            userid: res.data.members[0].userid,
             location: res.data.members[0].location.location,
           })
+          
           
         }
       })

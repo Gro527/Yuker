@@ -60,7 +60,7 @@ Page({
   },*/
   onLoad:function(){
         //登录获取code
-     
+        
         wx.login({
           success: function (res) {
             //发送请求
@@ -73,7 +73,7 @@ Page({
               },
               method:'POST',
               success: function (res) {
-               console.log(res)
+               //console.log(res)
                wx.setStorage({
                  key: 'openid',
                  data: res.data.openid,
@@ -86,6 +86,7 @@ Page({
                  key: 'session_key',
                  data: res.data.session_key,
                })
+               
               },
               fail:function(res){
                 console.log(res)
@@ -93,6 +94,7 @@ Page({
             })
          }
         })
+        
       },
 
 
