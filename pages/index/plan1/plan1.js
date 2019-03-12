@@ -15,7 +15,7 @@ Page({
       this.setData({
         proid:options.proid,
         //设置成员类型：0未参与者，1为发起人，2为参与者
-        member_type:options.type
+        // member_type:options.type
       })
       var that = this
       wx.request({
@@ -26,10 +26,11 @@ Page({
           'content-type': 'application/json'
         },
         success: function(res){
-          console.log(res.data.members)
+          console.log(res.data)
           that.setData({
             time:res.data.time,
             members: res.data.members,
+            location: res.data.members[0].location.location,
           })
           
         }
