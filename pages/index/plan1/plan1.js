@@ -104,7 +104,18 @@ Page({
 
   },
 
-  confirm:function(){
+  submit:function(){
+    wx.request({
+      url: host.leader_submit_url+this.data.proid,
+      method:'GET',
+      success(res){
+        console.log(res.data)
+        wx.setStorage({
+          key: 'result',
+          data: res.data,
+        })
+      }
+    })
     wx.navigateTo({
       url: '/pages/index/plan1/plan1_1/plan1_1'
       })

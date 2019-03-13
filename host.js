@@ -22,7 +22,7 @@ var host = {
 
   //发起人submit
   //需提交方案id
-  leader_submit_url:`${base}/submit`,
+  leader_submit_url:`${base}/submit/`,
 
   //查询方案信息
   program_info_url:`${base}/program_info`,
