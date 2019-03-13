@@ -10,8 +10,8 @@
       <!-- <view class="plan_item" style='flex-direction:row;' > -->
         <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
 
-          <view class='little1'>
-            <view class='little2'>
+          <view class='little0'>
+            <view class='little1'>
               <view class="first0">{{plan.link}}</view>
               <view class= "first1">{{plan.label}}</view>
               <view class="second">
@@ -19,7 +19,7 @@
                 <text>{{plan.dest}}</text>
               </view>
             </view>  
-            <view class='little3'>
+            <view class='little2'>
               <image bindtap='daohang' data-dest='{{plan.dest}}'class='image' src='/images/daohang.png'></image> 
             </view>  
           </view>
