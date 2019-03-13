@@ -11,9 +11,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-     where_go_array: county,
-     where_go_area: area,
-     
+    where_go_array: county,
+    where_go_area: area,
+    
+    program_name:"我的Yuker方案",
     hasLocation: false,
     info_food: "默认",
     hiddenname: true,
@@ -99,7 +100,7 @@ Page({
   },
   forcontent: function (e) {
     this.setData({
-      text: e.detail.value,
+      program_name: e.detail.value,
     })
   },
 
@@ -116,8 +117,8 @@ Page({
         url: '/pages/leader/step-2/step-2'//?text='+this.data.text+'&addr='+this.data.locationAddress
       }),
       wx.setStorage({
-        key: 'text',
-        data: this.data.text,
+        key: 'program_name',
+        data: this.data.program_name,
       })
       wx.setStorage({
         key: 'addr',

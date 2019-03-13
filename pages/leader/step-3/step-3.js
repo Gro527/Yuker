@@ -155,6 +155,8 @@ Page({
     json.location.name = wx.getStorageSync('addr')
     json.location.longitude = long_lati[0]
     json.location.latitude = long_lati[1]
+    var program_name = wx.getStorageSync('program_name')
+    json.program_name = program_name
     var links = []
     for (var i in that.data.links_chosen) {
       console.log(i)
@@ -170,6 +172,7 @@ Page({
       links.push(j)
     }
     json.links = links
+    console.log(json)
     // 向服务器发送leader_confirm请求
     wx.request({
       url: host.leader_confirm_url,
