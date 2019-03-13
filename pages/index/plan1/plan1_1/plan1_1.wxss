@@ -8,9 +8,6 @@
   height: 300rpx;
   margin-top:50rpx; 
   margin-left: 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
  /* background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 .little2{
@@ -19,7 +16,7 @@
   margin-top:50rpx; 
   /* margin-left: 20rpx; */
   font-weight: bold;
-  
+  margin-left: 30rpx;
   /*background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 
@@ -81,6 +78,11 @@
    margin-right: 50rpx;
 }
 
+.pic{
+  height: 60rpx;
+  width: 60rpx;
+}
+
 .image_item{
    width: 150rpx;
    height: 150rpx;
@@ -97,7 +99,13 @@
 }
 
 
-.first{
+.first0{
+  font-size: 20px;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+.first1{
   font-size: 20px;
   font-weight: bold;
   /* text-align: center; */
@@ -105,7 +113,7 @@
 
 .second{
   margin-top: 20rpx;
-  font-size: 16px;
+
 }
 
 scroll-view{

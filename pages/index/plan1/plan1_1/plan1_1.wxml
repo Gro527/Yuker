@@ -5,22 +5,22 @@
  
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange"> 
 
-  <swiper-item wx:for="{{result}}"> 
+  <swiper-item wx:for="{{result}}" wx:for-index="index_plan"> 
     <scroll-view scroll-y='true'> 
       <!-- <view class="plan_item" style='flex-direction:row;' > -->
         <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
 
           <view class='little1'>
             <view class='little2'>
-              <view>{{plan.link}}</view>
-              <view class= "first">{{plan.label}}</view>
+              <view class="first0">{{plan.link}}</view>
+              <view class= "first1">{{plan.label}}</view>
               <view class="second">
-                <image class="image" src='../../../../images/item3.png'></image>
+                <image class="pic" src='../../../../images/item3.png'></image>
                 <text>{{plan.dest}}</text>
               </view>
             </view>  
             <view class='little3'>
-              <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
+              <image bindtap='daohang' data-dest='{{plan.dest}}'class='image' src='/images/daohang.png'></image> 
             </view>  
           </view>
             <view class="line"></view>

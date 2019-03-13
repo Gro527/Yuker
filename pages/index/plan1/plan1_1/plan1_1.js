@@ -65,9 +65,10 @@ Page({
   },
 
   daohang:function(e){
+    console.log(e)
    wx.showToast({
     icon: 'none',
-    title: '高德地图导航'
+    title: e.currentTarget.dataset.dest
   });
   },
 
