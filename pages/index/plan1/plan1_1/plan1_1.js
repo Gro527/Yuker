@@ -6,33 +6,34 @@
 var app = getApp()
 Page({
   data: {
-    /**
-
-        * 页面配置
-
-        */
     winWidth: 0,
     winHeight: 0,
     // tab切换
     currentTab: 0,
+    result:[]
   },
 
   onLoad: function () {
     var that = this;
-    /**
-
-     * 获取系统信息
-
-     */
     wx.getSystemInfo({
 
       success: function (res) {
         that.setData({
           winWidth: res.windowWidth,
-          winHeight: res.windowHeight
+          winHeight: res.windowHeight,
+
         });
       }
     });
+    
+    var result = []
+    result = wx.getStorageSync('result')
+    this.setData({
+      result:result,
+    })
+    console.log(result)
+
+
 
   },
   /**

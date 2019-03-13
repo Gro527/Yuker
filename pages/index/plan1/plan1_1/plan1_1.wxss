@@ -4,23 +4,27 @@
 /**index.wxss**/
 
 .little1{
-  width: 20%;
+  width: 100%;
   height: 300rpx;
   margin-top:50rpx; 
   margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
  /* background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 .little2{
-  width: 70%;
+  width: 80%;
   height: 300rpx;
   margin-top:50rpx; 
   /* margin-left: 20rpx; */
   font-weight: bold;
+  
   /*background: rgb(143, 136, 136)     /*便于看清布局*/
 }
 
 .little3{
-  width: 15%;
+  width: 20%;
   height: 300rpx;
   margin-right: 20rpx;
  /* background: rgb(143, 136, 136)     /*便于看清布局*/

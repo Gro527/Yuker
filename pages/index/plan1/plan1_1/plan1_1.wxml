@@ -1,221 +1,39 @@
 <view class="swiper-tab"> 
- 
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">方案一</view> 
- 
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">方案二</view> 
- 
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">方案三</view> 
- 
+    <view wx:for="{{result}}"  wx:for-index="index_plan" class="swiper-tab-list {{currentTab==index_plan ? 'on' : ''}}" data-current="{{index_plan}}" bindtap="swichNav">方案{{index_plan}}</view> 
 </view> 
-<!--此处添加小的组件方便查看方案标签--> 
   
  
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange"> 
- 
-    <!-- 方案一 --> 
- 
-<swiper-item> 
-<scroll-view scroll-y='true'> 
-<!--button bindtap='final' type="primary" plain="true">方案发布</button--> 
-      <!--step1--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">海底捞火锅</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-     <view class='line'></view> 
- 
-      <!--step2--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">万达影城</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-     <view class='line'></view> 
- 
-      <!--step3--> 
-        <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">木屋烧烤</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-       <view class='line'></view> 
-         <view class="bz">备注：</view>
-         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
-       <view class='line'></view> 
 
-     <button class='final' type="default" plain="true">方案发布</button> 
-</scroll-view> 
-</swiper-item> 
- 
-    <!-- 方案二 --> 
- 
-<swiper-item> 
-<scroll-view scroll-y='true'> 
-      <!--step1--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item2.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">万达影城</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-       <view class='line'></view> 
- 
-      <!--step2--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item2.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">桌游</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-      <view class='line'></view> 
- 
-      <!--step3--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item2.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">木屋烧烤</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-       <view class='line'></view> 
-         <view class="bz">备注：</view>
-         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
-      <view class='line'></view> 
- 
-       <button class='final' type="default" plain="true">方案发布</button> 
- 
-</scroll-view> 
-</swiper-item> 
- 
-    <!-- 方案三 --> 
- 
-<swiper-item> 
-<scroll-view scroll-y='true'> 
-        <!--step1--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item3.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">比格披萨</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-      <view class='line'></view> 
- 
-      <!--step2--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item3.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">万达影城</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-      <view class='line'></view> 
- 
-      <!--step3--> 
-      <view class='plan_item'style='flex-direction:row;' > 
-        <view class='little1'>
-          <image class='image_item' src='/images/item3.png'></image> 
-        </view>
-        <view class='little2'>
-          <view class= "first">木屋烧烤</view>
-          <view class="second">地址：</view>
-        </view>     
-        <view class='little3'>
-          <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
-        </view>  
-      </view>
-       <view class='button'>
-      <button class="mini-btn" type="default" size="mini">我要更换</button> 
-      </view>
- 
-      <view class='line'></view> 
-         <view class="bz">备注：</view>
-         <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
-         <view class='line'></view> 
-      <button class='final' type="default" plain="true">方案发布</button> 
-    
-</scroll-view> 
-</swiper-item> 
- 
+  <swiper-item wx:for="{{result}}"> 
+    <scroll-view scroll-y='true'> 
+      <!-- <view class="plan_item" style='flex-direction:row;' > -->
+        <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
+
+          <view class='little1'>
+            <view class='little2'>
+              <view>{{plan.link}}</view>
+              <view class= "first">{{plan.label}}</view>
+              <view class="second">
+                <image class="image" src='../../../../images/item3.png'></image>
+                <text>{{plan.dest}}</text>
+              </view>
+            </view>  
+            <view class='little3'>
+              <image bindtap='daohang' class='image' src='/images/daohang.png'></image> 
+            </view>  
+          </view>
+            <view class="line"></view>
+
+        </block>
+      <!-- </view> -->
+      
+    <view class="bz">备注：</view>
+    <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
+    <view class='line'></view> 
+    <button class='final' type="default" plain="true">方案发布</button> 
+    </scroll-view> 
+
+  </swiper-item> 
+
 </swiper> 

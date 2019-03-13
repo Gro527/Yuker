@@ -68,6 +68,7 @@ Page({
         
         that.setData({
           time : res.data.time,
+          name: res.data.program_name,
           members : res.data.members,
           userid_current : wx.getStorageSync('userid')
         })
@@ -109,16 +110,16 @@ Page({
       url: host.leader_submit_url+this.data.proid,
       method:'GET',
       success(res){
-        console.log(res.data)
         wx.setStorage({
           key: 'result',
           data: res.data,
         })
+        wx.navigateTo({
+          url: '/pages/index/plan1/plan1_1/plan1_1'
+        })
+
       }
     })
-    wx.navigateTo({
-      url: '/pages/index/plan1/plan1_1/plan1_1'
-      })
   },
 
   join: function () {

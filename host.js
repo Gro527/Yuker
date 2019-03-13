@@ -32,6 +32,8 @@ var host = {
 
   //查询当前用户参与的方案
   member_history_url:`${base}/member_history`,
+
+  
 }
 
 module.exports = host

@@ -1,4 +1,5 @@
 // pages/index/plan1/plan1_final/plan1_final.js
+const host = require('../../../../host')
 Page({
 
   /**

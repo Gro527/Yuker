@@ -12,7 +12,8 @@
           <view class="name">
             <view class="fname">{{item.name}}</view>
             <view class="time">{{item.time}}</view>
-            <view class="status">{{item.status}}</view>
+            <view wx-if="{{item.status==1}}" class="status">已完成</view>
+            <view wx-else class="status">未完成</view>
           </view>
           <button class="count" data-program_id='{{item.id}}' bindtap='plan1' ><image class="next" src="/images/next.png"></image></button>
         </view>

@@ -27,8 +27,9 @@ Page({
         for(var program in res.data){
           var program_info = {}
           program_info.id = res.data[program].id
-          program_info.name = res.data[program].name
+          program_info.name = res.data[program].program_name
           program_info.time = res.data[program].datetime
+          program_info.status = res.data[program].submit_state
           program_info.type = "0"
           var name_leader_program = "leader_program["+program+"]"
           that.setData({

@@ -3,7 +3,7 @@
   <view class="bg">
     
       <view class="head_name">
-        <text>方案名称</text>
+        <text>{{name}}</text>
       </view>
       <view class="head_time">
         <text>{{time}}</text>
