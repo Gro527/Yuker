@@ -32,7 +32,6 @@ Page({
     this.setData({
       result:result,
     })
-    console.log(result)
 
 
 
@@ -66,12 +65,7 @@ Page({
   },
 
   daohang:function(e){
-    console.log(e)
     var shop_name = e.currentTarget.dataset.dest
-  //  wx.showToast({
-  //   icon: 'none',
-  //   title: e.currentTarget.dataset.dest
-  // });
     QQMapSdk = new QQMap({
       key: 'X5MBZ-WWM3Q-TT45A-G5VQO-DU34F-QKB2Q'
     })

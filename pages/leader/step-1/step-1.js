@@ -50,7 +50,6 @@ Page({
     var that = this
     wx.chooseLocation({
       success: function (res) {
-        console.log(res)
         that.setData({
           hasLocation: true,
           addr_longitude_latitude:[res.longitude,res.latitude],
@@ -138,21 +137,6 @@ Page({
    */
   onLoad: function (options) {
     
-    // wx.request({
-    //  // url: "http://47.94.210.236:5555/dbtest",
-    //   url: host.link_url,//json数据地址
-    
-    //   success: function (result) {
-    //     console.log('request success', result)
-    //   },
-
-    //   fail: function ({ errMsg }) {
-    //     console.log('request fail', errMsg)
-    //     /*self.setData({
-    //       loading: false
-    //     })*/
-    //   }
-    // })
   
   },
 

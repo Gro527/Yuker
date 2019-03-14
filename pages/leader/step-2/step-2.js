@@ -38,7 +38,6 @@ show:function(e){
 
   this.data.clicktime++;
   if (this.data.clicktime > 2) { this.data.clicktime = 3; }
-  console.log(this.data.link_choose+this.data.clicktime);
 
 },
 
@@ -51,7 +50,6 @@ remove:function(e){
 
   this.data.clicktime--;
   if (this.data.clicktime < 0) { this.data.clicktime = 0; }
-  // console.log(this.data.link_choose);
 
 },
 
@@ -72,7 +70,6 @@ for(let i=0;i<this.data.style.length;i++){
 
 }
 
-  console.log(this.data.style_choose);
 
 },
 
