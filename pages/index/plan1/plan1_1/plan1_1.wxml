@@ -16,7 +16,7 @@
               <view class= "first1">{{plan.label}}</view>
               <view class="second">
                 <image class="pic" src='../../../../images/item3.png'></image>
-                <text>{{plan.dest}}</text>
+                <view class = "loc">{{plan.dest}}</view>
               </view>
             </view>  
             <view class='little2'>
