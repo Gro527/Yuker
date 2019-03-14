@@ -29,11 +29,13 @@ Page({
    */
   onLoad: function () {
     var that=this
+    var addr = wx.getStorageSync('addr')
     wx.getStorage({
-      key: 'text',
+      key: 'program_name',
       success: function(res) {
         that.setData({
-          text: res.data
+          program_name: res.data,
+          addr:addr
         })
       },
     })

@@ -6,17 +6,17 @@
 
 <view class="name">
   <text class='title' >方案名称：</text>
-  <text class='textarea'>{{text}}</text>
+  <text class='textarea'>{{program_name}}</text>
 </view>     
 
 <view class='line'> </view>
 
-
+<!-- 
 <view class="name">
- <text class='title' >出行范围： 海淀区</text>
-</view>
-
-<view class='line'></view>
+ <text class='title' >出发位置：{{addr}}</text>
+</view> -->
+<!-- 
+<view class='line'></view> -->
 
 <view class="name">
   <text class='title' >方案环节：{{ct}}\n</text>
