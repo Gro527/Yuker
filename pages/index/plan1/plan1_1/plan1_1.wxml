@@ -1,5 +1,5 @@
 <view class="swiper-tab"> 
-    <view wx:for="{{result}}"  wx:for-index="index_plan" class="swiper-tab-list {{currentTab==index_plan ? 'on' : ''}}" data-current="{{index_plan}}" bindtap="swichNav">方案{{index_plan}}</view> 
+    <view wx:for="{{result}}"  wx:for-index="index_plan" class="swiper-tab-list {{currentTab==index_plan ? 'on' : ''}}" data-current="{{index_plan}}" bindtap="swichNav">方案{{index_plan+1}}</view> 
 </view> 
   
  
