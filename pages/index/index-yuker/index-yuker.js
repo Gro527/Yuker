@@ -23,7 +23,6 @@ Page({
       data:{"userid":userid},
       method:'POST',
       success: function(res){
-        console.log(res.data)
         for(var program in res.data){
           var program_info = {}
           program_info.id = res.data[program].id
@@ -84,7 +83,6 @@ Page({
 
 
   plan1:function(options){
-    console.log(options)
     var program_id = options.currentTarget.dataset.program_id
     wx.navigateTo({
       url: '/pages/index/plan1/plan1?proid='+program_id,

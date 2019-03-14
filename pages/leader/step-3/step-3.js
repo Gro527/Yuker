@@ -50,13 +50,11 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function(res){
-        console.log(res.data)
         var _labels_all = new Map()
         for(link in res.data){
           _labels_all.set(res.data[link].link, res.data[link].sub)
         }
         that.setData({labels_all:_labels_all})
-        console.log(that.data.labels_all)
         //加载环节选项框内标签
         var _labels_toChoose = []
         for (var link in that.data.links_chosen) {
@@ -81,7 +79,6 @@ Page({
           })
         }
         that.setData({labels_toChoose:_labels_toChoose})
-        console.log(that.data.labels_toChoose)
       }
     })
 
@@ -92,7 +89,6 @@ Page({
     this.setData({
       viewid: e.detail.currentItemId
     })
-    console.log(this.data.viewid)
 
   },
 
@@ -106,7 +102,6 @@ Page({
   },
 
   label_choose: function(data){
-    console.log(data)
     var link = data.currentTarget.dataset.link
     var index = data.currentTarget.dataset.index
     var id = data.currentTarget.id
@@ -159,7 +154,6 @@ Page({
     json.program_name = program_name
     var links = []
     for (var i in that.data.links_chosen) {
-      console.log(i)
       var j = {}
       j.name = that.data.links_chosen[i]
       var sub = []
@@ -172,7 +166,6 @@ Page({
       links.push(j)
     }
     json.links = links
-    console.log(json)
     // 向服务器发送leader_confirm请求
     wx.request({
       url: host.leader_confirm_url,
