@@ -129,6 +129,11 @@
 
 }
 
+.loc{
+  margin-top: 3rpx;
+  margin-left: 3rpx;
+}
+
 scroll-view{
   height: 100%;
 }
