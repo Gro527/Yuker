@@ -3,7 +3,8 @@ const host = require('../../../host')
 var tcity = require("../../../utils/citys.js")
 const county = ["附近", "热门商圈"]
 const area = ["500m", "1km", "2km", "3km", "4km", "5km", "6km", "7km", "8km", "10km", "15km", "20km", "20km以上"]
-
+var QQMap = require('../../../libs/qqmap-wx-jssdk.js')
+var QQMapSdk
 
 Page({
   
@@ -31,20 +32,20 @@ Page({
   },
 
 
-//跳转页面
-5:function(e){
-  wx.showToast({
-    icon: 'none',
-    title: '请完成本页填写！'
-  });
-},
-
-3: function (e) {
+  //跳转页面
+  5:function(e){
     wx.showToast({
       icon: 'none',
       title: '请完成本页填写！'
     });
-},
+  },
+
+  3: function (e) {
+      wx.showToast({
+        icon: 'none',
+        title: '请完成本页填写！'
+      });
+  },
 
   chooseLocation: function () {
     var that = this
@@ -136,8 +137,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-  
+    QQMapSdk = new QQMap({
+      key: 'X5MBZ-WWM3Q-TT45A-G5VQO-DU34F-QKB2Q'
+    })
+    var that = this
+    wx.getLocation({
+      success: function(res){
+        QQMapSdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: function (res1) {
+            that.setData({
+              hasLocation: true,
+              addr_longitude_latitude: [res.longitude, res.latitude],
+              locationAddress: res1.result.address
+            })
+          }
+      })
+      }
+      })
+
   },
 
   /**
