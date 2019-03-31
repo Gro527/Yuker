@@ -39,9 +39,9 @@ margin-bottom: 30rpx;
 }
 
 .mini-button2{
-margin-top: 50rpx;
-margin-right:34rpx;
-margin-left: 34rpx;
+margin-top: 40rpx;
+margin-right:40rpx;
+margin-left: 40rpx;
 margin-bottom: 10rpx;
 }
 

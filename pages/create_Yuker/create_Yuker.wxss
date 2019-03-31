@@ -12,18 +12,18 @@
 }
 
 .logo{
-  padding-top: 20px;
+  padding-top: 50rpx;
   color:#696969;
 }
 
 .first{
-  font-size: 24px;
+  font-size: 54rpx;
   font-weight: bold;
 }
 
 .second{
   margin-top: 20rpx;
-  font-size: 14px;
+  font-size: 34rpx;
 }
 
 .btn-1{
