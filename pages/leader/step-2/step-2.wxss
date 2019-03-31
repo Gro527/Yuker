@@ -25,29 +25,37 @@ font-style:  inherit;
 }
 
 .mini-button{
+height: 60rpx;
+width: 190rpx;
 margin-top: 30rpx;
-margin-right:20rpx;
-margin-left: 20rpx;
+margin-right:10rpx;
+margin-left: 10rpx;
 margin-bottom: 30rpx;
 }
 
 .mini-button1{
-margin-top: 30rpx;
-margin-right:20rpx;
-margin-left: 20rpx;
-margin-bottom: 30rpx;
+height: 60rpx;
+width: 190rpx;
+margin-top: 40rpx;
+margin-right:10rpx;
+margin-left: 10rpx;
+margin-bottom: 40rpx;
 }
 
 .mini-button2{
+height: 60rpx;
+width: 140rpx;
 margin-top: 40rpx;
 margin-right:40rpx;
 margin-left: 40rpx;
-margin-bottom: 10rpx;
+margin-bottom: 40rpx;
 }
 
 
 
 .index-hd {
+  height: 360rpx;
+  width: 670rpx;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -63,6 +71,8 @@ border-color: rgba(115, 121, 115, 0.726);
 }
 
 .index-td {
+height: 140rpx;
+width: 670rpx;
 display:flex;
 flex-direction:row;
 justify-content: space-around;
@@ -109,6 +119,8 @@ margin-bottom: 50rpx;
 }
 
 .style {
+  height: 280rpx;
+  width: 660rpx;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
