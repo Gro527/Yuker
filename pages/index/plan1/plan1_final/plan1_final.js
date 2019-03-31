@@ -13,7 +13,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var program_info = wx.getStorageSync('program_info')
+    this.setData({
+      program_info: program_info
+    })
+    console.log(this.data.program_info)
   },
 
   /**

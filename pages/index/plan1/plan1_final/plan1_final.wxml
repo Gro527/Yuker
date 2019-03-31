@@ -1,96 +1,21 @@
 <button bindtap='return'>返回主页</button>
 
-<text>Yuker-最优方案</text>
+<text>{{program_info.program_name}}</text>
 
 <!--此处为最后方案的标签-->
 
 <view class='line'></view>
 <view>
- <!--step1-->
-      <view class='plan_item'>
+      <view wx:for='{{program_info.release_result}}' wx:for-item='step' class='plan_item'>
         <view class='plan_API'>
         <image class='image_item' src='/images/item.png'></image>
           <view class='info_item'>
-          <text>海底捞火锅\n\n</text>
-          <text>地址</text>
+          <text>{{step.dest}}</text>
           </view>
         </view>
        <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
-      </view>
-    
-
-      <!--step2-->
-      <view class='plan_item'>
-        <view class='plan_API'>
-        <image class='image_item' src='/images/item.png'></image>
-          <view class='info_item'>
-          <text>万达影城\n\n</text>
-          <text>地址</text>
-          </view>
-        </view>
-       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
-      </view>
-     
-      <!--step3-->
-      <view class='plan_item'>
-        <view class='plan_API'>
-        <image class='image_item' src='/images/item.png'></image>
-          <view class='info_item'>
-          <text>木屋烧烤\n\n</text>
-          <text>地址</text>
-          </view>
-        </view>
-       <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
-      </view>
-      
+      </view>  
 </view>
 
-<view class='line'></view>
-<text>  推荐方案契合度</text>   <!--样式改变！！！-->
-<view class='body'>
-
-<view class='person' style='flex-direction:row;'>   <!--NO.1-->
-<view class='little'>
-<image class='head' src='/images/person_1.png'></image>
-<image class='location_p' src='/images/location.png'></image>
-<text class='location'>BUPT</text>
-</view>
-<view class='little_2'>
-<text>饮食:\n\n</text>
-<text>娱乐:\n\n</text>
-<text>饮食:</text>
-</view>        
-</view>
-
-<view class='person' style='flex-direction:row;'>  <!--NO.2-->
-<view class='little'>
-<image class='head' src='/images/person_2.png'></image>
-<image class='location_p' src='/images/location.png'></image>
-<text class='location'>beijing</text>
-</view>
-<view class='little_2'>
-<!--text>饮食:\n\n</text>
-<text>娱乐:\n\n</text>
-<text>饮食:</text-->
-<text>\n\n未操作</text>
-</view>    
-</view>
-
-<view class='person' style='flex-direction:row;'>   <!--NO.3-->
-<view class='little'>
-<image class='head' src='/images/person_1.png'></image>
-<image class='location_p' src='/images/location.png'></image>
-<text class='location'>BUPT</text>
-</view>
-<view class='little_2'>
-<text>饮食:\n\n</text>
-<text>娱乐:\n\n</text>
-<text>饮食:</text>
-</view>        
-</view>
-
-<!--button bindtap='confirm' type="primary" class='final'>生成方案</button-->
-
-</view>
-<view class='line'></view>
-<text>方案点评：</text>
+<view>若您已完成出行，请:</view>
+<button>发表评论</button>

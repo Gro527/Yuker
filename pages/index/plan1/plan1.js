@@ -64,7 +64,10 @@ Page({
       },
       success: function(res){
         console.log(res.data)
-        
+        wx.setStorage({
+          key: 'program_info',
+          data: res.data,
+        })
         that.setData({
           time : res.data.time,
           name: res.data.program_name,
@@ -109,9 +112,11 @@ Page({
       url: host.leader_submit_url+this.data.proid,
       method:'GET',
       success(res){
+        var program_info = wx.getStorageSync('program_info')
+        program_info.submit_result = res.data
         wx.setStorage({
-          key: 'result',
-          data: res.data,
+          key: 'program_info',
+          data: program_info,
         })
         wx.navigateTo({
           url: '/pages/index/plan1/plan1_1/plan1_1'

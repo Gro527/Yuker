@@ -31,7 +31,7 @@
     <view class="bz">备注：</view>
     <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='输入备注' value='{{name}}' maxlength='15'></input> 
     <view class='line'></view> 
-    <button class='final' type="default" plain="true">方案发布</button> 
+    <button class='final' type="default" plain="true" bindtap="final">方案发布</button> 
     </scroll-view> 
 
   </swiper-item> 

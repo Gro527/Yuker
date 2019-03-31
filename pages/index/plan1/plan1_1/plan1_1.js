@@ -30,8 +30,9 @@ Page({
       }
     });
     
-    var result = []
-    result = wx.getStorageSync('result')
+    
+    var program_info = wx.getStorageSync('program_info')
+    var result = program_info.submit_result
     this.setData({
       result:result,
     })
@@ -89,6 +90,12 @@ Page({
   },
 
   final:function(e){
+    var program_info = wx.getStorageSync('program_info')
+    program_info.release_result = this.data.result[this.data.currentTab]
+    wx.setStorage({
+      key: 'program_info',
+      data: program_info,
+    })
     wx.navigateTo({
       url: '/pages/index/plan1/plan1_final/plan1_final',
     })

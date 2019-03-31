@@ -1,6 +1,6 @@
-// //服务器配置文件
-// var port = "55899"
-// var base = "http://localhost:"+port+"/api"
+//服务器配置文件
+// var port = "65500"
+// var base = "http://10.28.231.208:"+port+"/api"
 var base = "http://47.94.210.236:5555/api"
 
 var host = {
