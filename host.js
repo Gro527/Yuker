@@ -1,6 +1,6 @@
 //服务器配置文件
-// var port = "65500"
-// var base = "http://10.28.231.208:"+port+"/api"
+// var port = "  "
+// var base = "http://127.0.0.1:"+port+"/api"
 var base = "http://47.94.210.236:5555/api"
 
 var host = {
@@ -35,7 +35,8 @@ var host = {
   //查询当前用户参与的方案
   member_history_url:`${base}/member_history`,
 
-  
+  //发起人release
+  leader_release_url: `${base}/release`,
 }
 
 module.exports = host

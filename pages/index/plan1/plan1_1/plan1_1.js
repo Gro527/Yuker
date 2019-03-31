@@ -2,6 +2,7 @@
 //index.js
 
 //获取应用实例
+const host = require('../../../../host')
 var QQMap = require('../../../../libs/qqmap-wx-jssdk.js')
 var QQMapSdk
 var app = getApp()
@@ -95,6 +96,14 @@ Page({
     wx.setStorage({
       key: 'program_info',
       data: program_info,
+    })
+    wx.request({
+      url: host.leader_release_url,
+      method:'POST',
+      data:{
+        'program_id':program_info.program_id,
+        'release_result':program_info.release_result
+      }
     })
     wx.navigateTo({
       url: '/pages/index/plan1/plan1_final/plan1_final',
