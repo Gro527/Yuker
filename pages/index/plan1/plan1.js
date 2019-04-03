@@ -128,6 +128,15 @@ Page({
   },
 
   join: function () {
+    var linklist = []
+    for(var link in this.data.members[0].sub){
+      linklist.push(this.data.members[0].sub[link].link)
+    }
+    wx.setStorage({
+      key: 'link_choose',
+      data: linklist,
+    })
+    console.log(linklist)
     wx.navigateTo({
       url: '/pages/leader/step-3/step-3'
     })

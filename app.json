@@ -10,7 +10,8 @@
     "pages/leader/step-4/step-4",
     "pages/index/plan1/plan1_1/plan1_1",
     "pages/index/plan1/plan1_final/plan1_final",
-    "template/template"
+    "template/template",
+    "pages/member/member"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,12 +35,11 @@
         "iconPath": "/images/project-0.png",
         "selectedIconPath": "/images/project-1.png"
       }
-      ]
-    },
-    "permission":{
-      "scope.userLocation":{
-        "desc": "需要你的位置信息来提供准确的目的地推荐服务"
-      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要你的位置信息来提供准确的目的地推荐服务"
     }
-
+  }
 }
