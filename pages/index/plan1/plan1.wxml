@@ -30,6 +30,7 @@
   <view class='line'></view>
 </block>
 
+
 <block wx:if="{{member_type==0}}">
  <button bindtap='submit' type="default" class='final'>生成方案</button>
 </block>

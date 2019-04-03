@@ -29,7 +29,7 @@ Page({
           program_info.name = res.data[program].program_name
           program_info.time = res.data[program].datetime
           program_info.submit_state = res.data[program].submit_state
-           program_info.release_state = res.data[program].release_state
+          program_info.release_state = res.data[program].release_state
           program_info.type = "0"
           var name_leader_program = "leader_program["+program+"]"
           that.setData({
@@ -51,6 +51,8 @@ Page({
           program_info.id = res.data[program].id
           program_info.name = res.data[program].name
           program_info.time = res.data[program].datetime
+          program_info.submit_state = res.data[program].submit_state
+          program_info.release_state = res.data[program].release_state
           program_info.type = "1"
           var name_member_program = "member_program[" + program + "]"
           that.setData({
@@ -84,10 +86,32 @@ Page({
 
 
   plan1:function(options){
-    var program_id = options.currentTarget.dataset.program_id
-    wx.navigateTo({
-      url: '/pages/index/plan1/plan1?proid='+program_id,
-    })
+    var program = options.currentTarget.dataset.program
+    var program_id = program.id
+    var release_state = program.release_state
+    //若方案已发布，则直接进入发布结果页面
+    if(release_state == 1){
+      wx.request({
+        url: host.release_result_url,
+        method: 'POST',
+        data:{"program_id":program_id},
+        success: function(res){
+          program.release_result = res.data
+          wx.setStorage({
+            key: 'program_info',
+            data: program,
+          })
+        }
+      })
+      wx.navigateTo({
+        url: '/pages/index/plan1/plan1_final/plan1_final',
+      })
+    }else{    //若方案未发布，则进入参与成员界面
+      wx.navigateTo({
+        url: '/pages/index/plan1/plan1?proid=' + program_id,
+      })
+    }
+    
   },
 
   /**

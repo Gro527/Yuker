@@ -1,5 +1,5 @@
 //服务器配置文件
-// var port = "  "
+// var port = "58175"
 // var base = "http://127.0.0.1:"+port+"/api"
 var base = "http://47.94.210.236:5555/api"
 
@@ -37,6 +37,10 @@ var host = {
 
   //发起人release
   leader_release_url: `${base}/release`,
+
+  //查询release_result
+  release_result_url:`${base}/release_result`,
+
 }
 
 module.exports = host

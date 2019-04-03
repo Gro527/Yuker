@@ -15,7 +15,7 @@
             <view wx-if="{{item.release_state==1}}" class="status">已完成</view>
             <view wx-if="{{item.release_state==0}}" class="status">未完成</view>
           </view>
-          <button class="count" data-program_id='{{item.id}}' bindtap='plan1' ><image class="next" src="/images/next.png"></image></button>
+          <button class="count" data-program='{{item}}' bindtap='plan1' ><image class="next" src="/images/next.png"></image></button>
         </view>
       </view>
       <view class="line"></view>

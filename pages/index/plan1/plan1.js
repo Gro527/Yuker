@@ -72,7 +72,8 @@ Page({
           time : res.data.time,
           name: res.data.program_name,
           members : res.data.members,
-          userid_current : wx.getStorageSync('userid')
+          userid_current : wx.getStorageSync('userid'),
+          release_state: res.data.release_state
         })
 
 
