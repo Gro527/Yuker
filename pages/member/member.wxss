@@ -1,1 +1,139 @@
-/* pages/member/member.wxss */
+/* pages/index/step-2/step-2.wxss */
+@import"/template/template.wxss";
+.prefer_add{
+  margin-left: 60rpx;
+  font-size: large;
+  font-style:  inherit;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.link1{
+  margin-top: 30rpx;
+  margin-left:70rpx;
+  font-style:  inherit;
+}
+
+
+
+.picture{
+  width:75rpx;
+  height:75rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+
+ 
+  }
+
+  .title{
+    display: flex;
+     flex-wrap:unwrap;
+     flex-direction:row;
+     /* justify-content:space-between; */
+     align-items: center;
+     width:310rpx;
+    height:75rpx;
+    margin-left: 70rpx;
+    border: solid;
+    border-color:  rgba(115, 121, 115, 0.726);
+    
+ }
+
+ .choose{
+   margin-right: 20rpx;
+   /* margin-left: 50rpx; */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+  
+
+ .title_sub{
+   width:310rpx;
+  height:75rpx;
+  margin-right: 70rpx;
+  border: solid;
+  border-color:rgba(115, 121, 115, 0.726);
+ 
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .overall{
+    display: flex;
+     flex-wrap:unwrap;
+     flex-direction:row;
+     justify-content:space-between;
+     margin-bottom: 10rpx;
+     margin-top: 30rpx;
+    
+ }
+  
+
+  .label{
+     background: #FFFFF0;
+     width:620rpx;
+     height:550rpx;
+     margin-left: 70rpx;
+     margin-right: 70rpx;
+  }
+
+
+    
+
+ .label_sub{
+     width:620rpx;
+     height:550rpx;
+     display: flex;
+     flex-wrap:wrap;
+     flex-direction:row;
+     justify-content:space-between;
+     align-items: baseline;}
+
+ .labelcontent{
+
+margin-right:70rpx;
+margin-left: 70rpx;
+margin-bottom: 30rpx;
+border-radius: 20rpx;
+/* border-width: 200rpx;
+border-left-width: 50rpx; */
+padding: 15rpx;
+}
+
+.confirm{
+  margin-left: 70rpx;
+  margin-right:70rpx;
+  margin-bottom: 30rpx;
+   margin-top: 100rpx;
+
+}
+
+.line{
+  background: darkgrey;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.dislike{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: unwrap;
+  justify-content: space-between;
+    margin-left: 60rpx;
+  margin-right:60rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.add_info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: unwrap;
+  justify-content: space-between;
+    margin-left: 70rpx;
+  margin-right:70rpx;
+}
+

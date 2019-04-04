@@ -12,7 +12,7 @@
 <view class='line'></view>
 
 <view class='location'>
-  <text class='title_location' >当前定位：</text>
+  <text class='title_location' >选择位置：</text>
   <image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
 </view>
 <view class='location_choose'>

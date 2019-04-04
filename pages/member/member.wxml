@@ -1,2 +1,49 @@
-<!--pages/member/member.wxml-->
-<text>pages/member/member.wxml</text>
+<!--pages/index/step-2/step-2.wxml-->
+
+<import src="/template/template.wxml"/>
+
+ <template is="create_head" data='{{item}}' />
+<view class='line'> </view>
+<view class='location'>
+  <text class='title_location' >选择位置：</text>
+  <image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
+</view>
+<view class='line'></view>
+<view class="prefer_add">偏好添加</view><view class='line'></view>
+
+
+
+<block wx:for="{{links_chosen}}" wx:for-item="linkname" wx:for-index="i">
+  <view class="link1">环节{{i+1}}:</view>
+  <view class="overall">
+    <view class="title">
+      <image class="picture" src="/images/chicken.png"></image>
+      <view class= "choose">{{linkname}}</view>
+    </view>
+    <view id="{{i}}" hidden="{{!hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">请选择 ∨</view>
+    <view id="{{i}}" hidden="{{hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">已选 {{numLabel_chosen[i]}} 项:</view>
+  </view>
+
+  <swiper class="label" indicator-dots="true" duration="1000" hidden="{{hidden_swiper[i]}}" bindchange='get_view'>
+    <block wx:for="{{labels_toChoose_split[i]}}" wx:for-item="split_array" wx:for-index="split_array_index">
+      <swiper-item  item-id="{{index}}" >
+        <view class="label_sub">
+          <view class="labelcontent" data-link="{{i}}" data-index="{{split_array_index}}" wx:for="{{split_array}}" wx:for-item="item" id="{{index}}" bindtap='label_choose' style="background-color:{{item.chosen?'PapayaWhip':'#FFFFFF0'}}">{{item.label}}</view>
+        </view> 
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='line'></view>
+</block>
+
+   <view class="dislike">
+      <view >反标签添加：</view>
+      <view bindtap="test">厌恶、忌口等></view>
+   </view>
+<view class='line'></view>
+ 
+ <button bindtap="next3" type="default" class='confirm'>方案创建</button>
+ 
+
+
+
