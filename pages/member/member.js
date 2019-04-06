@@ -70,7 +70,12 @@ Page({
           var index_numlabel = "numLabel_chosen[" + link + "]";
           var index_labels_chosen = "labels_chosen[" + link + "]";
           var index_labels_toChoose_split = "labels_toChoose_split[" + link + "]";
-          that.setData((_that$setData = {}, _defineProperty(_that$setData, index_swiper, true), _defineProperty(_that$setData, index_numlabel, 0), _defineProperty(_that$setData, index_labels_chosen, _labels_chosen), _defineProperty(_that$setData, index_labels_toChoose_split, _labels_toChoose_split), _that$setData));
+          that.setData({
+            [index_swiper]: true,
+            [index_numlabel]: 0,
+            [index_labels_chosen]: _labels_chosen,
+            [index_labels_toChoose_split]: _labels_toChoose_split
+          })
         }
         that.setData({ labels_toChoose: _labels_toChoose });
       }
@@ -122,7 +127,9 @@ Page({
     var id = parseInt(data.currentTarget.id);
     var hidden = !this.data.hidden_swiper[id];
     var index = "hidden_swiper[" + id + "]";
-    this.setData(_defineProperty({}, index, hidden));
+    this.setData({
+      [index]: hidden
+    })
   },
 
   label_choose: function label_choose(data) {
@@ -149,7 +156,11 @@ Page({
     var index_labels_toChoose = "labels_toChoose[" + link + "][" + label.id + "].chosen";
     var index_labels_toChoose_split = "labels_toChoose_split[" + link + "][" + index + "][" + id + "].chosen";
     var index_numLabel_chosen = "numLabel_chosen[" + link + "]";
-    this.setData((_setData2 = {}, _defineProperty(_setData2, index_labels_toChoose, label.chosen), _defineProperty(_setData2, index_numLabel_chosen, chosenNum), _defineProperty(_setData2, index_labels_toChoose_split, label.chosen), _setData2));
+    this.setData({
+      [index_labels_toChoose]: label.chosen,
+      [index_numLabel_chosen]: chosenNum,
+      [index_labels_toChoose_split]: label.chosen
+    })
   },
 
   next3: function next3(data) {

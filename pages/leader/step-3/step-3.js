@@ -133,7 +133,7 @@ Page({
 
   next3: function(data){
     var that = this
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/leader/step-4/step-4'
     })
     //将label发送至storage

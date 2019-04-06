@@ -54,11 +54,16 @@ Page({
 
   myplan: function () {
     var proid = wx.getStorageSync('program_id')
-    wx.redirectTo({
-      url: '/pages/index/plan1/plan1?proid='+proid,
+    wx.navigateTo({
+      url: '/pages/index/plan1/plan1?program_id='+proid,
     })
   },
 
+  backhome: function () {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

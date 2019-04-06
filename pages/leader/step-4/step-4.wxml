@@ -50,6 +50,8 @@
 
 
  <button open-type='share' bindtap='myplan' type="default" class='confirm'>分享给我的好友</button>
+ <button bindtap='myplan' type='default' class='confirm'>查看方案详情</button>
+ <button bindtap='backhome' type='default' class='confirm'>回到首页</button>
 
 </view>
 

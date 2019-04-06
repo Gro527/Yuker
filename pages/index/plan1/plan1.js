@@ -128,7 +128,7 @@ Page({
   },
 
   join: function () {
-    var program_id = this.data.program_info.program_id
+    var program_id = this.data.program_id
     wx.navigateTo({
       url: '/pages/member/member?program_id='+program_id
     })
