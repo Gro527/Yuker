@@ -90,28 +90,9 @@ Page({
     var program_id = program.id
     var release_state = program.release_state
     //若方案已发布，则直接进入发布结果页面
-    if(release_state == 1){
-      wx.request({
-        url: host.release_result_url,
-        method: 'POST',
-        data:{"program_id":program_id},
-        success: function(res){
-          program.release_result = res.data
-          wx.setStorage({
-            key: 'program_info',
-            data: program,
-          })
-        }
-      })
-      wx.navigateTo({
-        url: '/pages/index/plan1/plan1_final/plan1_final',
-      })
-    }else{    //若方案未发布，则进入参与成员界面
-      wx.navigateTo({
-        url: '/pages/index/plan1/plan1?program_id=' + program_id,
-      })
-    }
-    
+    wx.navigateTo({
+      url: '/pages/index/plan1/plan1?program_id=' + program_id,
+    })
   },
 
   /**

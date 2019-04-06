@@ -1,4 +1,5 @@
 //app.js
+const host = require('/host')
 App({
   onLaunch: function () {
     // 展示本地存储能力as
@@ -6,10 +7,37 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录呵呵da合金钢合金钢就会规划局规划局
+    // 登录
     wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      success: function (res) {
+        //发送请求
+        wx.request({
+          url: host.login_url, //接口地址
+          data:
+            { 'code': res.code },
+          header: {
+            'content-type': 'application/json' //默认值
+          },
+          method: 'POST',
+          success: function (res) {
+            wx.setStorage({
+              key: 'openid',
+              data: res.data.openid,
+            })
+            wx.setStorage({
+              key: 'userid',
+              data: res.data.id,
+            })
+            wx.setStorage({
+              key: 'session_key',
+              data: res.data.session_key,
+            })
+
+          },
+          fail: function (res) {
+            console.log(res)
+          }
+        })
       }
     })
     // 获取用户信息

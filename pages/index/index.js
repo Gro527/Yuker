@@ -59,41 +59,6 @@ Page({
     }
   },*/
   onLoad:function(){
-        //登录获取code
-        
-        wx.login({
-          success: function (res) {
-            //发送请求
-            wx.request({
-              url: host.login_url, //接口地址
-              data: 
-              { 'code': res.code },
-              header: {
-                'content-type': 'application/json' //默认值
-              },
-              method:'POST',
-              success: function (res) {
-               wx.setStorage({
-                 key: 'openid',
-                 data: res.data.openid,
-               })
-               wx.setStorage({
-                 key: 'userid',
-                 data: res.data.id,
-               })
-               wx.setStorage({
-                 key: 'session_key',
-                 data: res.data.session_key,
-               })
-               
-              },
-              fail:function(res){
-                console.log(res)
-              }
-            })
-         }
-        })
-        
       },
 
 

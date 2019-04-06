@@ -21,39 +21,6 @@ Page({
         // member_type:options.type
       })
     
-      //当前用户id刷新storage
-      wx.login({
-        success: function (res) {
-          //发送请求
-          wx.request({
-            url: host.login_url, //接口地址
-            data:
-              { 'code': res.code },
-            header: {
-              'content-type': 'application/json' //默认值
-            },
-            method: 'POST',
-            success: function (res) {
-              wx.setStorage({
-                key: 'openid',
-                data: res.data.openid,
-              })
-              wx.setStorage({
-                key: 'userid',
-                data: res.data.id,
-              })
-              wx.setStorage({
-                key: 'session_key',
-                data: res.data.session_key,
-              })
-            },
-            fail: function (res) {
-              console.log(res)
-            }
-          })
-        }
-      })
-    
     var that = this
     wx.request({
       url: host.program_info_url,
@@ -68,6 +35,25 @@ Page({
           key: 'program_info',
           data: res.data,
         })
+        //若方案已发布，则直接进入发布结果页面
+        if(res.data.release_state == 1)
+        {
+          wx.request({
+            url: host.release_result_url,
+            method: 'POST',
+            data: { "program_id": res.data.program_id },
+            success: function (res) {
+              program.release_result = res.data
+              wx.setStorage({
+                key: 'program_info',
+                data: program,
+              })
+            }
+          })
+          wx.navigateTo({
+            url: '/pages/index/plan1/plan1_final/plan1_final',
+          })
+        }
         that.setData({
           time : res.data.time,
           name: res.data.program_name,
