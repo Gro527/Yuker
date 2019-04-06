@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     
       this.setData({
-        proid:options.proid,
+        program_id:options.program_id,
         //设置成员类型：0为发起者，1为参与人，2为路人
         // member_type:options.type
       })
@@ -57,7 +57,7 @@ Page({
     var that = this
     wx.request({
       url: host.program_info_url,
-      data:{'program_id': this.data.proid},
+      data:{'program_id': this.data.program_id},
       method:'POST',
       header:{
         'content-type': 'application/json'
@@ -110,7 +110,7 @@ Page({
 
   submit:function(){
     wx.request({
-      url: host.leader_submit_url+this.data.proid,
+      url: host.leader_submit_url+this.data.program_id,
       method:'GET',
       success(res){
         var program_info = wx.getStorageSync('program_info')
@@ -128,17 +128,9 @@ Page({
   },
 
   join: function () {
-    var linklist = []
-    for(var link in this.data.members[0].sub){
-      linklist.push(this.data.members[0].sub[link].link)
-    }
-    wx.setStorage({
-      key: 'link_choose',
-      data: linklist,
-    })
-    console.log(linklist)
+    var program_id = this.data.program_info.program_id
     wx.navigateTo({
-      url: '/pages/leader/step-3/step-3'
+      url: '/pages/member/member?program_id='+program_id
     })
   },
 

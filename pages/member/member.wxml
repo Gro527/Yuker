@@ -8,6 +8,14 @@
   <text class='title_location' >选择位置：</text>
   <image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
 </view>
+<view class='location_choose'>
+   <block wx:if="{{hasLocation === false}}">
+      <text class="noneaddress">未选择位置</text>
+   </block>
+   <block wx:if="{{hasLocation === true}}">
+      <text class="address">{{locationAddress}}</text>
+   </block>
+</view>   
 <view class='line'></view>
 <view class="prefer_add">偏好添加</view><view class='line'></view>
 
@@ -42,7 +50,7 @@
    </view>
 <view class='line'></view>
  
- <button bindtap="next3" type="default" class='confirm'>方案创建</button>
+ <button bindtap="next3" type="default" class='confirm'>确认加入</button>
  
 
 

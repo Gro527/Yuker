@@ -108,7 +108,7 @@ Page({
       })
     }else{    //若方案未发布，则进入参与成员界面
       wx.navigateTo({
-        url: '/pages/index/plan1/plan1?proid=' + program_id,
+        url: '/pages/index/plan1/plan1?program_id=' + program_id,
       })
     }
     

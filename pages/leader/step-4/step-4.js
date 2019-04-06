@@ -109,7 +109,7 @@ Page({
       var proid = wx.getStorageSync('program_id')
       return {
         title: '约客',
-        path: '/pages/index/plan1/plan1?proid='+proid,
+        path: '/pages/index/plan1/plan1?program_id='+proid,
       }
     }
   }
