@@ -11,11 +11,9 @@
     </view>
   </view>
 
-
 <view class="container">
 
    <button class="check" bindtap="clickme" type="default" plain="Boolean">我的Yuker方案</button>
-
    <view class="display1">
    <view class="info1">
       <view >优惠券</view>
