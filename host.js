@@ -1,5 +1,5 @@
 // //服务器配置文件
-// var port = "58141"
+// var port = "55388"
 // var base = "http://127.0.0.1:"+port+"/api"
 var base = "http://47.94.210.236:5555/api"
 
@@ -9,6 +9,9 @@ var host = {
 
   //登录
   login_url:`${base}/login`,
+
+  //上传用户信息
+  userinfo_url:`${base}/userinfo`,
 
   //请求环节
   link_url:`${base}/link_type/all`,

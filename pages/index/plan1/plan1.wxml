@@ -38,7 +38,7 @@
  <button bindtap='join' type="default" class='final'>修改方案</button>
 </block>
 <block wx:elif="{{member_type==2}}">
- <button bindtap='join' type="default" class='final'>加入方案</button>
+ <button  open-type='getUserInfo' bindgetuserinfo='join' type="default" class='final'>加入方案</button>
 </block>
 
 

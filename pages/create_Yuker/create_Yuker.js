@@ -1,4 +1,4 @@
-// pages/create_Yuker/create_Yuker.js
+const host = require('../../host')
 Page({
 
   /**
@@ -39,9 +39,20 @@ onLoad: function(e) {
     })
   },
 
-  creator: function () {
-    wx.navigateTo({
-      url: '/pages/leader/step-1/step-1'
+  creator: function (e) {
+    var userid = wx.getStorageSync('userid')
+    wx.request({
+      url: host.userinfo_url,
+      method: 'POST',
+      data:{
+        'userinfo':e.detail.userInfo,
+        'userid':userid
+      },
+      success: function (res){
+        wx.navigateTo({
+          url: '/pages/leader/step-1/step-1'
+        })
+      }
     })
   },
 

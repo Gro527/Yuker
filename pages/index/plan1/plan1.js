@@ -114,10 +114,21 @@ Page({
     })
   },
 
-  join: function () {
+  join: function (e) {
     var program_id = this.data.program_id
-    wx.navigateTo({
-      url: '/pages/member/member?program_id='+program_id
+    var userid = wx.getStorageSync('userid')
+    wx.request({
+      url: host.userinfo_url,
+      method: 'POST',
+      data: {
+        'userinfo': e.detail.userInfo,
+        'userid': userid
+      },
+      success: function(res){
+        wx.navigateTo({
+          url: '/pages/member/member?program_id=' + program_id
+        })
+      }
     })
   },
 
