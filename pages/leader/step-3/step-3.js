@@ -9,7 +9,7 @@ Page({
     labels_toChoose_split:[],
     hidden_swiper:[true,],
     numLabel_chosen:[0,],
-    labels_chosen:[]
+    labels_chosen:[ ]
   },
 
   data:{
@@ -34,7 +34,7 @@ Page({
 
   onLoad: function(options){
     var that = this;
-
+      
     //获取step-2中选中的标签
     wx.getStorage({
       key: 'link_choose',
@@ -42,7 +42,7 @@ Page({
         that.setData({links_chosen:res.data})
       }
     }),
-
+     
     //获取标签列表
     wx.request({
       url: 'http://47.94.210.236:5555/api/label_type/all',
@@ -81,8 +81,20 @@ Page({
         that.setData({labels_toChoose:_labels_toChoose})
       }
     })
-
-
+/*
+    var links=that.data.links_chosen
+    var labels_tem=[]
+    labels_tem.push("不限")
+    console.log(links)
+    for ( var i in that.data.links_chosen) {
+      labels_tem.push("不限")
+      }
+      console.log(labels_tem)
+       that.setData({
+         labels_chosen:labels_tem
+       })  
+     console.log(links)   
+     console.log(that.data.labels_chosen)*/      //渲染时加入 不限
   },
 
   get_view: function (e) {
@@ -110,8 +122,14 @@ Page({
     // var link_chosenlist = this.data.labels_chosen[link]
     var chosenNum = this.data.numLabel_chosen[link]
     if(label.chosen==true) {
-      this.data.labels_chosen[link].push(label)
-      chosenNum++
+      for (var i in this.data.labels_chosen[link]){
+        if(this.data.labels_chosen[link][i] == "不限"){
+          this.data.labels_chosen[link].splice(i, 1)
+       }}
+         this.data.labels_chosen[link].push(label)
+         chosenNum++
+      console.log(chosenNum)
+      console.log(this.data.labels_chosen)   //打印输出当前选中
     }
     else {
       for(var i in this.data.labels_chosen[link]){
@@ -120,6 +138,11 @@ Page({
         }
       }
       chosenNum--
+      if (chosenNum == 0) {
+        this.data.labels_chosen[link].push("不限")
+      }
+      console.log(chosenNum)
+      console.log(this.data.labels_chosen)   //打印输出当前选中
     }
     var index_labels_toChoose = "labels_toChoose["+link+"]["+label.id+"].chosen"
     var index_labels_toChoose_split = "labels_toChoose_split["+link+"]["+index+"]["+id+"].chosen"

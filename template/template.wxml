@@ -1,7 +1,7 @@
 <!--template/template.wxml-->
 <template name="create_head">
   <view class='row' >
-    <view wx:for='{{item}}'>
+    <view wx:for='{{item}}' wx:key="navItems">
       <image bindtap='{{item.id}}' class='ima' src='{{item.addr}}'></image>
     </view>
   </view>
