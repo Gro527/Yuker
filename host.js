@@ -1,5 +1,5 @@
 // //服务器配置文件
-// var port = "55388"
+// var port = "61910"
 // var base = "http://127.0.0.1:"+port+"/api"
 var base = "http://47.94.210.236:5555/api"
 
