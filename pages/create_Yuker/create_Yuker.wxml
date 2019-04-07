@@ -11,5 +11,4 @@
 
   <view class="container">
     <button class="createbutton" bindtap="creator" type="default" plain="Boolean" > + 创建Yuker方案 </button>
-
   </view>

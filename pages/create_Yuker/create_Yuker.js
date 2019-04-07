@@ -12,10 +12,25 @@ Page({
   /**
   * 生命周期函数--监听页面加载
   */
-  onLoad: function (options) {
-    
-  
+
+//onLoad当页面加载时执行的方法
+onLoad: function(e) {
+  var progressNum = 0; 
+    // progressNum
+    var that = this;
+    var timer = setInterval(function () {
+      progressNum++;
+      //当进度条为100时清除定时任务
+      if (progressNum >= 100) {
+        clearInterval(timer);
+      }
+      //并且把当前的进度值设置到progress中
+      that.setData({
+        progress: progressNum
+      })
+    })
   },
+
 
 
   percentor: function () {

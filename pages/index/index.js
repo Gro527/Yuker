@@ -5,9 +5,9 @@ const app = getApp()
 
 Page({
   data: {
-    // motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
+    // // motto: 'Hello World',
+    // userInfo: {},
+    // hasUserInfo: false,
   },
   //事件处理函数
   clickme: function () {
@@ -59,7 +59,9 @@ Page({
     }
   },*/
   onLoad:function(){
+   
       },
+
 
 
   getUserInfo: function (e) {
@@ -69,7 +71,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
+   
+  }
+
 })
+
 
 
