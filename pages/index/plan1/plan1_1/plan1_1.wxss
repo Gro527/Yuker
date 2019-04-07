@@ -14,6 +14,10 @@
   
  /* background: rgb(143, 136, 136)     /*便于看清布局*/
 }
+.preview{
+  width: 200rpx;
+  height: 150rpx;
+}
 .little1{
   width: 75%;
   height: 300rpx;

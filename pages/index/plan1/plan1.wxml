@@ -15,7 +15,8 @@
 <block wx:for="{{members}}"  wx:for-item="user"  wx:for-index="i">
   <view class="person" style='flex-direction:row;'>
     <view class='little'>
-      <image class='head' src='/images/person_1.png'></image>
+      <image class='head' src='{{user.avatar}}'></image>
+      <text>{{user.nickname}}</text>
     </view>
     <view class='little_2'>
       <text wx:for="{{user.sub}}" wx:for-item="link">

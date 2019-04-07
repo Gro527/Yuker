@@ -11,13 +11,14 @@
         <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
 
           <view class='little0'>
+            <image class='preview' src='{{plan.preview[0]}}'></image>
             <view class='little1'>
-              <view class="first0">{{plan.link}}</view>
-              <view class= "first1">{{plan.label}}</view>
+              <view class="first0">{{plan.link}}:{{plan.label}}</view>
               <view class="second">
                 <image class="pic" src='../../../../images/item3.png'></image>
                 <view class = "loc">{{plan.dest}}</view>
               </view>
+              <view class = "loc">{{plan.dest_position[0]}}</view>
             </view>  
             <view class='little2'>
               <image bindtap='daohang' data-dest='{{plan.dest}}'class='image' src='/images/daohang.png'></image> 
