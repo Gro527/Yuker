@@ -51,7 +51,7 @@ Page({
               })
             }
           })
-          wx.navigateTo({
+          wx.reLaunch({
             url: '/pages/index/plan1/plan1_final/plan1_final',
           })
         }
