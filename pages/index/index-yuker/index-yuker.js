@@ -37,10 +37,11 @@ Page({
           })
         }
         that.setData({
-          show:that.data.leader_program
+          show: that.data.leader_program.reverse()
         })
       }
     })
+
     wx.request({
       url: host.member_history_url,
       data:{"userid":userid},
@@ -73,12 +74,12 @@ Page({
     }
     if(this.data.currentTab == 0){
       this.setData({
-        show:this.data.leader_program
+        show: this.data.leader_program
       })
     }
     else{
       this.setData({
-        show:this.data.member_program
+        show: this.data.member_program.reverse()
       })
     }
   },

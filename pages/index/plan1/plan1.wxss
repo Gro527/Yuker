@@ -41,7 +41,6 @@
 }
 .little{
   width: 30%;
-  /* height: 300rpx; */
   margin-top:70rpx; 
   display: flex;
   flex-direction: column;
