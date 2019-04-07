@@ -35,6 +35,7 @@ Page({
           key: 'program_info',
           data: res.data,
         })
+        var program = res.data
         //若方案已发布，则直接进入发布结果页面
         if(res.data.release_state == 1)
         {

@@ -89,7 +89,6 @@ Page({
     var program = options.currentTarget.dataset.program
     var program_id = program.id
     var release_state = program.release_state
-    //若方案已发布，则直接进入发布结果页面
     wx.navigateTo({
       url: '/pages/index/plan1/plan1?program_id=' + program_id,
     })
