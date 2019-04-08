@@ -123,13 +123,11 @@ Page({
     var chosenNum = this.data.numLabel_chosen[link]
     if(label.chosen==true) {
       for (var i in this.data.labels_chosen[link]){
-        if(this.data.labels_chosen[link][i] == "不限"){
+        if(this.data.labels_chosen[link][i].label == "不限"){
           this.data.labels_chosen[link].splice(i, 1)
        }}
          this.data.labels_chosen[link].push(label)
          chosenNum++
-      console.log(chosenNum)
-      console.log(this.data.labels_chosen)   //打印输出当前选中
     }
     else {
       for(var i in this.data.labels_chosen[link]){
@@ -139,10 +137,12 @@ Page({
       }
       chosenNum--
       if (chosenNum == 0) {
-        this.data.labels_chosen[link].push("不限")
+        this.data.labels_chosen[link].push({
+          chosen:true,
+          id:0,
+          label:"不限"
+          })
       }
-      console.log(chosenNum)
-      console.log(this.data.labels_chosen)   //打印输出当前选中
     }
     var index_labels_toChoose = "labels_toChoose["+link+"]["+label.id+"].chosen"
     var index_labels_toChoose_split = "labels_toChoose_split["+link+"]["+index+"]["+id+"].chosen"
