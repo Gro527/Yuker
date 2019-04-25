@@ -18,7 +18,10 @@
                 <image class="pic" src='../../../../images/item3.png'></image>
                 <view class = "loc">{{plan.dest}}</view>
               </view>
+              <view class='third'>
+              <image class='location_p' src='/images/location.png'></image>
               <view class = "loc">{{plan.dest_position[0]}}</view>
+              </view>
             </view>  
             <view class='little2'>
               <image bindtap='daohang' data-dest='{{plan.dest}}'class='image' src='/images/daohang.png'></image> 
