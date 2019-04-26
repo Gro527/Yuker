@@ -137,6 +137,7 @@ Page({
 
   submit:function(){
     this.showProgress()
+    var that = this
     wx.request({
       url: host.leader_submit_url+this.data.program_id,
       method:'GET',
@@ -150,7 +151,9 @@ Page({
         wx.navigateTo({
           url: '/pages/index/plan1/plan1_1/plan1_1'
         })
-
+        that.setData({
+          showProgressStatus:false
+        })
       }
     })
   },

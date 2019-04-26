@@ -46,5 +46,5 @@
 
 <view class="mask" data-statu="close" wx:if="{{showProgressStatus}}"></view>
 <view animation="{{animationData}}" class="ProgressBox" wx:if="{{showProgressStatus}}">
-  <template is='progress_bar' data='{{ok}}'></template>
+  <template is='progress_bar' data='{{...item}}'></template>
 </view>
