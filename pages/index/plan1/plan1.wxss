@@ -67,7 +67,7 @@
 .head{
   width: 150rpx;
   height: 150rpx;
-  margin: 75rpx 70rpx 10rpx;
+  margin: 35rpx 70rpx 10rpx;
 }
 .location_p{
   width: 50rpx;
