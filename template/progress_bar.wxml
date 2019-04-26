@@ -1,0 +1,5 @@
+<!--template/progress_bar.wxml-->
+
+<template name='progress_bar'>
+  <progress percent='{{percent}}' show-info='true' active='true' bindactiveend='end'>  正在计算目的地...</progress>
+</template>

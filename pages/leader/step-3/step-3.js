@@ -45,7 +45,7 @@ Page({
      
     //获取标签列表
     wx.request({
-      url: 'http://47.94.210.236:5555/api/label_type/all',
+      url: host.label_all_url,
       headers:{
         'Content-Type': 'application/json'
       },
