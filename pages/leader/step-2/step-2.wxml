@@ -27,11 +27,11 @@
 <view class='line'></view>
  
 
-<view class="style_choose">方案风格选取：</view>
+<!-- <view class="style_choose">方案风格选取：</view>
 <view class="style">
   <button class="mini-button2"  wx:for="{{style}}" id="{{index}}" bindtap="display" type="default"    size="mini" plain="{{item.state?false:true}}"> {{item.name}}</button>
   <view class='line'></view>
-</view>
+</view> -->
 
 <view class="next-step" >
 <button  bindtap="next" type="default" > 下一步 </button></view>

@@ -156,6 +156,16 @@ Page({
 
   next3: function(data){
     var that = this
+    for(var i in that.data.labels_chosen)
+    {
+      if(!that.data.labels_chosen[i].length){
+        that.data.labels_chosen[i].push({
+          chosen: true,
+          id: 0,
+          label: "不限"
+        })
+      }
+    }
     wx.reLaunch({
       url: '/pages/leader/step-4/step-4'
     })

@@ -42,6 +42,7 @@
 <block wx:elif="{{member_type==2}}">
  <button  open-type='getUserInfo' bindgetuserinfo='join' type="default" class='final'>加入方案</button>
 </block>
+<button bindtap='onShareAppMessage' type='default' class='final'>邀请好友</button>
 
 
 <view class="mask" data-statu="close" wx:if="{{showProgressStatus}}"></view>

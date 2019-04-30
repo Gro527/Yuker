@@ -27,8 +27,7 @@
 
 
 
-
-<!-- 选择出行范围 -->
+<!-- 
 <view class="where_go">
 
   <text class='title_where' >出行范围：</text>
@@ -51,7 +50,7 @@
   </view>
 
 </view>
-
+ -->
 
 
 

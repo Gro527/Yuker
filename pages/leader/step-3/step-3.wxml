@@ -31,11 +31,11 @@
   <view class='line'></view>
 </block>
 
-   <view class="dislike">
+   <!-- <view class="dislike">
       <view >反标签添加：</view>
       <view bindtap="test">厌恶、忌口等></view>
    </view>
-<view class='line'></view>
+<view class='line'></view> -->
  
  <button bindtap="next3" type="default" class='confirm'>方案创建</button>
  
