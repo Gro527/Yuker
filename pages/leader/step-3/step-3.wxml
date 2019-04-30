@@ -15,8 +15,8 @@
       <image class="picture" src="/images/chicken.png"></image>
       <view class= "choose">{{linkname}}</view>
     </view>
-    <view id="{{i}}" hidden="{{!hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">请选择 ∨</view>
-    <view id="{{i}}" hidden="{{hidden_swiper[i]}}" class="title_sub" bindtap="show_swiper">已选 {{numLabel_chosen[i]}} 项:</view>
+    <view id="{{i}}" hidden="{{!hidden_swiper[i]||numLabel_chosen[i]}}" class="title_sub" bindtap="show_swiper">请选择 ∨</view>
+    <view id="{{i}}" hidden="{{hidden_swiper[i]&&!numLabel_chosen[i]}}" class="title_sub" bindtap="show_swiper">已选 {{numLabel_chosen[i]}} 项:</view>
   </view>
 
   <swiper class="label" indicator-dots="true" duration="1000" hidden="{{hidden_swiper[i]}}" bindchange='get_view'>

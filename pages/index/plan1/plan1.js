@@ -53,7 +53,7 @@ Page({
               })
             }
           })
-          wx.reLaunch({
+          wx.redirectTo({
             url: '/pages/index/plan1/plan1_final/plan1_final',
           })
         }
@@ -148,7 +148,7 @@ Page({
           key: 'program_info',
           data: program_info,
         })
-        wx.navigateTo({
+        wx.redirectTo({
           url: '/pages/index/plan1/plan1_1/plan1_1'
         })
         that.setData({

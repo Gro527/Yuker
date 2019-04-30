@@ -105,7 +105,7 @@ Page({
         'release_result':program_info.release_result
       }
     })
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/index/plan1/plan1_final/plan1_final',
     })
 
