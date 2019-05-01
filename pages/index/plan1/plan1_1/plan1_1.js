@@ -3,8 +3,7 @@
 
 //获取应用实例
 const host = require('../../../../host')
-var QQMap = require('../../../../libs/qqmap-wx-jssdk.js')
-var QQMapSdk
+const map = require('../../../../map.js')
 var app = getApp()
 Page({
   data: {
@@ -17,9 +16,6 @@ Page({
 
   onLoad: function () {
     var that = this;
-    QQMapSdk = new QQMap({
-      key: 'X5MBZ-WWM3Q-TT45A-G5VQO-DU34F-QKB2Q'
-    })
     wx.getSystemInfo({
 
       success: function (res) {
@@ -71,23 +67,7 @@ Page({
 
   daohang:function(e){
     var shop_name = e.currentTarget.dataset.dest
-    QQMapSdk.search({
-      keyword: shop_name,
-      success: function (res) {
-        console.log(res);
-        wx.openLocation({
-          latitude: res.data[0].location.lat,
-          longitude: res.data[0].location.lng,
-          name: shop_name
-        })
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-      complete: function (res) {
-        console.log(res);
-      }
-    });
+    map.search_by_name(shop_name)
   },
 
   final:function(e){
