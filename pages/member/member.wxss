@@ -8,6 +8,13 @@
   margin-bottom: 30rpx;
 }
 
+.location{
+  margin-left: 60rpx;
+  font-style:  inherit;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
 .link1{
   margin-top: 30rpx;
   margin-left:70rpx;

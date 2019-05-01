@@ -5,15 +5,15 @@
  <template is="create_head" data='{{item}}' />
 <view class='line'> </view>
 <view class='location'>
-  <text class='title_location' >   选择位置：</text>
+  <text class='title_location' >选择位置：</text>
   <image class='image' bindtap='chooseLocation' src='/images/location.png'></image>
 </view>
 <view class='location_choose'>
    <block wx:if="{{hasLocation === false}}">
-      <text class="noneaddress">   未选择位置</text>
+      <text class="location">未选择位置</text>
    </block>
    <block wx:if="{{hasLocation === true}}">
-      <text class="address">{{"   "+locationAddress}}</text>
+      <text class="location">{{locationAddress}}</text>
    </block>
 </view>   
 <view class='line'></view>
