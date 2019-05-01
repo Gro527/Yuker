@@ -15,8 +15,8 @@
 
    <button class="check" bindtap="clickme" type="default" plain="Boolean">我的Yuker方案</button>
    <view class="display1">
-   <view class="info1">
-      <view >优惠券</view>
+   <view class="info1" bindtap="introduction">
+      <view >使用说明</view>
       <view >></view>
    </view>
 <view class='line1'></view></view>

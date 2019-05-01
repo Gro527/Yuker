@@ -10,10 +10,10 @@
 </view>
 <view class='location_choose'>
    <block wx:if="{{hasLocation === false}}">
-      <text class="noneaddress">未选择位置</text>
+      <text class="location">未选择位置</text>
    </block>
    <block wx:if="{{hasLocation === true}}">
-      <text class="address">{{locationAddress}}</text>
+      <text class="location">{{locationAddress}}</text>
    </block>
 </view>   
 <view class='line'></view>
