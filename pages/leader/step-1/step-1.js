@@ -1,10 +1,6 @@
 // pages/leader/step-1/step-1.js
 const host = require('../../../host')
-var tcity = require("../../../utils/citys.js")
-const county = ["附近", "热门商圈"]
-const area = ["500m", "1km", "2km", "3km", "4km", "5km", "6km", "7km", "8km", "10km", "15km", "20km", "20km以上"]
-var QQMap = require('../../../libs/qqmap-wx-jssdk.js')
-var QQMapSdk
+const map = require('../../../map')
 
 Page({
   
@@ -12,9 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    where_go_array: county,
-    where_go_area: area,
-    
     program_name:"我的Yuker方案",
     hasLocation: false,
     info_food: "默认",
@@ -32,21 +25,6 @@ Page({
   },
 
 
-  //跳转页面
-  5:function(e){
-    wx.showToast({
-      icon: 'none',
-      title: '请完成本页填写！'
-    });
-  },
-
-  3: function (e) {
-      wx.showToast({
-        icon: 'none',
-        title: '请完成本页填写！'
-      });
-  },
-
   chooseLocation: function () {
     var that = this
     wx.chooseLocation({
@@ -62,42 +40,6 @@ Page({
     })
   },
 
-
-  show_food_list: function (e) {
-    var that = this;
-    
-    tcity.init(that);
-    var cityData = that.data.cityData;
-
-    for (let i = 0; i < cityData[0].sub[0].sub.length; i++) {
-      county.push(cityData[0].sub[0].sub[i].name);
-    }
-    this.setData({ 
-      hiddenname: !this.data.hiddenname ,
-      where_go_array: county
-    })
-  },
-
-  get1: function (e) {
-    this.setData({
-      info_food: this.data.info_food = "附近",
-      labela: this.data.labela = "智能距离",
-      labelb: this.data.labelb = "1000m",
-      labelc: this.data.labelc = "3000m",
-      labeld: this.data.labeld = "5000m",
-      color1: this.data.color1 = 'whitesmoke',
-    })
-  },
-
-  get2: function (e) {
-    this.setData({ info_food: this.data.info_food = "热门商圈" })
-  },
-
-  get7: function (e) {
-    this.setData({
-      info_food: this.data.info_food = "昌平区"
-    })
-  },
   forcontent: function (e) {
     this.setData({
       program_name: e.detail.value,
@@ -137,25 +79,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    QQMapSdk = new QQMap({
-      key: 'X5MBZ-WWM3Q-TT45A-G5VQO-DU34F-QKB2Q'
-    })
     var that = this
     wx.getLocation({
       success: function(res){
-        QQMapSdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
+
+        map.get_address_by_long_lati(
+          {
+            latitude:res.latitude,
+            longitude:res.longitude
           },
-          success: function (res1) {
-            that.setData({
-              hasLocation: true,
-              addr_longitude_latitude: [res.longitude, res.latitude],
-              locationAddress: res1.result.address
-            })
-          }
-      })
+          that
+        )
       }
       })
 
