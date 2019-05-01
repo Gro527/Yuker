@@ -24,7 +24,7 @@
           </view>
         </view>
         <view class='part3'>
-         <image bindtap='daohang' class='image' src='/images/daohang.png'></image>
+         <image bindtap='daohang' data-dest='{{step.dest}}' class='image' src='/images/daohang.png'></image>
         </view>
       </view>
       <view class='line'></view>
