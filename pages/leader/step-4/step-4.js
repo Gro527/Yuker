@@ -48,7 +48,6 @@ Page({
       },
     })
     
-
   },
 
 
@@ -57,6 +56,7 @@ Page({
     wx.navigateTo({
       url: '/pages/index/plan1/plan1?program_id='+proid,
     })
+    
   },
 
   backhome: function () {

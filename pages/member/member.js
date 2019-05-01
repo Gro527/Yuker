@@ -166,7 +166,7 @@ Page({
   next3: function next3(data) {
     var that = this;
     wx.navigateTo({
-      url: '/pages/leader/step-4/step-4'
+      url: '/pages/index/index'
     });
     //将label发送至storage
     wx.setStorage({

@@ -27,8 +27,10 @@
 
 
 
-<!-- 
-<view class="where_go">
+
+<!-- 选择出行范围 -->
+<!-- <view class="where_go">
+>>>>>>> Stashed changes
 
   <text class='title_where' >出行范围：</text>
 
@@ -47,10 +49,8 @@
         <view wx:for="{{where_go_area}}">{{item}}</view>
       </scroll-view>
     </view>
-  </view>
+  </view> -->
 
-</view>
- -->
 
 
 
