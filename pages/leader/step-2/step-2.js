@@ -88,12 +88,6 @@ for(let i=0;i<this.data.style.length;i++){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    this.setData({
-      text: options.text,
-      address: options.addr,
-          })
-
     var _this = this
     wx.request({
       url: host.link_url,//json数据地址
