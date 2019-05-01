@@ -1,4 +1,4 @@
-<button bindtap='return' class='return'>返回主页</button>
+
 
   <view class="bg">
     
@@ -13,21 +13,27 @@
 
 <view>
     <block wx:for='{{program_info.release_result}}' wx:for-item='step' class='plan_item'>
-      <view class='part0'>
-        <view class='part1'>
-          <image class='image_item' src='{{step.preview[0]}}'></image>
-        </view>
-        <view class='part2'>
-          <view class='info_item'>
-          <text>{{step.dest}}</text>
-          <text>{{step.dest_position[0]}}</text>
+     
+        <view class='little'>
+           <view class='little0'>
+            <image class='preview' src='{{step.preview[0]}}'>
+            </image>
+            <view class='little2'>
+              <view class="first0">{{step.link}} : {{step.label}}</view>
+              <view class = "loc">{{step.dest}}</view>
+            </view>
+           </view>
           </view>
-        </view>
-        <view class='part3'>
-         <image bindtap='daohang' data-dest='{{step.dest}}' class='image' src='/images/daohang.png'></image>
-        </view>
-      </view>
-      <view class='line'></view>
+
+          <view class='little1'>
+             <image bindtap='daohang' data-dest='{{step.dest}}'class='image' src='/images/daohang.png'></image>
+             <view class = "loc1">{{step.dest_position[0]}}
+             </view>
+          </view>
+
+            <view class="line"></view>
+        
+    
     </block>  
 </view>
 <view class='text1'>若您已完成出行，请:</view>

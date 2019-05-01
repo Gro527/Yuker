@@ -130,12 +130,11 @@
   font-size: 38rpx;
   font-weight: bold;
   margin-left: 20rpx;
-  text-align: right;
   margin-top: 30rpx;
 }
 
 .loc{
-  margin-left:15rpx; 
+  margin-left:20rpx; 
   margin-top: 20rpx;
   font-size: 30rpx;
   font-weight: bold;
