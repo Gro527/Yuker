@@ -16,6 +16,11 @@ Page({
     })
   },
 
+  introduction: function () {
+    wx.navigateTo({
+      url: '/pages/index/introduction/introduction'
+    })
+  },
 
   creator: function () {
     wx.navigateTo({

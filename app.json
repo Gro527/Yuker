@@ -11,7 +11,8 @@
     "pages/index/plan1/plan1_1/plan1_1",
     "pages/index/plan1/plan1_final/plan1_final",
     "template/template",
-    "pages/member/member"
+    "pages/member/member",
+    "pages/index/introduction/introduction"
   ],
   "window": {
     "backgroundTextStyle": "light",
