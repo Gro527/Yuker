@@ -1,5 +1,6 @@
 // pages/index/plan1/plan1_final/plan1_final.js
 const host = require('../../../../host')
+const map = require('../../../../map')
 Page({
 
   /**
@@ -68,6 +69,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  // 导航
+  daohang: function(e) {
+    var shop_name = e.currentTarget.dataset.dest
+    map.search_by_name(shop_name)
+  },
+
 
   return:function(e){
     wx.reLaunch({
