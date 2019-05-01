@@ -17,12 +17,13 @@ Page({
    */
   onLoad: function (options) {
     
-      this.setData({
-        program_id:options.program_id,
-        //设置成员类型：0为发起者，1为参与人，2为路人
-        // member_type:options.type
-      })
-    
+    this.setData({
+      program_id:options.program_id,
+    })
+    wx.setStorage({
+      key: 'program_id',
+      data: options.program_id,
+    })
     var that = this
     wx.request({
       url: host.program_info_url,
