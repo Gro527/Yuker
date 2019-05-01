@@ -5,6 +5,7 @@ var QQMapSdk = new QQMap({
 
 
 var map = {
+  // 根据店名搜索
   search_by_name(shop_name) {
     QQMapSdk.search({
       keyword: shop_name,
@@ -24,6 +25,24 @@ var map = {
       }
     })
   },
+  // 根据地址获取地名
+  // 参数1：经纬度，参数2：page
+  get_address_by_long_lati(data,page){
+    QQMapSdk.reverseGeocoder({
+      location: {
+        latitude: data.latitude,
+        longitude: data.longitude
+      },
+      success: function (res) {
+        page.setData({
+          hasLocation: true,
+          addr_longitude_latitude: [data.longitude, data.latitude],
+          locationAddress: res.result.address
+        })
+      }
+    })
+  },
+
 }
 
 module.exports = map
