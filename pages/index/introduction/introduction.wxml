@@ -1,2 +1,44 @@
 <!--pages/index/introduction/introduction.wxml-->
-<text>Yuker 使用说明</text>
+<view class="content">
+ <view class="bg">
+  <view class="logo">
+    <view class= "first">Yuker 使用说明</view>
+  </view>
+ </view>
+</view>
+
+<view class='text0'> 若为活动发起人：</view>
+<text class='text1'>    1）点击“创建Yuker方案”按钮创建方案\n</text>
+<text class='text1'>    2）输入方案名称、直接获取或手动输入所在定位\n</text>
+<text class='text1'>    3）选择方案环节（最多选择3个环节）\n</text>
+<text class='text1'>    4）选择各个环节的标签并创建方案\n</text>
+<text class='text1'>    5）填写方案备注并将可方案分享给出行同伴\n</text>
+
+<view class='text0'> 若为活动参与者：</view>
+<text class='text1'>    1）点击好友发送的链接加入方案\n</text>
+<text class='text1'>    2）直接获取或手动输入所在定位\n</text>
+<text class='text1'>    3）选择出行环节（最多选择3个环节）\n</text>
+<text class='text1'>    4）选择各个环节的标签并确认方案\n</text>
+<text class='text1'>    5）等待发起人生成方案\n</text>
+
+<view class='text0'> 查看方案：</view>
+<text class='text1'>    1）在“我的方案”页面点击“我的Yuker方案”按钮\n</text>
+<text class='text1'>    2）可分别查看我发起的方案和我参与的方案\n</text>
+<text class='text1'>    3）查看具体方案时可选择继续邀请好友或直接生成方案\n</text>
+
+ <!-- 1）点击创建Yuker方案按钮创建方案\n2）
+  活动发起人发起活动，选择单人模式或多人模式。 
+
+  若为单人模式，则直接获取自己定位选择偏好标签，生成推荐行程规划。 
+
+  若为多人模式先选择出行群体关系，分为同事、亲友、同学、情侣，进行不同的偏好推荐。 
+
+1）活动发起人输入自己的定位，选择自己偏好的标签。生成链接发给同伴； 
+
+2）同伴通过链接输入自己的定位以及选择自己的标签。 
+
+3）在所有人的定位都获取完毕后，活动发起人确认生成规划；软件联系所有定位信息与现有的标签做出交通、饮食、休闲等方面综合的推荐规划。 
+
+4）用户可对规划行程替换，修改后生成最终的规划，发送到所有人的客户端。 
+
+5）用户采取推荐行程规划后，对该行程推荐进行五星制打分。  -->
