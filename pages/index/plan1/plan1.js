@@ -74,7 +74,7 @@ Page({
         }
         else {
           for (var i in that.data.members) {
-            if (that.data.members[i] == that.data.userid_current) {
+            if (that.data.members[i].userid == that.data.userid_current) {
               _member_type = 1
             }
           }

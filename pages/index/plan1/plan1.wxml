@@ -37,12 +37,12 @@
  <button bindtap='submit' type="default" class='final'>生成方案</button>
 </block>
 <block wx:elif="{{member_type==1}}">
- <button bindtap='join' type="default" class='final'>修改方案</button>
+<!-- 非发起人成员逻辑 待添加 -->
 </block>
 <block wx:elif="{{member_type==2}}">
  <button  open-type='getUserInfo' bindgetuserinfo='join' type="default" class='final'>加入方案</button>
 </block>
-<button bindtap='onShareAppMessage' type='default' class='final'>邀请好友</button>
+<button open-type='share' type='default' class='final'>邀请好友</button>
 
 
 <view class="mask" data-statu="close" wx:if="{{showProgressStatus}}"></view>
