@@ -19,14 +19,11 @@ Page({
         'userinfo': e.detail.userInfo,
         'userid': userid
       },
-      success: function (res) {
+      success: function(){
         wx.navigateTo({
-          url: '/pages/leader/step-1/step-1'
+          url: '/pages/index/index-yuker/index-yuker'
         })
       }
-    })
-    wx.navigateTo({
-      url: '/pages/index/index-yuker/index-yuker'
     })
   },
 

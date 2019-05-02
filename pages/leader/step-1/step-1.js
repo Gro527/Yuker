@@ -82,7 +82,6 @@ Page({
     var that = this
     wx.getLocation({
       success: function(res){
-
         map.get_address_by_long_lati(
           {
             latitude:res.latitude,

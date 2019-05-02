@@ -1,6 +1,5 @@
 var host = require('../../host.js');
-var QQMap = require('../../libs/qqmap-wx-jssdk.js');
-var QQMapSdk;
+const map = require('../../map')
 Page({
 
   Data: {
@@ -81,27 +80,18 @@ Page({
       }
     });
 
-    QQMapSdk = new QQMap({
-      key: 'X5MBZ-WWM3Q-TT45A-G5VQO-DU34F-QKB2Q'
-    });
     var that = this;
-    wx.getLocation({
-      success: function success(res) {
-        QQMapSdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
-          },
-          success: function success(res1) {
-            that.setData({
-              hasLocation: true,
-              addr_longitude_latitude: [res.longitude, res.latitude],
-              locationAddress: res1.result.address
-            });
-          }
-        });
-      }
-    });
+      wx.getLocation({
+        success: function success(res) {
+          map.get_address_by_long_lati(
+            {
+              latitude: res.latitude,
+              longitude: res.longitude
+            },
+            that
+          )
+        }
+      });
   },
 
   chooseLocation: function chooseLocation() {
@@ -165,9 +155,6 @@ Page({
 
   next3: function next3(data) {
     var that = this;
-    wx.navigateTo({
-      url: '/pages/index/index'
-    });
     //将label发送至storage
     wx.setStorage({
       key: 'labels_chosen',
@@ -205,10 +192,9 @@ Page({
       data: { json: json },
       method: 'POST',
       success: function success(res) {
-        wx.setStorage({
-          key: 'program_id',
-          data: res.data.program_id
-        });
+        wx.reLaunch({
+          url: '/pages/index/plan1/plan1?program_id='+that.data.program_info.program_id
+        })
       }
     });
   }
