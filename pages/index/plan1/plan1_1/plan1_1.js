@@ -16,18 +16,6 @@ Page({
 
   onLoad: function () {
     var that = this;
-    wx.getSystemInfo({
-
-      success: function (res) {
-        that.setData({
-          winWidth: res.windowWidth,
-          winHeight: res.windowHeight,
-
-        });
-      }
-    });
-    
-    
     var program_info = wx.getStorageSync('program_info')
     var result = program_info.submit_result
     this.setData({

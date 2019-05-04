@@ -89,9 +89,12 @@ Page({
   plan1:function(options){
     var program = options.currentTarget.dataset.program
     var program_id = program.id
+    var submit_state = program.submit_state
     var release_state = program.release_state
+    var url = '/pages/index/plan1/plan1?program_id=' + program_id
+    if(release_state == 1) url = '/pages/index/plan1/plan1_final/plan1_final?program_id=' + program_id
     wx.navigateTo({
-      url: '/pages/index/plan1/plan1?program_id=' + program_id,
+      url: url,
     })
   },
 

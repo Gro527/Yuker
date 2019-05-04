@@ -99,6 +99,7 @@
 .loc1{
     font-size: 30rpx;
     margin-left: 20rpx;
+    text-decoration: underline;
 }
 
 .image{

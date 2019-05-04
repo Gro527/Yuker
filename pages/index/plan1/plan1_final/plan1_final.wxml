@@ -25,16 +25,10 @@
            </view>
           </view>
 
-          <view class='little1'>
-             <image bindtap='daohang' data-dest='{{step.dest}}'class='image' src='/images/daohang.png'></image>
-             <view class = "loc1">{{step.dest_position[0]}}
-             </view>
+          <view class='little1'  bindtap='daohang'  data-dest='{{step.dest}}'>
+             <image class='image' src='/images/daohang.png'></image>
+             <view class = "loc1">{{step.dest_position[0]}} </view>
           </view>
-
             <view class="line"></view>
-        
-    
     </block>  
 </view>
-<view class='text1'>若您已完成出行，请:</view>
-<button class='bt1'>发表评论</button>

@@ -1,5 +1,5 @@
-// //服务器配置文件
-// var port = "61910"
+// // //服务器配置文件
+// var port = "51205"
 // var base = "http://127.0.0.1:"+port+"/api"
 var base = "https://yuker.vip/api"
 

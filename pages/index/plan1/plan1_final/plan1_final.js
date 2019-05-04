@@ -14,11 +14,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var program_info = wx.getStorageSync('program_info')
-    this.setData({
-      program_info: program_info
+    var program_id = options.program_id
+    var that = this
+    wx.request({
+      url: host.program_info_url,
+      method: 'POST',
+      data:{
+        program_id: program_id
+      },
+      success: function(res){
+        that.setData({
+          program_info: res.data
+        })
+      }
     })
-    console.log(this.data.program_info)
   },
 
   /**
