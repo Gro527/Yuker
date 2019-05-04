@@ -46,7 +46,8 @@ Page({
           userid_current : wx.getStorageSync('userid'),
           release_state: res.data.release_state
         })
-
+        
+        console.log(res.data.members)
 
         var _member_type = 2
         //判断当前用户类型所属（0为发起者，1为参与人，2为路人）

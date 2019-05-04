@@ -16,8 +16,16 @@
 <block wx:for="{{members}}"  wx:for-item="user"  wx:for-index="i">
   <view class="person" style='flex-direction:row;'>
     <view class='little'>
-      <image class='head' src='{{user.avatar}}'></image>
-      <text>{{user.nickname}}</text>
+      <view wx:if="{{user.avatar}}">
+        <image class='head' src='{{user.avatar}}'></image>
+        <text space='nbsp'>     {{user.nickname}}</text>
+      </view>
+      <view wx:else>
+        <image class='head' src='/images/project-1.png'></image>
+        <text space='nbsp'>     Yuker用户</text>
+      </view>
+
+      <!--text>{{user.nickname}}</text-->
     </view>
     <view class='little_2'>
       <text wx:for="{{user.sub}}" wx:for-item="link">
