@@ -75,13 +75,21 @@ for(let i=0;i<this.data.style.length;i++){
 
 
   next: function (e) {
-    wx.setStorage({
-      key: 'link_choose',
-      data:this.data.link_choose,
-    })
-    wx.navigateTo({
-      url: '/pages/leader/step-3/step-3?link_choose='+JSON.stringify(this.data.link_choose),
+   // console.log(this.data.link_choose.length)
+    if(this.data.link_choose.length==0){
+      wx.showToast({
+        title: '请至少选择一个环节',
+        icon:'none',
       })
+    }else{
+      wx.setStorage({
+        key: 'link_choose',
+        data:this.data.link_choose,
+      })
+      wx.navigateTo({
+        url: '/pages/leader/step-3/step-3?link_choose='+JSON.stringify(this.data.link_choose),
+        })
+    }
   },
 
  /**
