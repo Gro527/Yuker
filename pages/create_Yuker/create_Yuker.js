@@ -49,10 +49,10 @@ onLoad: function(e) {
         'userid':userid
       },
       success: function (res){
-        wx.navigateTo({
-          url: '/pages/leader/step-1/step-1'
-        })
       }
+    })
+    wx.navigateTo({
+      url: '/pages/leader/step-1/step-1'
     })
   },
 

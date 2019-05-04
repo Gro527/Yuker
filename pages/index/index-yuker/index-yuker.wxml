@@ -8,14 +8,14 @@
   <view class="hr"></view>
 <block wx:for="{{show}}">
       <view class="item">
-        <view class="nameInfo">
-          <view class="name">
+        <view class="nameInfo" data-program='{{item}}' bindtap='plan1'>
+          <view class="name" >
             <view class="fname">{{item.name}}</view>
             <view class="time">{{item.time}}</view>
             <view wx-if="{{item.release_state==1}}" class="status">已完成</view>
             <view wx-if="{{item.release_state==0}}" class="status">未完成</view>
           </view>
-          <text class="count" data-program='{{item}}' bindtap='plan1' >></text>
+          <text class="count"  >></text>
         </view>
       </view>
       <view class="line"></view>

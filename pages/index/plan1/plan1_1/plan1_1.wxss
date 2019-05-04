@@ -52,13 +52,15 @@
 .loc1{
     font-size: 30rpx;
     margin-left: 20rpx;
+    text-decoration: underline;
 }
 
 .swiper-tab{
 	width: 100%;
 	border-bottom: 2rpx solid #777777;
 	text-align: center;
-	line-height: 80rpx;}
+	line-height: 80rpx;
+  }
 
 .swiper-tab-list{  
   font-size: 30rpx;

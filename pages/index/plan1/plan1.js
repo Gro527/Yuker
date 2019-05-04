@@ -20,10 +20,6 @@ Page({
     this.setData({
       program_id:options.program_id,
     })
-    wx.setStorage({
-      key: 'program_id',
-      data: options.program_id,
-    })
     var that = this
     wx.request({
       url: host.program_info_url,
@@ -44,6 +40,7 @@ Page({
           name: res.data.program_name,
           members : res.data.members,
           userid_current : wx.getStorageSync('userid'),
+          submit_state: res.data.submit_state,
           release_state: res.data.release_state
         })
 
@@ -130,7 +127,7 @@ Page({
           key: 'program_info',
           data: program_info,
         })
-        wx.redirectTo({
+        wx.navigateTo({
           url: '/pages/index/plan1/plan1_1/plan1_1'
         })
         that.setData({
@@ -161,12 +158,7 @@ Page({
 
   
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
+  onShow: function () { this.onLoad({program_id:this.data.program_id}) },
 
   /**
    * 生命周期函数--监听页面隐藏
