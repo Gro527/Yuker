@@ -157,7 +157,11 @@ Page({
   },
 
 
-  
+  backhome: function () {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
+  },
 
   onShow: function () { this.onLoad({program_id:this.data.program_id}) },
 

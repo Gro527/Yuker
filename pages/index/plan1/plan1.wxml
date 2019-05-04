@@ -18,11 +18,11 @@
     <view class='little'>
       <view wx:if="{{user.avatar}}">
         <image class='head' src='{{user.avatar}}'></image>
-        <text space='nbsp'>     {{user.nickname}}</text>
+        <text class='name'>{{user.nickname}}</text>
       </view>
       <view wx:else>
         <image class='head' src='/images/project-1.png'></image>
-        <text space='nbsp'>     Yuker用户</text>
+        <text class='name'>Yuker用户</text>
       </view>
 
       <!--text>{{user.nickname}}</text-->
