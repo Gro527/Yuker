@@ -7,7 +7,7 @@
 <view class='line'></view>
 <view class="name1" >
   <view class='title' >方案名称:</view>
-  <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='我的Yuker方案' value='{{name}}' maxlength='15'></input>
+  <input type='text' bindinput='forcontent' class='textarea' name='name' placeholder='为您的出行方案取个名字吧~' value='{{name}}' maxlength='15'></input>
 </view>
 <view class='line'></view>
 

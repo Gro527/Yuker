@@ -5,8 +5,8 @@
 
 <view class='line'> </view>
 <view class="title">
-<text>方案环节选取：</text>
-<text>*最多可选三项</text>
+<text >方案环节选取：</text>
+<text class='noting'>*最多可选三项</text>
 </view>
 
 <view class="index-hd">
@@ -16,9 +16,9 @@
 </view>
 <view class='line'></view>
 
-<view class="index-dd">
-  <text>方案环节</text>
-  <text>*选中删除</text>
+<view class="title">
+  <text>方案环节:</text>
+  <text class='noting'>*选中删除</text>
 </view>
 
 <view class="index-td">

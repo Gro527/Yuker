@@ -9,9 +9,13 @@ margin-left: 40rpx;
 margin-top: 50rpx;
 font-size: large;
 font-style:  inherit;
+font-weight: bold;
 
 }
-
+.noting{
+  font-weight: 200;
+  font-size: small;
+}
 .style_choose{
 display:flex;
 flex-direction:row;

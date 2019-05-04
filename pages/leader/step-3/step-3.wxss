@@ -6,6 +6,7 @@
   font-style:  inherit;
   margin-top: 30rpx;
   margin-bottom: 30rpx;
+  font-weight: bold;
 }
 
 .link1{
