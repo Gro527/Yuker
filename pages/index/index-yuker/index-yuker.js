@@ -37,7 +37,7 @@ Page({
           })
         }
         that.setData({
-          show: that.data.leader_program.reverse()
+          show: that.data.currentTab? that.data.member_program.reverse() : that.data.leader_program.reverse()
         })
       }
     })
