@@ -14,7 +14,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     var program_id = options.program_id
+    if(options.first == "true")
+    {
+      wx.showModal({
+        title: '方案已发布',
+        content: '方案已发布，快去分享给好友吧',
+        confirmText: "确定",
+        showCancel:false,
+      })
+    }
     var that = this
     wx.request({
       url: host.program_info_url,

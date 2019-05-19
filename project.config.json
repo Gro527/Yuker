@@ -12,7 +12,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.5",
 	"appid": "wx6e4a230ab71d4c11",
-	"projectname": "Yuker",
+	"projectname": "YukerClient",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

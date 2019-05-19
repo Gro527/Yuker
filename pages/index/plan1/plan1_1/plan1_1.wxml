@@ -17,7 +17,7 @@
            </view>
           </view>
 
-          <view class='little1' bindtap='daohang' data-dest='{{plan.dest}}'>
+          <view class='little1' bindtap='daohang' data-dest='{{plan.dest}}'pll>
              <image class='image' src='/images/daohang.png'></image>
              <view class = "loc1">{{plan.dest_position[0]}}</view>
           </view>

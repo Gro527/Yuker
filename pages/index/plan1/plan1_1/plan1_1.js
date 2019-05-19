@@ -55,7 +55,9 @@ Page({
   daohang:function(e){
     var shop_name = e.currentTarget.dataset.dest
     map.search_by_name(shop_name)
+
   },
+
 
   final:function(e){
     var program_id = this.data.program_id
@@ -69,7 +71,7 @@ Page({
       }
     })
     wx.redirectTo({
-      url: '/pages/index/plan1/plan1_final/plan1_final?program_id='+program_id,
+      url: '/pages/index/plan1/plan1_final/plan1_final?program_id='+program_id+'&first=true',
     })
 
   }
