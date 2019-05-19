@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    comment_show: false,
+    comment_finished: false,
+    commentText: "",
+    commentStars: 0,
   },
 
   /**
@@ -37,6 +40,26 @@ Page({
           program_info: res.data
         })
       }
+    })
+  },
+
+  showCommentArea: function(){
+    this.setData({
+      comment_show: !this.data.comment_show,
+    })
+  },
+
+  confirmComment: function(e){
+    var comment = e.detail.value
+    this.setData({
+      commentText: comment,
+    })
+  },
+
+  submitComment: function(){
+    this.setData({
+      comment_finished:true,
+      comment_show:false
     })
   },
 

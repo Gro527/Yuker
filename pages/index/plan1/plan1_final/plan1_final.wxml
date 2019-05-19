@@ -31,4 +31,22 @@
           </view>
             <view class="line"></view>
     </block>  
+
+    <block>
+      <button open-type='share'>分享给我的好友</button>
+      <view hidden='{{comment_show}}'>
+        <view wx:if='{{!comment_finished}}'>
+        <text>已完成行程？您可以</text>
+        <button bindtap='showCommentArea'>发表评论</button>
+        </view>
+        <view wx:else>
+        <button bindtap='showCommentArea'>查看/修改评论</button>
+        </view>
+      </view>
+      <view class='comment' hidden='{{!comment_show}}'>
+        <textarea class='commentText' placeholder='对方案和小程序的意见和建议……' auto-focus='true' bindconfirm='confirmComment'></textarea>
+        <button bindtap='submitComment'>确认发表</button>
+      </view>
+
+    </block>
 </view>
