@@ -12,8 +12,8 @@
           <view class="name" >
             <view class="fname">{{item.name}}</view>
             <view class="time">{{item.time}}</view>
-            <view wx-if="{{item.release_state==1}}" class="status">已完成</view>
-            <view wx-if="{{item.release_state==0}}" class="status">未完成</view>
+            <view wx-if="{{item.release_state==1}}" class="status">已发布</view>
+            <view wx-if="{{item.release_state==0}}" class="status">未发布</view>
           </view>
           <text class="count"  >></text>
         </view>
