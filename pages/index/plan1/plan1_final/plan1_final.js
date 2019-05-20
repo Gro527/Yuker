@@ -11,6 +11,7 @@ Page({
     comment_finished: false,
     commentText: "",
     commentStars: 0,
+    comment_list:[]
   },
 
   /**
@@ -19,6 +20,7 @@ Page({
   onLoad: function (options) {
     var that = this
     var program_id = options.program_id
+    //如果是第一次进入发布页面
     if(options.first == "true")
     {
       wx.showModal({
@@ -26,6 +28,29 @@ Page({
         content: '方案已发布，快去分享给好友吧',
         confirmText: "确定",
         showCancel:false,
+      })
+    }
+    //如果不是第一次进入发布页面，查询是否存在评论
+    else
+    {
+      wx.request({
+        url: host.get_comment_url,
+        method: 'POST',
+        data:{
+          program_id: program_id
+        },
+        success: function(res){
+          that.setData({
+            comment_list: res.data
+          })
+          for(var user in res.data)
+          {
+            if(res.data[user].user_id == wx.getStorageSync('userid'))
+              that.setData({
+                comment_finished:true
+              })
+          }
+        }
       })
     }
     var that = this
@@ -41,6 +66,7 @@ Page({
         })
       }
     })
+    
   },
 
   showCommentArea: function(){
@@ -50,16 +76,28 @@ Page({
   },
 
   confirmComment: function(e){
-    var comment = e.detail.value
     this.setData({
-      commentText: comment,
+      commentText: e.detail.value,
     })
   },
 
   submitComment: function(){
-    this.setData({
-      comment_finished:true,
-      comment_show:false
+    var that = this
+    wx.request({
+      url: host.upload_comment_url,
+      method: 'POST',
+      data:{
+        user_id: wx.getStorageSync('userid'),
+        program_id: that.data.program_info.program_id,
+        stars: 4.5,
+        comment: that.data.commentText
+      },
+      success: function(res){
+        that.setData({
+          comment_finished: true,
+          comment_show: false
+        })
+      }
     })
   },
 

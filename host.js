@@ -1,5 +1,5 @@
 // // //服务器配置文件
-// var port = "49191"
+// var port = "52389"
 // var base = "http://10.128.232.13:"+port+"/api"
 var base = "https://yuker.vip/api"
 
@@ -43,6 +43,13 @@ var host = {
 
   //查询release_result
   release_result_url:`${base}/release_result`,
+
+  //上传评论
+  upload_comment_url:`${base}/upload_comment`,
+
+  //查询评论
+  get_comment_url:`${base}/get_comment`,
+
 
 }
 
