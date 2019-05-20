@@ -42,7 +42,7 @@
 
 
 <block wx:if="{{member_type==0}}">
- <button bindtap='submit' type="default" class='final'>{{submit_state==0?"生成方案":"重新生成方案"}}</button>
+ <button bindtap='submit' type="default" class='final'>{{submit_state==0?"生成结果":"重新生成结果"}}</button>
 </block>
 
 <block wx:elif="{{member_type==1}}">

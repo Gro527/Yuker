@@ -117,25 +117,45 @@ Page({
   },
 
   submit:function(){
-    this.showProgress()
     var that = this
-    wx.request({
-      url: host.leader_submit_url+this.data.program_id,
-      method:'GET',
-      success(res){
-        var program_info = wx.getStorageSync('program_info')
-        program_info.submit_result = res.data
-        wx.setStorage({
-          key: 'program_info',
-          data: program_info,
-        })
-        wx.navigateTo({
-          url: '/pages/index/plan1/plan1_1/plan1_1'
-        })
-        that.setData({
-          showProgressStatus:false
-        })
-      }
+    wx.showModal({
+      title: '生成结果后将无法邀请新同伴',
+      content: '是否继续？',
+      showCancel: true,
+      cancelText: "否",
+      cancelColor: 'skyblue',
+      confirmText: "是",
+      confirmColor: 'skyblue',
+      success: function (res) {
+        if (res.cancel) {//点击取消,默认隐藏弹框
+          
+        } else {//点击确定
+         
+          that.showProgress()
+         
+          wx.request({
+            url: host.leader_submit_url + that.data.program_id,
+            method: 'GET',
+            success(res) {
+              var program_info = wx.getStorageSync('program_info')
+              program_info.submit_result = res.data
+              wx.setStorage({
+                key: 'program_info',
+                data: program_info,
+              })
+              wx.navigateTo({
+                url: '/pages/index/plan1/plan1_1/plan1_1'
+              })
+              that.setData({
+                showProgressStatus: false
+              })
+            }
+          })
+
+        }
+      },
+      fail: function (res) { },//接口调用失败的回调函数
+      complete: function (res) { },//接口调用结束的回调函数（调用成功、失败都会执行）
     })
   },
 
