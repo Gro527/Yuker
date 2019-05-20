@@ -121,3 +121,19 @@
   font-size: 30rpx;
   font-weight: bold;
 }
+.com{
+  margin:40rpx;
+}
+
+image{
+  height: 100rpx;
+  width: 100rpx;
+  display: inline-block
+}
+.commentText{
+  margin: 20rpx;
+}
+.usr{
+  font-weight: bold;
+  margin:5rpx;
+}

@@ -11,7 +11,13 @@ Page({
     comment_finished: false,
     commentText: "",
     commentStars: 0,
-    comment_list:[]
+    comment_list:[],
+
+   //五星评分
+   
+    key: 0,
+    two_2: 5
+
   },
 
   /**
@@ -69,6 +75,24 @@ Page({
     
   },
 
+
+//星级评分
+  in_xin: function (e) {
+    var in_xin = e.currentTarget.dataset.in;
+    var key;
+    if (in_xin === 'selected') {
+      key = Number(e.currentTarget.id);
+    } else {
+      key = Number(e.currentTarget.id) + this.data.key;
+    }
+    this.setData({
+      key: key,
+      two_2: 5 - key
+    })
+    console.log(this.data.key)
+  },
+
+
   showCommentArea: function(){
     this.setData({
       comment_show: !this.data.comment_show,
@@ -89,7 +113,7 @@ Page({
       data:{
         user_id: wx.getStorageSync('userid'),
         program_id: that.data.program_info.program_id,
-        stars: 4.5,
+        stars: this.data.key,
         comment: that.data.commentText
       },
       success: function(res){
@@ -99,6 +123,12 @@ Page({
         })
       }
     })
+    /*
+    if (getCurrentPages().length != 0) {
+      //刷新当前页面的数据
+      getCurrentPages()[getCurrentPages().length - 1].onLoad()
+    }
+    */
   },
 
   /**
