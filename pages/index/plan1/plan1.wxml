@@ -42,20 +42,22 @@
 
 
 <block wx:if="{{member_type==0}}">
- <button bindtap='submit' type="default" class='final'>{{submit_state==0?"生成结果":"重新生成结果"}}</button>
+ <button wx-if="{{!submit_state}}" bindtap='submit' type="default" class='final'>生成结果</button>
+ <button wx-if="{{submit_state}}" bindtap='check' type="default" class='final'>查看结果</button>
 </block>
 
 <block wx:elif="{{member_type==1}}">
-<!-- 非发起人成员逻辑 待添加 -->
+ <view wx-if="{{!submit_state}}">正在等待其他成员加入...</view>
+ <view wx-if="{{submit_state}}">发起人正在选择方案，请稍候...</view>
 </block>
 
 <block wx:elif="{{member_type==2}}">
 
- <block wx:if="{{release_state==0}}">
+ <block wx:if="{{submit_state==0}}">
   <button  open-type='getUserInfo' bindgetuserinfo='join' type="default" class='final'>加入方案</button>
  </block>
 
- <block wx:elif="{{release_state==1}}" >
+ <block wx:elif="{{submit_state==1}}" >
   <button type="default" class='final_lighter'>已结束</button>
  </block>
 

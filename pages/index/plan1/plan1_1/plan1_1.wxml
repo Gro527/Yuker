@@ -6,6 +6,7 @@
   <swiper-item wx:for="{{result}}" wx:for-index="index_plan"> 
     <scroll-view scroll-y='true'> 
         <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
+          <view bindtap='daohang' data-dest='{{plan.dest}}'>
           <view class='little'>
            <view class='little0'>
             <image class='preview' src='{{plan.preview[0]}}'>
@@ -17,11 +18,12 @@
            </view>
           </view>
 
-          <view class='little1' bindtap='daohang' data-dest='{{plan.dest}}'pll>
+          <view class='little1' >
              <image class='image' src='/images/daohang.png'></image>
              <view class = "loc1">{{plan.dest_position[0]}}</view>
           </view>
           <view class="line"></view>
+          </view>
         </block>
       <!-- </view> -->
       <view class="bz">备注：</view>

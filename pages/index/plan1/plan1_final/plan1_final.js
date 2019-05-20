@@ -121,8 +121,12 @@ Page({
           comment_finished: true,
           comment_show: false
         })
+        that.onLoad({
+          program_id: that.data.program_info.program_id
+        })
       }
     })
+
     /*
     if (getCurrentPages().length != 0) {
       //刷新当前页面的数据

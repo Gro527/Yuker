@@ -143,7 +143,7 @@ Page({
                 key: 'program_info',
                 data: program_info,
               })
-              wx.navigateTo({
+              wx.redirectTo({
                 url: '/pages/index/plan1/plan1_1/plan1_1'
               })
               that.setData({
@@ -156,6 +156,28 @@ Page({
       },
       fail: function (res) { },//接口调用失败的回调函数
       complete: function (res) { },//接口调用结束的回调函数（调用成功、失败都会执行）
+    })
+  },
+
+  check: function(){
+    var that = this
+    wx.request({
+      url: host.leader_submit_url + that.data.program_id,
+      method: 'GET',
+      success(res) {
+        var program_info = wx.getStorageSync('program_info')
+        program_info.submit_result = res.data
+        wx.setStorage({
+          key: 'program_info',
+          data: program_info,
+        })
+        wx.redirectTo({
+          url: '/pages/index/plan1/plan1_1/plan1_1'
+        })
+        that.setData({
+          showProgressStatus: false
+        })
+      }
     })
   },
 
