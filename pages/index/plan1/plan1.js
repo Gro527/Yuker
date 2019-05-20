@@ -45,6 +45,7 @@ Page({
         })
         
         console.log(res.data.members)
+        console.log(res.release_state)
 
         var _member_type = 2
         //判断当前用户类型所属（0为发起者，1为参与人，2为路人）

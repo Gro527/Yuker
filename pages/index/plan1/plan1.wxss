@@ -106,7 +106,13 @@
   margin-left: 70rpx;
   margin-right:70rpx;
   margin-bottom: 30rpx;
+}
 
+.final_lighter{
+  margin-left: 70rpx;
+  margin-right:70rpx;
+  margin-bottom: 30rpx;
+  font-weight: 200;
 }
 
 .mask {
