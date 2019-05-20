@@ -56,7 +56,7 @@
  </block>
 
  <block wx:elif="{{release_state==1}}" >
-  <button type="default" class='final_lighter'>已加入</button>
+  <button type="default" class='final_lighter'>已结束</button>
  </block>
 
 </block>
