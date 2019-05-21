@@ -78,11 +78,6 @@ Page({
   onLoad:function(){
    
       },
-test:function(){
-  wx.navigateTo({
-    url: '/pages/leader/step-4/step-4',
-  })
-},
 
 
   getUserInfo: function (e) {
@@ -93,6 +88,12 @@ test:function(){
       hasUserInfo: true
     })
    
+  },
+
+  collect:function(){
+    wx.navigateTo({
+      url: '/pages/index/collection/collection',
+    })
   },
 
   feedback: function () {

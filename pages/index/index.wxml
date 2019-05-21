@@ -22,7 +22,7 @@
 <view class='line1'></view></view>
 
    <view class="display2">
-   <view class="info2">
+   <view class="info2" bindtap='collect'>
       <view >我的收藏</view>
       <view >></view>
    </view>
