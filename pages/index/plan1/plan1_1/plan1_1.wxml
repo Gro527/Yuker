@@ -6,23 +6,33 @@
   <swiper-item wx:for="{{result}}" wx:for-index="index_plan"> 
     <scroll-view scroll-y='true'> 
         <block wx:for="{{result[currentTab]}}" wx:for-item="plan" wx:for-index="index">
-          <view bindtap='daohang' data-dest='{{plan.dest}}'>
+          <view>
           <view class='little'>
            <view class='little0'>
-            <image class='preview' src='{{plan.preview[0]}}'>
-            </image>
-            <view class='little2'>
-              <view class="first0">{{plan.link}} : {{plan.label}}</view>
-              <view class = "loc">{{plan.dest}}</view>
+              <image class='preview' src='{{plan.preview[0]}}'>
+              </image>
+              <view class='little2'>
+                <view class="first0">{{plan.link}} : {{plan.label}}</view>
+                <view class = "loc">{{plan.dest}}</view>
+                <view class='dianping'  bindtap='detail' data-url='{{plan.detail_url}}'>
+                  <image class='image_dp' src='/images/dianping.png'></image>
+                  <text class='txt_dp'>店铺详情></text>
+                </view>
+              </view>
             </view>
-           </view>
           </view>
 
-          <view class='little1' >
-             <image class='image' src='/images/daohang.png'></image>
-             <view class = "loc1">{{plan.dest_position[0]}}</view>
-          </view>
-          <view class="line"></view>
+              <view>
+                <view class="line_slim"></view>
+                <view  class='address_area'  bindtap='daohang' data-dest='{{plan.dest}}'>
+                  <view class='little1' >
+                  <image class='image' src='/images/daohang.png'></image>
+                  <view class = "loc1">{{plan.dest_position[0]}}</view>
+                </view>
+                <view class='right'>> </view>
+                </view>
+                <view class="line"></view>
+              </view>
           </view>
         </block>
       <!-- </view> -->
