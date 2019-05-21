@@ -149,9 +149,10 @@ image{
 } */
 .usr{
   font-weight: bold;
-  font-size: 45rpx;
+  font-size: 35rpx;
   margin-top:40rpx;
   margin-bottom: 20rpx;
+ 
 }
 
 .com1{
@@ -161,6 +162,7 @@ image{
   font-size: 50rpx;
 }
 .commentText{
+ 
 height: 250rpx;
 width: 600rpx;
 text-align: left;
@@ -168,9 +170,12 @@ border: solid;
 border-color: rgba(77, 80, 77, 0.726);
 }
 .commentText1{
-height: 200rpx;
-width: 600rpx;
+ margin:30rpx;
+ width: 540rpx;
+height: 160rpx;
 text-align: left;
+/*border: solid;
+border-color: rgba(77, 80, 77, 0.726);*/ 
 }
 .com2{
 height: fit-content;
@@ -181,6 +186,7 @@ margin-top: 40rpx;
 margin-bottom: 50rpx;
 text-align: center;
 border: solid;
+border-width: 3rpx;
 border-color: rgba(77, 80, 77, 0.726); 
 }
 .com3{

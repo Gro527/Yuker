@@ -25,3 +25,6 @@
   height: fit-content;
   border-color: rgba(77, 80, 77, 0.726);
 }
+.email{
+  color: blue
+}

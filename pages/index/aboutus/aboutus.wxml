@@ -7,5 +7,5 @@
 </view>
 
 <view class='us'>
-<text decode='{{true}}' space='emsp'>&emsp;&emsp;我们是来自北京邮电大学的大创团队，我们的初衷是为多人出行时目的地的选择提供便捷，只需简单的几步，就可以为你推荐出最适宜的方案！\n&emsp;&emsp;希望在这个繁杂的世界，能为你消灭一些小纠结，解决一些小烦恼~\n&emsp;&emsp;感谢(=^▽^=)</text>
+<text decode='{{true}}' space='emsp'>&emsp;&emsp;我们是来自北京邮电大学的大创团队，我们的初衷是为多人出行时目的地的选择提供便捷，只需简单的几步，就可以为你推荐出最适宜的方案！\n&emsp;&emsp;希望在这个繁杂的世界，能为你消灭一些小纠结，解决一些小烦恼~\n&emsp;&emsp;如果你有什么建议或者想对我们说的话，欢迎随时联系我们~(<text class='email'>ghp@bupt.edu.cn</text>)\n&emsp;&emsp;期待与你的对话(//∇//)</text>
 </view>
