@@ -33,6 +33,7 @@
         </view>
     </block>  
 
+ <view class='com'>
     <block>
       <button class='bt1' open-type='share'>分享给成员们</button>
       <view hidden='{{comment_show}}'>
@@ -73,4 +74,5 @@
       </view>
 
     </block>
+  </view>
 </view>

@@ -86,7 +86,7 @@ Page({
     // 第1步：创建动画实例 
     var animation = wx.createAnimation({
       duration: 200,  //动画时长
-      timingFunction: "linear", //线性
+      timingFunction: "ease", //线性
       delay: 0  //0则不延迟
     });
 
@@ -101,7 +101,7 @@ Page({
       animationData: animation.export()
     })
 
-    // 第5步：设置定时器到指定时候后，执行第二组动画
+   // 第5步：设置定时器到指定时候后，执行第二组动画
     setTimeout(function () {
       // 执行第二组动画
       animation.opacity(1).rotateX(0).step();
@@ -110,7 +110,6 @@ Page({
         animationData: animation
       })
     })
-
     that.setData({
       showProgressStatus: showProgressStatus
     })
