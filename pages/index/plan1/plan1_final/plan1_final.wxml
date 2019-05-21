@@ -34,14 +34,14 @@
     </block>  
 
     <block>
-      <button open-type='share'>分享给成员们</button>
+      <button class='bt1' open-type='share'>分享给成员们</button>
       <view hidden='{{comment_show}}'>
         <view wx:if='{{!comment_finished}}'>
-          <view class='com'>已完成行程？您可以</view>
-          <button bindtap='showCommentArea'>查看/发表评论</button>
+          <view class='com1'>已完成行程？您可以</view>
+          <button class='bt1' bindtap='showCommentArea'>查看/发表评论</button>
         </view>
         <view wx:else>
-          <button bindtap='showCommentArea'>查看评论</button>  
+          <button class='bt1' bindtap='showCommentArea'>查看评论</button>  
         </view>
       </view>
       <view class='comment' hidden='{{!comment_show}}'>
@@ -51,15 +51,14 @@
         <view class='com' wx:for='{{comment_list}}' wx:for-item='cur_comment'>
            <text class='usr'>{{cur_comment.nickname}}:\n</text>
            <block wx:for="{{cur_comment.stars}}">
-              <image src='/images/selected.png'>
-              </image>
+              <image src='/images/selected.png'></image>
           </block>
         <view class='commentText'>\n{{cur_comment.comment}}</view>
         </view>
         </block>
 
     <block wx:elif="{{!comment_finished}}">
-  <view class='com'>
+  <view class='com2'>
    <block wx:for="{{key}}" wx:key="index">
      <image catchtap='in_xin' id='{{index+1}}' data-in='selected' src='/images/selected.png'></image>
    </block>
@@ -67,8 +66,8 @@
      <image catchtap='in_xin' id='{{index+1}}' data-in='normal' src='/images/normal.png'></image>
    </block>
 
-        <textarea class='commentText' placeholder='这个方案如何呢，快写下您的高见吧……' auto-focus='true' bindinput='confirmComment'></textarea>
-        <button bindtap='submitComment'>确认发表</button>
+        <textarea class='commentText' placeholder='这个方案如何呢，快写下您的高见吧…' auto-focus='true' bindinput='confirmComment'></textarea>
+        <button class='bt1' bindtap='submitComment'>确认发表</button>
      </view>
     </block>
         

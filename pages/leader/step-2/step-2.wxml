@@ -10,8 +10,10 @@
 </view>
 
 <view class="index-hd">
-  <button class="mini-button" wx:for="{{link}}"  id="{{index}}" bindtap='show' type="default"  size="mini" plain="true">{{item}}
+  <button class="mini-button"  wx:for="{{link}}" bindtap='show' hover-class="mini-button-hover" id="{{index}}" size="mini">{{item}}
   </button>
+
+  <!-- bindtap='show' type="default"   plain="true" -->
 
 </view>
 <view class='line'></view>
@@ -22,7 +24,7 @@
 </view>
 
 <view class="index-td">
-  <button class="mini-button1"  wx:for="{{link_choose}}" id="{{index}}" bindtap="remove" type="default"  size="mini" plain="true"> {{item}}</button>
+  <button class="mini-button1"  wx:for="{{link_choose}}" id="{{index}}" bindtap="remove" hover-class="mini-button1-hover" size="mini" > {{item}}</button>
  </view>
 <view class='line'></view>
  

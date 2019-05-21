@@ -40,6 +40,8 @@
 .bt1{
   margin-left: 80rpx;
   margin-right: 80rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
 }
 
 .return{
@@ -122,18 +124,65 @@
   font-weight: bold;
 }
 .com{
-  margin:40rpx;
+margin:40rpx;
+height: 230rpx;
+width: 670rpx;
+margin-left:40rpx;
+margin-right: 40rpx;
+margin-top: 40rpx; 
+margin-bottom: 50rpx;
+text-align: center;
+border: solid;
+border-color: rgba(77, 80, 77, 0.726);
+
 }
+
+
 
 image{
   height: 100rpx;
   width: 100rpx;
   display: inline-block
 }
-.commentText{
-  margin: 20rpx;
-}
+/* .commentText{
+  margin-bottom: 10rpx;
+} */
 .usr{
   font-weight: bold;
-  margin:5rpx;
+  font-size: 45rpx;
+  margin-top:40rpx;
+  margin-bottom: 20rpx;
+}
+
+.com1{
+  margin-left: 50rpx;
+  margin-bottom: 50rpx;
+  font-weight: bold;
+  font-size: 50rpx;
+}
+.commentText{
+
+
+height: 350rpx;
+width: 670rpx;
+/* margin-left:40rpx;
+margin-right: 40rpx;
+margin-top: 40rpx; 
+margin-bottom: 50rpx; */
+text-align: center;
+border: solid;
+border-color: rgba(77, 80, 77, 0.726);
+}
+.com2{
+margin:40rpx;
+height: 500rpx;
+width: 670rpx;
+margin-left:40rpx;
+margin-right: 40rpx;
+margin-top: 40rpx; 
+margin-bottom: 50rpx;
+text-align: center;
+/* border: solid;
+border-color: rgba(77, 80, 77, 0.726); */
+
 }

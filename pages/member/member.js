@@ -10,7 +10,8 @@ Page({
     labels_toChoose_split: [],
     hidden_swiper: [true],
     numLabel_chosen: [0],
-    labels_chosen: []
+    labels_chosen: [],
+    hasLocation:false,
   },
 
   data: {
@@ -162,6 +163,15 @@ Page({
     }
     else {
     var that = this;
+    for (var i in that.data.labels_chosen) {
+      if (!that.data.labels_chosen[i].length) {
+        that.data.labels_chosen[i].push({
+          chosen: true,
+          id: 0,
+          label: "不限"
+        })
+      }
+    }
     //将label发送至storage
     wx.setStorage({
       key: 'labels_chosen',

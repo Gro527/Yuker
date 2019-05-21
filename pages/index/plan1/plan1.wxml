@@ -47,8 +47,8 @@
 </block>
 
 <block wx:elif="{{member_type==1}}">
- <view wx-if="{{!submit_state}}">正在等待其他成员加入...</view>
- <view wx-if="{{submit_state}}">发起人正在选择方案，请稍候...</view>
+ <view class='remark' wx-if="{{!submit_state}}">正在等待其他成员加入...</view>
+ <view class='remark' wx-if="{{submit_state}}">发起人正在选择方案，请稍候...</view>
 </block>
 
 <block wx:elif="{{member_type==2}}">

@@ -79,7 +79,6 @@ Page({
    
       },
 
-
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -102,6 +101,12 @@ Page({
     })
   },
 
+  feedback: function () {
+      this.setData({
+        hiddenModal: !this.data.hiddenModal
+      })
+  },
+
   listenerCancel: function () {
     this.setData({
       hiddenModal: true
@@ -113,7 +118,12 @@ Page({
     this.setData({
       hiddenModal: true
     })
-  }
+  },
+  onShareAppMessage: function (e) {
+
+  },
+
+
 
 })
 

@@ -140,4 +140,12 @@
   border-radius: 3px;
 }
 
-
+.remark{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  font-weight: bold; 
+}

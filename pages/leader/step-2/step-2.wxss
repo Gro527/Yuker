@@ -29,21 +29,44 @@ font-style:  inherit;
 }
 
 .mini-button{
-height: 60rpx;
-width: 190rpx;
-margin-top: 30rpx;
-margin-right:10rpx;
-margin-left: 10rpx;
-margin-bottom: 30rpx;
+height: 70rpx;
+width: 210rpx;
+margin-top: 20rpx;
+/* margin-right:10rpx;
+margin-left: 10rpx; */
+margin-bottom: 20rpx;
+text-align: center;
+font-size: 30rpx;
+font-weight: bold;
+  border: none;
+background-color:  #FFFFF0;
 }
+.mini-button::after{
+  border: none;
+}
+.mini-button-hover{
+  background-color: rgba(248, 172, 59, 0.418);
+}
+
 
 .mini-button1{
 height: 60rpx;
-width: 190rpx;
+width: 210rpx;
 margin-top: 40rpx;
-margin-right:10rpx;
-margin-left: 10rpx;
+/* margin-right:10rpx;
+margin-left: 10rpx; */
 margin-bottom: 40rpx;
+text-align: center;
+font-size: 30rpx;
+font-weight: bold;
+  border: none;
+background-color:  #FFFFF0;
+}
+.mini-button1::after{
+  border: none;
+}
+.mini-button1-hover{
+  background-color: rgba(248, 172, 59, 0.418);
 }
 
 .mini-button2{
@@ -63,15 +86,16 @@ margin-bottom: 40rpx;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-around;
+justify-content:space-around;
 margin-left:40rpx;
 margin-right: 40rpx;
 margin-top: 40rpx; 
 margin-bottom: 50rpx;
 text-align: center;
 border: solid;
-border-color: rgba(115, 121, 115, 0.726);
-
+border-color:rgb(250, 250, 232);
+border-radius: 3%;
+background:  #FFFFF0;
 }
 
 .index-td {
@@ -85,8 +109,9 @@ margin-left: 40rpx;
 margin-top: 40rpx;
 margin-bottom: 50rpx;
 border: solid;
-  border-color: rgba(115, 121, 115, 0.726);
-  height: 130rpx;
+border-color:rgb(250, 250, 232);
+border-radius: 3%;
+background:  #FFFFF0;
 }
 
 
