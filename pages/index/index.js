@@ -5,6 +5,7 @@ const app = getApp()
 
 Page({
   data: {
+    hiddenModal:true
     // // motto: 'Hello World',
     // userInfo: {},
     // hasUserInfo: false,
@@ -92,6 +93,25 @@ test:function(){
       hasUserInfo: true
     })
    
+  },
+
+  feedback: function () {
+    this.setData({
+      hiddenModal: !this.data.hiddenModal
+    })
+  },
+
+  listenerCancel: function () {
+    this.setData({
+      hiddenModal: true
+    });
+  },
+
+  //确认
+  listenerConfirm: function () {
+    this.setData({
+      hiddenModal: true
+    })
   }
 
 })

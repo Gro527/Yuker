@@ -48,7 +48,7 @@ Page({
 
 
   next: function () {
-    if (!this.data.hasLocation && this.data.hasLocation) {
+    if (!this.data.hasLocation) {
       wx.showToast({
         icon: 'none',
         title: '请选择您的位置！'

@@ -154,6 +154,13 @@ Page({
   },
 
   next3: function next3(data) {
+    if (!this.data.hasLocation) {
+      wx.showToast({
+        icon: 'none',
+        title: '请选择您的位置！'
+      });
+    }
+    else {
     var that = this;
     //将label发送至storage
     wx.setStorage({
@@ -197,5 +204,6 @@ Page({
         })
       }
     });
+    }
   }
 });

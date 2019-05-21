@@ -36,11 +36,21 @@
 <view class='line1'></view></view>
 
 <view class="display4">
- <view class="info4">
+ <view class="info4" bindtap='feedback'>
       <view >反馈及信息</view>
       <view >></view>
    </view>
 <view class='line1'></view></view>
+
+<modal 
+     title="反馈及建议"
+     hidden="{{hiddenModal}}"
+     confirm-text="确认"
+     cancel-text="退出"
+     bindconfirm="listenerConfirm"
+     bindcancel="listenerCancel" >
+     <textarea class='feedb_text' placeholder="请写下您遇到的问题，我们将会努力改进！" auto-focus/>
+     </modal>
 
 </view>
 </view>

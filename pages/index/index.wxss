@@ -161,3 +161,7 @@ margin-right: 120rpx;
   display: flex;
   flex-direction: column;
 }
+.feedb_text{
+  margin: 20rpx;
+  width: 100%
+}
