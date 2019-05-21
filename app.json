@@ -13,7 +13,8 @@
     "template/template",
     "pages/member/member",
     "pages/index/introduction/introduction",
-    "pages/index/collection/collection"
+    "pages/index/collection/collection",
+    "pages/index/aboutus/aboutus"
   ],
   "window": {
     "backgroundTextStyle": "light",

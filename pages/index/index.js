@@ -34,6 +34,12 @@ Page({
     })
   },
 
+  aboutus: function () {
+    wx.navigateTo({
+      url: '/pages/index/aboutus/aboutus'
+    })
+  },
+
   creator: function () {
     wx.navigateTo({
       url: '/pages/create_Yuker/create_Yuker'
