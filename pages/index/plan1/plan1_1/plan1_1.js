@@ -57,6 +57,17 @@ Page({
     map.search_by_name(shop_name)
 
   },
+  detail:function(e){
+    var url = e.currentTarget.dataset.url
+    wx.setClipboardData({
+      data: url,
+    })
+    wx.showModal({
+      title: '链接已复制',
+      content: '由于微信限制，无法直接打开页面，请使用其他浏览器打开',
+      showCancel: false
+    })
+  },
 
 
   final:function(e){
