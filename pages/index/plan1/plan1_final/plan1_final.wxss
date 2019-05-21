@@ -124,17 +124,16 @@
   font-weight: bold;
 }
 .com{
-margin:40rpx;
-height: 230rpx;
+height: fit-content;
 width: 670rpx;
-margin-left:40rpx;
+margin-left:30rpx;
 margin-right: 40rpx;
 margin-top: 40rpx; 
 margin-bottom: 50rpx;
 text-align: center;
-border: solid;
+/*border: solid;
 border-color: rgba(77, 80, 77, 0.726);
-
+*/
 }
 
 
@@ -161,27 +160,36 @@ image{
   font-size: 50rpx;
 }
 .commentText{
-height: 350rpx;
-width: 670rpx;
+height: 250rpx;
+width: 600rpx;
 text-align: left;
 border: solid;
 border-color: rgba(77, 80, 77, 0.726);
 }
 .commentText1{
-height: 350rpx;
+height: 200rpx;
 width: 600rpx;
 text-align: left;
 }
 .com2{
-margin:40rpx;
-height: 500rpx;
-width: 670rpx;
-margin-left:40rpx;
+height: fit-content;
+width: 600rpx;
+margin-left:25rpx;
 margin-right: 40rpx;
 margin-top: 40rpx; 
 margin-bottom: 50rpx;
 text-align: center;
-/* border: solid;
+border: solid;
+border-color: rgba(77, 80, 77, 0.726); 
+}
+.com3{
+height: fit-content;
+width: 600rpx;
+margin-left:25rpx;
+margin-right: 40rpx;
+margin-top: 40rpx; 
+margin-bottom: 50rpx;
+text-align: center;
+/*border: solid;
 border-color: rgba(77, 80, 77, 0.726); */
-
 }

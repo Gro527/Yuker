@@ -48,7 +48,7 @@
       <view class='comment' hidden='{{!comment_show}}'>
 
         <block wx:if="{{comment_finished}}">
-          <view class='com' wx:for='{{comment_list}}' wx:for-item='cur_comment'>
+          <view class='com2' wx:for='{{comment_list}}' wx:for-item='cur_comment'>
             <text class='usr'>{{cur_comment.nickname}}:\n</text>
             <block wx:for="{{cur_comment.stars}}">
                 <image src='/images/selected.png'></image>
@@ -58,7 +58,7 @@
         </block>
 
     <block wx:elif="{{!comment_finished}}">
-  <view class='com2'>
+  <view class='com3'>
    <block wx:for="{{key}}" wx:key="index">
      <image catchtap='in_xin' id='{{index+1}}' data-in='selected' src='/images/selected.png'></image>
    </block>
