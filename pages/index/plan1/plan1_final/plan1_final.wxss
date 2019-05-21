@@ -161,17 +161,16 @@ image{
   font-size: 50rpx;
 }
 .commentText{
-
-
 height: 350rpx;
 width: 670rpx;
-/* margin-left:40rpx;
-margin-right: 40rpx;
-margin-top: 40rpx; 
-margin-bottom: 50rpx; */
-text-align: center;
+text-align: left;
 border: solid;
 border-color: rgba(77, 80, 77, 0.726);
+}
+.commentText1{
+height: 350rpx;
+width: 600rpx;
+text-align: left;
 }
 .com2{
 margin:40rpx;

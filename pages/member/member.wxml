@@ -17,7 +17,7 @@
    </block>
 </view>   
 <view class='line'></view>
-<view class="prefer_add">偏好添加</view><view class='line'></view>
+<view class="prefer_add">选择您的偏好：</view><view class='line'></view>
 
 
 
