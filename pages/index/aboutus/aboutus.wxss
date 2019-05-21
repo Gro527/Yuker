@@ -1,4 +1,3 @@
-/* pages/index/collection/collection.wxss */
 .bg{
   width:100%;
   height: 150rpx;
@@ -17,4 +16,12 @@
 .first{
   font-size: 54rpx;
   font-weight: bold;
+}
+.us{
+  margin: 30rpx;
+  padding: 30rpx;
+  border: solid;
+  border-width: 3rpx;
+  height: fit-content;
+  border-color: rgba(77, 80, 77, 0.726);
 }

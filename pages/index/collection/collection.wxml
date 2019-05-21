@@ -1,1 +1,9 @@
+<view class="content">
+ <view class="bg">
+  <view class="logo">
+    <view class= "first">我的收藏</view>
+  </view>
+ </view>
+</view>
+
 <text >(收藏为空)</text>

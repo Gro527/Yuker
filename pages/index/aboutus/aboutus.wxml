@@ -1,0 +1,11 @@
+<view class="content">
+ <view class="bg">
+  <view class="logo">
+    <view class= "first">关于我们</view>
+  </view>
+ </view>
+</view>
+
+<view class='us'>
+<text decode='{{true}}' space='emsp'>&emsp;&emsp;我们是来自北京邮电大学的大创团队，我们的初衷是为多人出行时目的地的选择提供便捷，只需简单的几步，就可以为你推荐出最适宜的方案！\n&emsp;&emsp;希望在这个繁杂的世界，能为你消灭一些小纠结，解决一些小烦恼~\n&emsp;&emsp;感谢(=^▽^=)</text>
+</view>
