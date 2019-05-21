@@ -29,15 +29,15 @@
 <view class='line1'></view></view>
 
 <view class="display3">
- <view class="info3">
-      <view >修改手机</view>
+ <view class="info3" bindtap='feedback'>
+      <view >反馈建议 </view>
       <view >></view>
    </view>
 <view class='line1'></view></view>
 
 <view class="display4">
- <view class="info4" bindtap='feedback'>
-      <view >反馈及信息</view>
+ <view class="info4" >
+      <view >关于我们</view>
       <view >></view>
    </view>
 <view class='line1'></view></view>

@@ -97,6 +97,7 @@ Page({
     this.setData({
       comment_show: !this.data.comment_show,
     })
+    console.log(this.data.comment_finished)
   },
 
   confirmComment: function(e){
