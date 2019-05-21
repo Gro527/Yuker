@@ -60,21 +60,22 @@
 
 .little{
   height: 250rpx;
-  margin-top:30rpx; 
+  margin-top:10rpx; 
   display: flex;
   flex-direction: row;
 }
 
 .little0{
   height: 250rpx;
-  margin-top:30rpx; 
+  margin-top:10rpx; 
   display: flex;
   flex-direction: row;
 }
 
 .little1{
+  flex: 1;
   height: 80rpx;
-  margin-top:70rpx; 
+  margin-top:40rpx; 
   display: flex;
   flex-direction: row;
   font-size: 30rpx;
@@ -192,4 +193,48 @@ margin-bottom: 50rpx;
 text-align: center;
 /*border: solid;
 border-color: rgba(77, 80, 77, 0.726); */
+
+}
+
+.line_slim{
+  margin-top: 40rpx;
+  margin-bottom: 0;
+  height: 2rpx;
+  background-color: #D8D8D8;
+}
+
+.line{
+  margin-top: 1rpx;
+}
+
+.address_area{
+  display: flex;
+  flex-direction: row;
+}
+
+.right{
+  position: relative;
+  height: 80rpx;
+  margin-right: 30rpx;
+  margin-top:15rpx; 
+  align-content: right;
+  font-size: 60rpx;
+}
+
+.dianping{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+.image_dp{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 200rpx;
+   /* margin-right: 30rpx; */
+}
+.txt_dp{
+    margin-top:15rpx;
+    font-size: 30rpx;
+    text-decoration: underline;
+    font-weight: bold;
 }
