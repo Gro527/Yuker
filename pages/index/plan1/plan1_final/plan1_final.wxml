@@ -21,7 +21,7 @@
             <view class='little2'>
               <view class="first0">{{step.link}} : {{step.label}}</view>
               <view class = "loc">{{step.dest}}</view>
-              <view class='dianping'  bindtap='detail' data-url='{{plan.detail_url}}'>
+              <view class='dianping'  bindtap='detail' data-url='{{step.detail_url}}'>
                 <image class='image_dp' src='/images/dianping.png'></image>
                 <text class='txt_dp'>店铺详情></text>
               </view>
@@ -30,7 +30,7 @@
         </view>
 
           <view class='line_slim'></view>
-          <view class='address_area' bindtap='daohang' data-dest='{{plan.dest}}'>
+          <view class='address_area' bindtap='daohang' data-dest='{{step.dest}}'>
             <view class='little1'>
               <image class='image' src='/images/daohang.png'></image>
               <view class = "loc1">{{step.dest_position[0]}} </view>
@@ -61,7 +61,7 @@
             <block wx:for="{{cur_comment.stars}}">
                 <image src='/images/selected.png'></image>
             </block>
-            <textarea class='commentText1' disabled='true'>\n{{cur_comment.comment}}</textarea> 
+            <textarea class='commentText1' disabled='true'>\n{{cur_comment.comment.length==0?"这家伙很懒，什么也没说...":cur_comment.comment}}</textarea> 
           </view>
         </block>
 
@@ -74,7 +74,7 @@
      <image catchtap='in_xin' id='{{index+1}}' data-in='normal' src='/images/normal.png'></image>
    </block>
 
-        <textarea class='commentText' placeholder='这个方案如何呢，快写下您的高见吧…' auto-focus='true' bindinput='confirmComment'></textarea>
+        <textarea wx:if="{{!comment_finished}}" class='commentText' placeholder='这个方案如何呢，快写下您的高见吧…'  bindinput='confirmComment'></textarea>
         <button class='bt1' bindtap='submitComment'>确认发表</button>
      </view>
     </block>

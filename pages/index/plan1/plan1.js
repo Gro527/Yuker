@@ -45,8 +45,13 @@ Page({
         })
         
         console.log(res.data.members)
-        console.log(res.release_state)
-
+        console.log(res.data.release_state)
+        if(res.data.release_state == 1)
+        {
+          wx.redirectTo({
+            url: '/pages/index/plan1/plan1_final/plan1_final?program_id='+that.data.program_id+'&first=false',
+          })
+        }
         var _member_type = 2
         //判断当前用户类型所属（0为发起者，1为参与人，2为路人）
         if (that.data.userid_current == that.data.members[0].userid) {

@@ -1,5 +1,6 @@
 <!--template/progress_bar.wxml-->
 
 <template name='progress_bar'>
-  <progress percent='99' show-info='true' active='true' bindactiveend='end'>  由于数据量较大，请耐心等待...</progress>
+  <view>由于数据量较大，请耐心等待...</view>
+  <progress percent='99' show-info='true' active='true' bindactiveend='end'>  </progress>
 </template>

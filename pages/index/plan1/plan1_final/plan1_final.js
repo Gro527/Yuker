@@ -46,16 +46,19 @@ Page({
           program_id: program_id
         },
         success: function(res){
-          that.setData({
-            comment_list: res.data
-          })
+          var comment_list = res.data
           for(var user in res.data)
           {
             if(res.data[user].user_id == wx.getStorageSync('userid'))
+            {
               that.setData({
-                comment_finished:true
+                comment_finished: true
               })
+            }  
           }
+          that.setData({
+            comment_list: comment_list
+          })
         }
       })
     }
@@ -94,6 +97,25 @@ Page({
 
 
   showCommentArea: function(){
+    var that = this
+    wx.request({
+      url: host.get_comment_url,
+      method: 'POST',
+      data: {
+        program_id: this.data.program_info.program_id
+      },
+      success: function (res) {
+        that.setData({
+          comment_list: res.data
+        })
+        for (var user in res.data) {
+          if (res.data[user].user_id == wx.getStorageSync('userid'))
+            that.setData({
+              comment_finished: true
+            })
+        }
+      }
+    })
     this.setData({
       comment_show: !this.data.comment_show,
     })
@@ -182,7 +204,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '约客',
+      path: '/pages/index/plan1/plan1_final/plan1_final?program_id='+this.data.program_info.program_id+'&first=false',
+    }
   },
 
   // 导航
