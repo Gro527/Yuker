@@ -1,6 +1,6 @@
 // // //服务器配置文件
 // var port = "5555"
-// var base = "http://10.128.232.13:"+port+"/api"
+// var base = "http://192.168.43.66:"+port+"/api"
 var base = "https://yuker.vip/api"
 
 var host = {

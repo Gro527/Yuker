@@ -10,7 +10,10 @@ Page({
     userid_current:3,
     showProgressStatus: false,
     ok:false,
-    display_height:[]
+    display_height:[],
+    timer:'a',
+    countDownNum: 30,
+    showCountDown: false,
   },
 
   /**
@@ -145,9 +148,7 @@ Page({
       content: '是否继续？',
       showCancel: true,
       cancelText: "否",
-      cancelColor: 'skyblue',
       confirmText: "是",
-      confirmColor: 'skyblue',
       success: function (res) {
         if (res.cancel) {//点击取消,默认隐藏弹框
           
@@ -172,13 +173,48 @@ Page({
               that.setData({
                 showProgressStatus: false
               })
+            },
+            fail: function(res){
+              wx.showModal({
+                title: '服务器忙',
+                content: '请求仍在处理中，稍后可在“我的Yuker方案”内查看',
+                showCancel: false,
+                success: function(){
+                  wx.reLaunch({
+                    url: '/pages/index/index',
+                  })
+                }
+              })
             }
           })
-
         }
       },
       fail: function (res) { },//接口调用失败的回调函数
       complete: function (res) { },//接口调用结束的回调函数（调用成功、失败都会执行）
+    })
+
+    var countDownNum = that.data.countDownNum
+    //倒计时
+    that.setData({
+      timer: setInterval(function () {//这里把setInterval赋值给变量名为timer的变量
+        //每隔一秒countDownNum就减一，实现同步
+        countDownNum--;
+        //然后把countDownNum存进data，好让用户知道时间在倒计着
+        that.setData({
+          countDownNum: countDownNum
+        })
+        if (countDownNum <= 20) {
+          that.setData({
+            showCountDown : true
+          })
+        }
+        if (countDownNum == 0) {
+          //这里特别要注意，计时器是始终一直在走的，如果你的时间为0，那么就要关掉定时器！不然相当耗性能
+          //因为timer是存在data里面的，所以在关掉时，也要在data里取出后再关闭
+          clearInterval(that.data.timer);
+          //关闭定时器之后，可作其他处理codes go here
+        }
+      }, 1000)
     })
   },
 

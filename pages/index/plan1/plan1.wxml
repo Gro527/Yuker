@@ -69,5 +69,11 @@
 
 <view class="mask" data-statu="close" wx:if="{{showProgressStatus}}"></view>
 <view animation="{{animationData}}" class="ProgressBox" wx:if="{{showProgressStatus}}">
+  <view>
+  <text>数据量较大，请耐心等待...</text>
+  <text wx:if='{{showCountDown}}'>{{countDownNum}}s</text>
+  </view>
   <template is='progress_bar' data='{{...item}}'></template>
+  <view class='countdown' style='align-text:center;width:100%'>
+  </view>
 </view>
