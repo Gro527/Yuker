@@ -208,6 +208,8 @@ border-color: rgba(77, 80, 77, 0.726); */
   margin-bottom: 0;
   height: 2rpx;
   background-color: #D8D8D8;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }
 
 .line{
@@ -244,4 +246,9 @@ border-color: rgba(77, 80, 77, 0.726); */
     font-size: 30rpx;
     text-decoration: underline;
     font-weight: bold;
+}
+.address_area-hover{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(248, 172, 59, 0.219);
 }

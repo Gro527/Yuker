@@ -30,7 +30,7 @@
         </view>
 
           <view class='line_slim'></view>
-          <view class='address_area' bindtap='daohang' data-dest='{{step.dest}}'>
+          <view class='address_area'hover-class='address_area-hover' bindtap='daohang' data-dest='{{step.dest}}'>
             <view class='little1'>
               <image class='image' src='/images/daohang.png'></image>
               <view class = "loc1">{{step.dest_position[0]}} </view>

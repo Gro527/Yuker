@@ -182,12 +182,12 @@ Page({
     var openid = wx.getStorageSync("openid");
     json.openid = openid;
     json.program_id = this.data.program_info.program_id;
-    var long_lati = wx.getStorageSync('addr_long_lati');
+    var long_lati = this.data.addr_longitude_latitude
     json.location = {};
-    json.location.name = wx.getStorageSync('addr');
+    json.location.name = this.data.locationAddress
     json.location.longitude = long_lati[0];
     json.location.latitude = long_lati[1];
-    var program_name = wx.getStorageSync('program_name');
+    var program_name = this.data.program_info.program_name
     json.program_name = program_name;
     var links = [];
     for (var i in that.data.links_chosen) {
@@ -204,6 +204,7 @@ Page({
     }
     json.links = links;
     // 向服务器发送member_confirm请求
+    console.log(json)
     wx.request({
       url: host.member_confirm_url,
       data: { json: json },

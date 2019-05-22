@@ -184,6 +184,8 @@ scroll-view{
   margin-bottom: 0;
   height: 2rpx;
   background-color: #D8D8D8;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
  }
 
 .line{
@@ -193,6 +195,12 @@ scroll-view{
 .address_area{
   display: flex;
   flex-direction: row;
+}
+
+.address_area-hover{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(248, 172, 59, 0.219);
 }
 
 .right{
