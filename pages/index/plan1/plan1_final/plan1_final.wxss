@@ -188,6 +188,7 @@ text-align: center;
 border: solid;
 border-width: 3rpx;
 border-color: rgba(77, 80, 77, 0.726); 
+overflow-wrap: break-word;
 }
 .com3{
 height: fit-content;

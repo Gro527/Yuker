@@ -6,7 +6,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    wx.setStorageSync('login_state', 0)
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -50,7 +50,10 @@ App({
                         key: 'session_key',
                         data: res.data.session_key,
                       })
-
+                      wx.setStorage({
+                        key: 'login_state',
+                        data: 1,
+                      })
                     },
                     fail: function (res) {
                       console.log(res)

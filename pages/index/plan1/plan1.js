@@ -9,7 +9,8 @@ Page({
     userid:[],
     userid_current:3,
     showProgressStatus: false,
-    ok:false
+    ok:false,
+    display_height:[]
   },
 
   /**
@@ -35,13 +36,30 @@ Page({
           data: res.data,
         })
         var program = res.data
+
+        // 计算每个成员对应区块的高度
+        // var rpx = wx.getSystemInfoSync().windowWidth / 750
+        var display_height = []
+        for(var i in res.data.members)
+        {
+          var cur_height = 300
+          if(res.data.members[i].length == 3) cur_height = 500
+          for(var j in res.data.members[i].sub)
+          {
+            cur_height += parseInt(res.data.members[i].sub[j].sub.length / 4) * 50
+          }
+          display_height.push(cur_height)
+        }
+
+
         that.setData({
           time : res.data.time,
           name: res.data.program_name,
           members : res.data.members,
           userid_current : wx.getStorageSync('userid'),
           submit_state: res.data.submit_state,
-          release_state: res.data.release_state
+          release_state: res.data.release_state,
+          display_height: display_height
         })
         
         console.log(res.data.members)
@@ -143,6 +161,7 @@ Page({
             success(res) {
               var program_info = wx.getStorageSync('program_info')
               program_info.submit_result = res.data
+              console.log(res.data)
               wx.setStorage({
                 key: 'program_info',
                 data: program_info,
@@ -188,19 +207,68 @@ Page({
   join: function (e) {
     var program_id = this.data.program_id
     var userid = wx.getStorageSync('userid')
-    wx.request({
-      url: host.userinfo_url,
-      method: 'POST',
-      data: {
-        'userinfo': e.detail.userInfo,
-        'userid': userid
-      },
-      success: function(res){
-        wx.navigateTo({
-          url: '/pages/member/member?program_id=' + program_id
-        })
-      }
-    })
+    // wx.request({
+    //   url: host.userinfo_url,
+    //   method: 'POST',
+    //   data: {
+    //     'userinfo': e.detail.userInfo,
+    //     'userid': userid
+    //   },
+    //   success: function(res){
+    //     wx.navigateTo({
+    //       url: '/pages/member/member?program_id=' + program_id
+    //     })
+    //   }
+    // })
+    if(wx.getStorageSync('login_state') == 0)
+    {
+      wx.login({
+        success: function (res) {
+          //发送请求
+          wx.request({
+            url: host.login_url, //接口地址
+            data: {
+              'code': res.code,
+              'userinfo': e.detail.userInfo,
+            },
+            header: {
+              'content-type': 'application/json' //默认值
+            },
+            method: 'POST',
+            success: function (res) {
+              wx.setStorage({
+                key: 'openid',
+                data: res.data.openid,
+              })
+              wx.setStorage({
+                key: 'userid',
+                data: res.data.id,
+              })
+              wx.setStorage({
+                key: 'session_key',
+                data: res.data.session_key,
+              })
+              wx.setStorage({
+                key: 'login_state',
+                data: 1,
+              })
+              wx.navigateTo({
+                url: '/pages/member/member?program_id=' + program_id
+              })
+            },
+            fail: function (res) {
+              console.log(res)
+            }
+          })
+        }
+      })
+    }
+    else{
+      wx.navigateTo({
+        url: '/pages/member/member?program_id=' + program_id
+      })
+    }
+
   },
 
 

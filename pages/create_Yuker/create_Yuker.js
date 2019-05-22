@@ -40,20 +40,70 @@ onLoad: function(e) {
   },
 
   creator: function (e) {
-    var userid = wx.getStorageSync('userid')
-    wx.request({
-      url: host.userinfo_url,
-      method: 'POST',
-      data:{
-        'userinfo':e.detail.userInfo,
-        'userid':userid
-      },
-      success: function (res){
-      }
-    })
-    wx.navigateTo({
-      url: '/pages/leader/step-1/step-1'
-    })
+    // var userid = wx.getStorageSync('userid')
+    // wx.request({
+    //   url: host.userinfo_url,
+    //   method: 'POST',
+    //   data:{
+    //     'userinfo':e.detail.userInfo,
+    //     'userid':userid
+    //   },
+    //   success: function (res){
+    //   }
+    // })
+    // wx.navigateTo({
+    //   url: '/pages/leader/step-1/step-1'
+    // })
+    if(wx.getStorageSync('login_state') == 0)
+    {
+      wx.login({
+        success: function (res) {
+          //发送请求
+          wx.request({
+            url: host.login_url, //接口地址
+            data: {
+              'code': res.code,
+              'userinfo': e.detail.userInfo,
+            },
+            header: {
+              'content-type': 'application/json' //默认值
+            },
+            method: 'POST',
+            success: function (res) {
+              wx.setStorage({
+                key: 'openid',
+                data: res.data.openid,
+              })
+              wx.setStorage({
+                key: 'userid',
+                data: res.data.id,
+              })
+              wx.setStorage({
+                key: 'session_key',
+                data: res.data.session_key,
+              })
+              wx.setStorage({
+                key: 'login_state',
+                data: 1,
+              })
+              wx.navigateTo({
+                url: '/pages/leader/step-1/step-1'
+              })
+            },
+            fail: function (res) {
+              console.log(res)
+            }
+          })
+        }
+      })
+    }
+    else{
+      wx.navigateTo({
+        url: '/pages/leader/step-1/step-1'
+      })
+    }
+
+
   },
 
  

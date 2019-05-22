@@ -34,7 +34,8 @@
 
 .person{
   /*background: rgb(235, 117, 117); /*便于看清布局*/
-  height: 300rpx;
+  /* height: 600rpx; */
+  /* height: 100%; */
   display: flex;
   flex-direction: row;
 
@@ -45,13 +46,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- /* background: rgb(143, 136, 136)     /*便于看清布局*/
+   /* background: rgb(143, 136, 136) */
+ /* /*     便于看清布局 */
 }
 .little_2{
   width: 70%;
+  flex:1;
   height: 300rpx;
   margin-top:70rpx; 
-  margin-left: 20rpx;
+  margin-right: 20rpx;
   font-weight: bold;
 
   /*background: rgb(143, 136, 136)     /*便于看清布局*/
@@ -63,14 +66,22 @@
   margin-left: 50rpx;
   font-weight: bold;
 }
-
+.info{
+  text-align: center;
+  width: 150rpx;
+  margin-left: 70rpx;
+  /* background: rgb(143, 136, 136); */
+  overflow-wrap: break-word;
+}
 .head{
   width: 150rpx;
   height: 150rpx;
   margin: 35rpx 70rpx 10rpx;
 }
 .name{
-  margin-left: 53rpx;
+  /* margin-left: 100rpx; */
+  width: 100%;
+  /* text-align: left; */
 }
 .location_p{
   width: 50rpx;
